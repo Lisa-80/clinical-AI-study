@@ -691,6 +691,11 @@ input[type=text]{
     transform:scale(1.1);
 }
 
+#participantId{
+    width:180px;
+    flex:none;
+}
+
 #demographicsScreen .case-card,
 #scalesScreen .case-card,
 #maximizerScreen .case-card,
