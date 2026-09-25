@@ -19,10 +19,29 @@
 </head>
 
 <script type="module">
+/**
+ * Clinical AI Study Case Review Module
+ *
+ * Responsibilities:
+ * - Track participant responses for each case
+ * - Validate required inputs
+ * - Record time spent per case
+ * - Load AI recommendations and transcripts
+ * - Configure display elements based on study arm
+ */
+
+// Stores responses for all completed cases.
 let caseResponses = [];
+
+// Current case being reviewed.
 let currentCase = 1;
+
+// Total number of study cases.
 const totalCases = 10;
+
+// Timestamp when the current case began.
 let caseStartTime = Date.now();
+	
 const params = new URLSearchParams(window.location.search);
 const studyArm = params.get("arm");
 let participantId = params.get("id");
@@ -36,8 +55,17 @@ window.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/**
+ * Controls which AI-generated diagnostic support
+ * features are visible for each randomized study arm.
+ * ARM*A: Control, no diagnostic support
+** ARM_B: Prioritized diagnoses
+ * ARM_C: Prioritized diagnoses plus probabilities
+ * ARM_D: Full diagnosis list without prioritization
+ */
 const armConfig = {
-    ARM_A: {
+	ARM_A: {
         showDiagnoses: false,
         showAllDiagnoses: false,
         showCantMissSection: false,
@@ -81,8 +109,13 @@ const armConfig = {
 
 };
 
-function saveCurrentCase(){
-    const timeSpentSeconds =
+/**
+ * Saves participant responses for the current case,
+ * including diagnosis, testing decisions, management,
+ * AI interactions, transcript use, and time spent.
+ */
+function saveCurrentCase() {
+	const timeSpentSeconds =
         Math.round(
             (Date.now() - caseStartTime) / 1000
         );
@@ -151,16 +184,24 @@ function saveCurrentCase(){
     });
 
 }
-
-function validateCase(){
-
+	
+/**
+ * Ensures all required fields have been completed
+ * before the participant can move to the next case.
+ *
+ * Returns:
+ *   true  = valid
+ *   false = missing required information
+ */
+function validateCase() {
     const missing = [];
 
     const diagnosis =
         document.getElementById(
             "diagnosis"
         )?.value.trim();
-
+	
+// Verify a primary diagnosis was entered.
     if(!diagnosis){
         missing.push("Most likely diagnosis");
     }
@@ -174,6 +215,7 @@ function validateCase(){
         missing.push("Next medical visit");
     }
 
+// Require at least one test recommendation.
     const hasTest =
         [
             ...document.querySelectorAll(
@@ -188,7 +230,7 @@ function validateCase(){
     if(!hasTest){
         missing.push("Tests");
     }
-
+// Require at least one management recommendation.
     const hasManagement =
         [
             ...document.querySelectorAll(
@@ -217,18 +259,29 @@ function validateCase(){
     return true;
 }
 
+// Load pre-generated AI probability estimates.
 const probabilityRows =
     await fetch("probabilities.json")
         .then(r => r.json());
 
+// Load AI recommendations.
 const recommendationRows =
     await fetch("recommendations.json")
         .then(r => r.json());
-
+	
+// Load transcript content 
 const transcriptRows =
     await fetch("transcripts.json")
         .then(r => r.json());
 
+/**
+* Builds the recommendation UI.
+*
+* TEST recommendations are mapped to the
+* tests-ai section, while MANAGEMENT
+* recommendations are mapped to the
+* management-ai section.
+*/
 function buildRecommendations(recommendations){
 
     let recommendationsHtml = "";
@@ -266,15 +319,31 @@ function buildRecommendations(recommendations){
         `;
     });
 
-    return recommendationsHtml;
+return recommendationsHtml;
 }
-    
+
+/**
+ * Renders a study case based on the participant's
+ * assigned study arm configuration.
+ *
+ * Responsibilities:
+ * - Load case-specific diagnostic information
+ * - Display AI-generated diagnoses and probabilities
+ * - Display recommendations and transcripts
+ * - Configure UI elements for the current study arm
+ * - Configure navigation to the next case
+ */
+
 window.showCase = function(index){
 caseStartTime = Date.now();
 const currentCaseID = index + 1;
     document.getElementById("caseLabel")
     .textContent =
         `Case ${currentCaseID} of ${totalCases}`;
+
+// Apply randomized study arm settings
+// that control which AI decision-support
+// features are visible.
 
 const config =
     armConfig[studyArm];
@@ -347,7 +416,11 @@ else{
 let displayedLikely;
 let displayedCantMiss;
 
-if(config.showAllDiagnoses){
+// Determine which diagnoses will be displayed.
+// Some arms show all diagnoses, while others
+// display only the highest-ranked diagnoses.
+
+	if(config.showAllDiagnoses){
 
     displayedLikely =
         [...currentRows]
@@ -428,6 +501,7 @@ displayedLikely.forEach(row => {
 
 let fillClass = "";
 
+// Assign styling based on probability level.
 if(row.probability >= 30){
 
     probabilityClass = "probability-high";
@@ -538,6 +612,10 @@ if (
 }
 
 }   
+
+// Display diagnoses that are important
+// to consider even when likelihood is lower.
+	
 if(
     config.showCantMissSection &&
     displayedCantMiss.length > 0
@@ -642,6 +720,8 @@ const actionButton =
         "actionButton"
     );
 
+// Final case uses the submit action;
+// all others advance to the next case.
 if(index === totalCases - 1){
 
     actionButton.textContent =
@@ -665,7 +745,6 @@ else{
 window.resetCaseForm = function(){
 
     document.getElementById("diagnosis").value = "";
-
     document.getElementById("diagnoses").innerHTML = "";
     document.getElementById("tests-manual").innerHTML = "";
     document.getElementById("tests-ai").innerHTML = "";
