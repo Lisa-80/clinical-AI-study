@@ -1,0 +1,1627 @@
+/**
+ * Clinical AI Study Case Review Module
+ *
+ * Responsibilities:
+ * - Track participant responses for each case
+ * - Validate required inputs
+ * - Record time spent per case
+ * - Load AI recommendations and transcripts
+ * - Configure display elements based on study arm
+ */
+
+// Stores responses for all completed cases.
+let caseResponses = [];
+
+// Current case being reviewed.
+let currentCase = 1;
+
+// Total number of study cases.
+const totalCases = 10;
+
+// Timestamp when the current case began.
+let caseStartTime = Date.now();
+
+const params = new URLSearchParams(window.location.search);
+const studyArm = params.get("arm");
+let participantId = params.get("id");
+window.addEventListener("DOMContentLoaded", () => {
+  const participantDisplay = document.getElementById("participantDisplay");
+
+  if (participantDisplay) {
+    participantDisplay.textContent = participantId;
+  }
+});
+
+/**
+ * Controls which AI-generated diagnostic support
+ * features are visible for each randomized study arm.
+ * ARM*A: Control, no diagnostic support
+ ** ARM_B: Prioritized diagnoses
+ * ARM_C: Prioritized diagnoses plus probabilities
+ * ARM_D: Full diagnosis list without prioritization
+ */
+const armConfig = {
+  ARM_A: {
+    showDiagnoses: false,
+    showAllDiagnoses: false,
+    showCantMissSection: false,
+    showProbabilities: false,
+    disclaimer: "",
+    showDagger: false,
+    showSidebar: false,
+  },
+
+  ARM_B: {
+    showDiagnoses: true,
+    showAllDiagnoses: false,
+    showCantMissSection: true,
+    showProbabilities: false,
+    disclaimer:
+      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance if missed based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+    cantMissColor: "black",
+    showDagger: true,
+    showSidebar: true,
+  },
+
+  ARM_C: {
+    showDiagnoses: true,
+    showAllDiagnoses: false,
+    showCantMissSection: true,
+    showProbabilities: true,
+    disclaimer:
+      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance if missed based on the available information. Percent estimates and visual displays are intended to support consideration, not to provide a precise or definitive diagnosis; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+    cantMissColor: "#dc2626",
+    showDagger: true,
+    showSidebar: true,
+  },
+
+  ARM_D: {
+    showDiagnoses: true,
+    showAllDiagnoses: true,
+    showCantMissSection: false,
+    showProbabilities: false,
+    disclaimer:
+      "Presented in approximate order of likelihood based on the available information. The ordering is not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+    showDagger: false,
+    showSidebar: true,
+  },
+};
+
+/**
+ * Saves participant responses for the current case,
+ * including diagnosis, testing decisions, management,
+ * AI interactions, transcript use, and time spent.
+ */
+function saveCurrentCase() {
+  const timeSpentSeconds = Math.round((Date.now() - caseStartTime) / 1000);
+  caseResponses.push({
+    caseNumber: currentCase,
+
+    diagnosis: document.getElementById("diagnosis").value,
+
+    otherDiagnoses: Array.from(
+      document.querySelectorAll('#diagnoses input[type="text"]'),
+    )
+      .map((x) => x.value)
+      .filter(Boolean),
+
+    allTests: [
+      ...Array.from(
+        document.querySelectorAll('#tests-manual input[type="text"]'),
+      ),
+      ...Array.from(document.querySelectorAll('#tests-ai input[type="text"]')),
+    ]
+      .map((x) => x.value)
+      .filter(Boolean),
+
+    allManagement: [
+      ...Array.from(
+        document.querySelectorAll('#management-manual input[type="text"]'),
+      ),
+      ...Array.from(
+        document.querySelectorAll('#management-ai input[type="text"]'),
+      ),
+    ]
+      .map((x) => x.value)
+      .filter(Boolean),
+
+    disposition:
+      document.querySelector(".care-btn.selected")?.textContent.trim() || "",
+
+    aiSelections: [...aiSelections],
+
+    transcriptViewed: transcriptViewed,
+
+    transcriptOpenCount: transcriptOpenCount,
+
+    timeSpentSeconds: timeSpentSeconds,
+  });
+}
+
+/**
+ * Ensures all required fields have been completed
+ * before the participant can move to the next case.
+ *
+ * Returns:
+ *   true  = valid
+ *   false = missing required information
+ */
+function validateCase() {
+  const missing = [];
+
+  const diagnosis = document.getElementById("diagnosis")?.value.trim();
+
+  // Verify a primary diagnosis was entered.
+  if (!diagnosis) {
+    missing.push("Most likely diagnosis");
+  }
+
+  const disposition = document.querySelector(".care-btn.selected");
+
+  if (!disposition) {
+    missing.push("Next medical visit");
+  }
+
+  // Require at least one test recommendation.
+  const hasTest = [
+    ...document.querySelectorAll('#tests-manual input[type="text"]'),
+    ...document.querySelectorAll('#tests-ai input[type="text"]'),
+  ].some((x) => x.value.trim());
+
+  if (!hasTest) {
+    missing.push("Tests");
+  }
+  // Require at least one management recommendation.
+  const hasManagement = [
+    ...document.querySelectorAll('#management-manual input[type="text"]'),
+    ...document.querySelectorAll('#management-ai input[type="text"]'),
+  ].some((x) => x.value.trim());
+
+  if (!hasManagement) {
+    missing.push("Treatment/management");
+  }
+
+  if (missing.length > 0) {
+    alert("Please complete:\n\n• " + missing.join("\n• "));
+
+    return false;
+  }
+
+  return true;
+}
+
+// Load pre-generated AI probability estimates.
+const probabilityRows = await fetch("probabilities.json").then((r) => r.json());
+
+// Load AI recommendations.
+const recommendationRows = await fetch("recommendations.json").then((r) =>
+  r.json(),
+);
+
+// Load transcript content
+const transcriptRows = await fetch("transcripts.json").then((r) => r.json());
+
+/**
+ * Builds the recommendation UI.
+ *
+ * TEST recommendations are mapped to the
+ * tests-ai section, while MANAGEMENT
+ * recommendations are mapped to the
+ * management-ai section.
+ */
+function buildRecommendations(recommendations) {
+  let recommendationsHtml = "";
+
+  recommendations.forEach((rec) => {
+    recommendationsHtml += `
+            <div class="recommendation">
+
+                <div class="rec-left">
+
+                    <span class="tag ${
+                      rec.type === "TEST" ? "tag-test" : "tag-management"
+                    }">
+                        ${rec.type}
+                    </span>
+
+                    ${rec.value}
+
+                </div>
+
+                <input
+                    type="checkbox"
+                    class="ai-checkbox"
+                    data-target="${
+                      rec.type === "TEST" ? "tests-ai" : "management-ai"
+                    }"
+                    data-value="${rec.value}">
+
+            </div>
+        `;
+  });
+
+  return recommendationsHtml;
+}
+
+/**
+ * Renders a study case based on the participant's
+ * assigned study arm configuration.
+ *
+ * Responsibilities:
+ * - Load case-specific diagnostic information
+ * - Display AI-generated diagnoses and probabilities
+ * - Display recommendations and transcripts
+ * - Configure UI elements for the current study arm
+ * - Configure navigation to the next case
+ */
+
+window.showCase = function (index) {
+  caseStartTime = Date.now();
+  const currentCaseID = index + 1;
+  document.getElementById("caseLabel").textContent =
+    `Case ${currentCaseID} of ${totalCases}`;
+
+  // Apply randomized study arm settings
+  // that control which AI decision-support
+  // features are visible.
+
+  const config = armConfig[studyArm];
+
+  const layout = document.querySelector(".layout");
+  if (!config.showSidebar) {
+    layout.style.gridTemplateColumns = "100%";
+    document.querySelector(".sidebar").style.display = "none";
+  }
+  const container = document.getElementById("diagnosisList");
+
+  container.style.display = config.showDiagnoses ? "block" : "none";
+
+  const currentRows = probabilityRows.filter(
+    (row) => row.caseID === currentCaseID,
+  );
+
+  const likely = currentRows;
+
+  const cantMiss = currentRows.filter((row) => row.cantMiss);
+
+  const disclaimerCard = document.getElementById("aiDisclaimer");
+
+  const disclaimerText = document.getElementById("disclaimerText");
+
+  if (!config.disclaimer) {
+    disclaimerCard.style.display = "none";
+  } else {
+    disclaimerCard.style.display = "block";
+
+    disclaimerText.textContent = config.disclaimer;
+  }
+  if (!config.showDiagnoses) {
+    container.style.display = "block";
+
+    container.innerHTML = "";
+  } else {
+    container.style.display = "block";
+  }
+
+  let displayedLikely;
+  let displayedCantMiss;
+
+  // Determine which diagnoses will be displayed.
+  // Some arms show all diagnoses, while others
+  // display only the highest-ranked diagnoses.
+
+  if (config.showAllDiagnoses) {
+    displayedLikely = [...currentRows].sort((a, b) => a.rank - b.rank);
+
+    displayedCantMiss = [];
+  } else {
+    displayedLikely = [...likely].sort((a, b) => a.rank - b.rank).slice(0, 3);
+
+    displayedCantMiss = cantMiss.filter(
+      (cm) => !displayedLikely.some((dx) => dx.diagnosisID === cm.diagnosisID),
+    );
+  }
+
+  const transcript = transcriptRows.find((t) => t.caseID === currentCaseID);
+
+  window.currentTranscript = transcript;
+
+  document.getElementById("presentation").textContent =
+    currentRows[0].presentation;
+
+  if (!config.showDiagnoses) {
+    container.innerHTML = `
+        <div style="min-height:600px;"></div>
+    `;
+  } else {
+    container.innerHTML = `
+        <div class="sidebar-header">
+        <h2>AI-Generated Diagnoses</h2>
+        <p>Recommended tests and treatments that can be automatically added to your assessment.</p>
+        </div>
+        <div class="dx-section-header">
+            MOST LIKELY DIAGNOSES
+        </div>
+    `;
+  }
+  if (config.showDiagnoses) {
+    displayedLikely.forEach((row) => {
+      const recommendations = recommendationRows.filter(
+        (rec) => rec.diagnosisID === row.diagnosisID,
+      );
+
+      const recommendationsHtml = buildRecommendations(recommendations);
+
+      let probabilityClass = "";
+
+      let fillClass = "";
+
+      // Assign styling based on probability level.
+      if (row.probability >= 30) {
+        probabilityClass = "probability-high";
+        fillClass = "fill-high";
+      } else if (row.probability >= 10) {
+        probabilityClass = "probability-medium";
+        fillClass = "fill-medium";
+      } else {
+        probabilityClass = "probability-low";
+        fillClass = "fill-low";
+      }
+      container.innerHTML += `
+        <div class="dx-card">
+
+<div class="dx-header">
+
+    <div class="dx-title-row ${
+      !config.showProbabilities ? "dx-title-row-full" : ""
+    }">
+
+<div class="dx-title">
+    ${row.diagnosisName}
+    ${
+      row.cantMiss && config.showDagger
+        ? '<span class="cantmiss-asterisk">&#8224;</span>'
+        : ""
+    }
+</div>
+
+${
+  config.showProbabilities
+    ? `
+        <div class="probability-block">
+
+            <div class="probability-text ${probabilityClass}">
+                ${row.probability}%
+            </div>
+
+            <div class="probability-track">
+
+                <div
+                    class="probability-fill ${fillClass}"
+                    style="width:${row.probability}%">
+                </div>
+
+            </div>
+
+        </div>
+      `
+    : ""
+}
+
+    </div>
+
+    <div class="dx-description">
+        ${row.description}
+    </div>
+
+</div>
+
+            ${
+              recommendationsHtml
+                ? `
+                    <details>
+
+                        <summary>
+                            View Recommendations
+                        </summary>
+
+                        ${recommendationsHtml}
+
+                    </details>
+                  `
+                : ""
+            }
+
+        </div>
+    `;
+    });
+  }
+  if (displayedLikely.some((row) => row.cantMiss)) {
+    if (config.showDagger && displayedLikely.some((row) => row.cantMiss)) {
+      container.innerHTML += `
+        <div class="cantmiss-note">
+            † Important to consider
+        </div>
+    `;
+    }
+  }
+
+  // Display diagnoses that are important
+  // to consider even when likelihood is lower.
+
+  if (config.showCantMissSection && displayedCantMiss.length > 0) {
+    container.innerHTML += `
+    <div class="dx-section-header">
+        OTHER DIAGNOSES IMPORTANT TO CONSIDER
+    </div>
+
+    <div
+        class="dx-description"
+        style="margin-bottom:12px;">
+        A serious condition that (1) is unlikely to resolve without treatment,
+        (2) could progress rapidly, or (3) has public health implications.
+    </div>
+`;
+
+    displayedCantMiss.forEach((row) => {
+      const probabilityClass = "cantmiss";
+      const fillClass = "cantmiss-fill";
+      const recommendations = recommendationRows.filter(
+        (rec) => rec.diagnosisID === row.diagnosisID,
+      );
+
+      const recommendationsHtml = buildRecommendations(recommendations);
+
+      container.innerHTML += `
+            <div class="dx-card">
+
+<div class="dx-header">
+
+    <div class="dx-title-row ${
+      !config.showProbabilities ? "dx-title-row-full" : ""
+    }">
+<div
+    class="dx-title-cantmiss"
+    style="color:${config.cantMissColor};">
+    ${row.diagnosisName}
+</div>
+
+${
+  config.showProbabilities
+    ? `
+        <div class="probability-block">
+
+            <div class="probability-text ${probabilityClass}">
+                ${row.probability}%
+            </div>
+
+            <div class="probability-track cantmiss-track">
+
+    <div
+        class="probability-fill ${fillClass}"
+        style="width:${row.probability}%">
+    </div>
+
+</div>
+        </div>
+      `
+    : ""
+}
+
+    </div>
+
+</div>
+
+<div class="dx-description">
+    ${row.description}
+</div>
+
+                ${
+                  recommendationsHtml
+                    ? `
+                        <details>
+
+                            <summary>
+                                View Recommendations
+                            </summary>
+
+                            ${recommendationsHtml}
+
+                        </details>
+                      `
+                    : ""
+                }
+
+            </div>
+        `;
+    });
+  }
+  const actionButton = document.getElementById("actionButton");
+
+  // Final case uses the submit action;
+  // all others advance to the next case.
+  if (index === totalCases - 1) {
+    actionButton.textContent = "Finish Cases";
+
+    actionButton.onclick = submitCase;
+  } else {
+    actionButton.textContent = "Next Case";
+
+    actionButton.onclick = nextCase;
+  }
+};
+
+window.resetCaseForm = function () {
+  document.getElementById("diagnosis").value = "";
+  document.getElementById("diagnoses").innerHTML = "";
+  document.getElementById("tests-manual").innerHTML = "";
+  document.getElementById("tests-ai").innerHTML = "";
+  document.getElementById("management-manual").innerHTML = "";
+  document.getElementById("management-ai").innerHTML = "";
+
+  addGrowingRow("diagnoses");
+  addGrowingRow("tests-manual");
+  addGrowingRow("management-manual");
+
+  document
+    .querySelectorAll(".care-btn")
+    .forEach((btn) => btn.classList.remove("selected"));
+
+  aiSelections.length = 0;
+
+  updateReviewSummary();
+};
+
+window.nextCase = async function () {
+  if (!validateCase()) {
+    return;
+  }
+  saveCurrentCase();
+
+  await saveProgress();
+  resetCaseForm();
+
+  currentCase++;
+
+  if (currentCase <= totalCases) {
+    showCase(currentCase - 1);
+    caseStartTime = Date.now();
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+};
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  doc,
+  setDoc,
+  getDoc,
+  deleteDoc,
+} from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC4uAUWrO03pxOL2DtvOMVRWN4aR5YignA",
+  authDomain: "clinical-ai-study.firebaseapp.com",
+  projectId: "clinical-ai-study",
+  storageBucket: "clinical-ai-study.firebasestorage.app",
+  messagingSenderId: "470693626185",
+  appId: "1:470693626185:web:3abc35f26fee7f10ac5a98",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+async function loadParticipantArm() {
+  const snapshot = await getDoc(doc(db, "assignments", participantId));
+
+  if (!snapshot.exists()) {
+    alert("Participant ID not found.");
+
+    throw new Error("Participant ID not found.");
+  }
+
+  studyArm = snapshot.data().studyArm;
+}
+async function saveProgress() {
+  await setDoc(
+    doc(db, "studyProgress", participantId),
+
+    {
+      participantId,
+      studyArm,
+
+      currentCase,
+
+      responses: caseResponses,
+
+      completed: false,
+
+      updated: new Date().toISOString(),
+    },
+
+    {
+      merge: true,
+    },
+  );
+}
+
+function validateDemographics() {
+  if (!document.getElementById("demoAge").value.trim()) {
+    alert("Please enter your age.");
+    return false;
+  }
+
+  if (!document.getElementById("demoGender").value) {
+    alert("Please select a gender.");
+    return false;
+  }
+
+  if (!document.getElementById("demoDegree").value) {
+    alert("Please select a degree.");
+    return false;
+  }
+
+  if (!document.getElementById("demoPracticeType").value.trim()) {
+    alert("Please enter a practice type.");
+    return false;
+  }
+
+  if (!document.getElementById("demoResident").value) {
+    alert("Please indicate whether you are currently a resident.");
+    return false;
+  }
+
+  if (
+    document.getElementById("demoResident").value === "Yes" &&
+    !document.getElementById("demoResidencyYear").value
+  ) {
+    alert("Please select your residency year.");
+    return false;
+  }
+
+  if (!document.getElementById("demoMalpractice").value) {
+    alert(
+      "Please indicate whether you have been sued for medical malpractice.",
+    );
+    return false;
+  }
+
+  if (!document.getElementById("demoAIUse").value) {
+    alert("Please indicate your prior use of AI.");
+    return false;
+  }
+
+  const residentStatus = document.getElementById("demoResident").value;
+
+  const yearsPractice = document
+    .getElementById("demoYearsPractice")
+    .value.trim();
+
+  if (residentStatus === "Yes" && yearsPractice) {
+    alert("Residents should leave Years in Practice blank.");
+    return false;
+  }
+
+  if (residentStatus === "No" && !yearsPractice) {
+    alert("Please enter Years in Practice.");
+    return false;
+  }
+
+  return true;
+}
+
+async function saveDemographics() {
+  const raceEthnicity = Array.from(
+    document.querySelectorAll('input[name="raceEthnicity"]:checked'),
+  ).map((checkbox) => checkbox.value);
+
+  await setDoc(
+    doc(db, "postStudy", participantId),
+    {
+      participantId,
+      studyArm,
+
+      demographics: {
+        age: document.getElementById("demoAge").value,
+
+        gender: document.getElementById("demoGender").value,
+
+        raceEthnicity,
+
+        degree: document.getElementById("demoDegree").value,
+
+        practiceType: document.getElementById("demoPracticeType").value,
+
+        resident: document.getElementById("demoResident").value,
+
+        residencyYear: document.getElementById("demoResidencyYear").value,
+
+        yearsInPractice: document.getElementById("demoYearsPractice").value,
+
+        residencyTraining: document.getElementById("demoResidencyTraining")
+          .value,
+
+        otherGraduateDegrees: document.getElementById("demoOtherDegrees").value,
+
+        malpracticeHistory: document.getElementById("demoMalpractice").value,
+
+        priorAIUse: document.getElementById("demoAIUse").value,
+      },
+    },
+    {
+      merge: true,
+    },
+  );
+}
+const startTime = Date.now();
+
+if (!participantId) {
+  alert("Missing Participant ID");
+  throw new Error("Missing Participant ID");
+}
+window.submitCase = async function () {
+  if (!validateCase()) {
+    return;
+  }
+  saveCurrentCase();
+  updateReviewSummary();
+  try {
+    await setDoc(
+      doc(db, "responses", participantId),
+
+      {
+        participantId,
+        studyArm,
+        currentCase,
+        surveyVersion: "2026-08-17",
+
+        responses: caseResponses,
+
+        completed: true,
+
+        submitted: new Date().toISOString(),
+      },
+    );
+    // await deleteDoc(
+    //     doc(
+    //         db,
+    //         "studyProgress",
+    //         participantId
+    //     )
+    // );
+
+    // document.body.innerHTML = `
+    //     <div style="
+    //         display:flex;
+    //         flex-direction:column;
+    //         justify-content:center;
+    //         align-items:center;
+    //         height:100vh;
+    //         background:#f6f4f8;
+    //         font-family:Inter,sans-serif;
+    //     ">
+    //         <h1>Thank You</h1>
+    //         <p>Your response has been successfully recorded.</p>
+    //     </div>
+    // `;
+
+    document.getElementById("studyScreen").style.display = "none";
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    document.getElementById("demographicsScreen").style.display = "block";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    return;
+  } catch (error) {
+    console.error(error);
+
+    alert("Submission failed. Check the browser console.");
+  }
+};
+
+async function loadStudy() {
+  const snapshot = await getDoc(doc(db, "studyProgress", participantId));
+
+  if (snapshot.exists()) {
+    const data = snapshot.data();
+
+    currentCase = data.currentCase || 1;
+
+    caseResponses = data.responses || [];
+
+    showCase(currentCase - 1);
+  } else {
+    showCase(0);
+  }
+}
+
+loadStudy();
+
+// hide years in residency for non-residents
+document.getElementById("demoResident").addEventListener("change", function () {
+  document.getElementById("residentYearSection").style.display =
+    this.value === "Yes" ? "block" : "none";
+});
+
+document.getElementById("demographicsNextBtn").onclick = async function () {
+  console.log("Continue clicked");
+
+  if (!validateDemographics()) {
+    console.log("Validation failed");
+    return;
+  }
+
+  console.log("Validation passed");
+
+  try {
+    await saveDemographics();
+
+    console.log("Demographics saved");
+
+    document.getElementById("demographicsScreen").style.display = "none";
+
+    document.getElementById("scalesScreen").style.display = "block";
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Autofill for cases
+window.autoFillCase = function () {
+  document.getElementById("diagnosis").value = "Test diagnosis";
+
+  document
+    .querySelectorAll('#diagnoses input[type="text"]')
+    .forEach((input) => {
+      input.value = "Test differential";
+    });
+
+  document
+    .querySelectorAll('#tests-manual input[type="text"]')
+    .forEach((input) => {
+      input.value = "Test test";
+    });
+
+  document
+    .querySelectorAll('#management-manual input[type="text"]')
+    .forEach((input) => {
+      input.value = "Test management";
+    });
+
+  const firstCareButton = document.querySelector(".care-btn");
+
+  if (firstCareButton) {
+    firstCareButton.click();
+  }
+};
+
+// Autofill for demographics
+window.autoFillDemographics = function () {
+  document.getElementById("demoAge").value = 45;
+
+  document.getElementById("demoGender").value = "Female";
+
+  document.getElementById("demoDegree").value = "MD or equivalent";
+
+  document.getElementById("demoPracticeType").value = "Academic";
+
+  document.getElementById("demoResidencyYear").value = "N/A";
+
+  document.getElementById("demoYearsPractice").value = 10;
+
+  document.getElementById("demoMalpractice").value = "No";
+
+  document.getElementById("demoAIUse").value = "Sometimes";
+
+  // Race/Ethnicity checkbox
+  const raceCheckbox = document.querySelector(
+    'input[name="raceEthnicity"][value="White"]',
+  );
+
+  if (raceCheckbox) {
+    raceCheckbox.checked = true;
+  }
+};
+
+// Autofill for fear of malpractice
+window.autoFillFearScale = function () {
+  for (let i = 1; i <= 6; i++) {
+    document.querySelector(`input[name="fear${i}"][value="3"]`)?.click();
+  }
+};
+
+function validateScales() {
+  for (let i = 1; i <= 6; i++) {
+    if (!document.querySelector(`input[name="fear${i}"]:checked`)) {
+      alert(`Please answer question ${i}.`);
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function validateMaximizer() {
+  for (let i = 1; i <= 8; i++) {
+    if (!document.querySelector(`input[name="max${i}"]:checked`)) {
+      alert(`Please answer question ${i}.`);
+
+      return false;
+    }
+  }
+
+  return true;
+}
+
+async function saveScales() {
+  await setDoc(
+    doc(db, "postStudy", participantId),
+    {
+      fearOfMalpractice: {
+        fear1: document.querySelector('input[name="fear1"]:checked')?.value,
+
+        fear2: document.querySelector('input[name="fear2"]:checked')?.value,
+
+        fear3: document.querySelector('input[name="fear3"]:checked')?.value,
+
+        fear4: document.querySelector('input[name="fear4"]:checked')?.value,
+
+        fear5: document.querySelector('input[name="fear5"]:checked')?.value,
+
+        fear6: document.querySelector('input[name="fear6"]:checked')?.value,
+      },
+    },
+    {
+      merge: true,
+    },
+  );
+}
+
+async function saveMaximizer() {
+  const results = {};
+
+  for (let i = 1; i <= 8; i++) {
+    results[`max${i}`] =
+      document.querySelector(`input[name="max${i}"]:checked`)?.value || "";
+  }
+
+  await setDoc(
+    doc(db, "postStudy", participantId),
+    {
+      maximizerMinimizer: results,
+    },
+    {
+      merge: true,
+    },
+  );
+}
+
+document.getElementById("maximizerNextBtn").onclick = async function () {
+  if (!validateMaximizer()) {
+    return;
+  }
+
+  await saveMaximizer();
+
+  document.getElementById("maximizerScreen").style.display = "none";
+
+  document.getElementById("stressScreen").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+document.getElementById("scalesNextBtn").onclick = async function () {
+  if (!validateScales()) {
+    return;
+  }
+
+  await saveScales();
+
+  document.getElementById("scalesScreen").style.display = "none";
+
+  document.getElementById("maximizerScreen").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
+  // next screen goes here
+};
+
+// Maximizer questions
+
+const maximizerQuestions = [
+  "1. It is important to treat disease even when treatment may not make a noticeable difference.",
+
+  "2. It is important to treat a disease even when it does not make a difference in quality of life.",
+
+  "3.	Doing everything to fight illness is always the right choice.",
+
+  "4.	When it comes to health care, the only responsible thing to do is to actively seek medical care.",
+
+  "5.	If I have a health issue, my preference is to wait and see if the problem gets better on its own before doing anything about it.",
+
+  "6.	When it comes to health care, watching and waiting is never an acceptable option.",
+
+  "7.	When it comes to medical treatment, more is usually better.",
+
+  "8.	Diagnostic tests always provide helpful information even if their results do not directly impact care.",
+];
+
+function buildMaximizerScale() {
+  const container = document.getElementById("maximizerQuestions");
+
+  container.innerHTML = "";
+
+  maximizerQuestions.forEach((question, index) => {
+    let row = `
+                <tr>
+
+                    <td class="likert-question">
+                        ${question}
+                    </td>
+            `;
+
+    for (let value = 1; value <= 7; value++) {
+      row += `
+                    <td class="likert-option">
+
+                        <input
+                            type="radio"
+                            name="max${index + 1}"
+                            value="${value}">
+
+                    </td>
+                `;
+    }
+
+    row += `
+                </tr>
+            `;
+
+    container.innerHTML += row;
+  });
+}
+buildMaximizerScale();
+
+// Stress from Uncertainty
+const stressQuestions = [
+  "1.	There is often uncertainty in the practice of medicine.",
+
+  "2.	I find the uncertainty involved in patient care disconcerting.",
+
+  "3.	Uncertainty in patient care makes me uneasy.",
+
+  "4.	The uncertainty of patient care often troubles me.",
+];
+
+function buildStressScale() {
+  const container = document.getElementById("stressQuestions");
+
+  container.innerHTML = "";
+
+  stressQuestions.forEach((question, index) => {
+    let row = `
+                <tr>
+
+                    <td class="likert-question">
+                        ${question}
+                    </td>
+            `;
+
+    for (let value = 1; value <= 6; value++) {
+      row += `
+                    <td class="likert-option">
+
+                        <input
+                            type="radio"
+                            name="stress${index + 1}"
+                            value="${value}">
+
+                    </td>
+                `;
+    }
+
+    row += `
+                </tr>
+            `;
+
+    container.innerHTML += row;
+  });
+}
+buildStressScale();
+
+function validateStress() {
+  for (let i = 1; i <= stressQuestions.length; i++) {
+    if (!document.querySelector(`input[name="stress${i}"]:checked`)) {
+      alert(`Please answer question ${i}.`);
+
+      return false;
+    }
+  }
+
+  return true;
+}
+
+async function saveStress() {
+  const results = {};
+
+  for (let i = 1; i <= stressQuestions.length; i++) {
+    results[`stress${i}`] =
+      document.querySelector(`input[name="stress${i}"]:checked`)?.value || "";
+  }
+
+  await setDoc(
+    doc(db, "postStudy", participantId),
+    {
+      stressFromUncertainty: results,
+    },
+    {
+      merge: true,
+    },
+  );
+}
+
+// button handler for end of stress scale
+document.getElementById("stressNextBtn").onclick = async function () {
+  if (!validateStress()) {
+    return;
+  }
+
+  await saveStress();
+
+  document.getElementById("stressScreen").style.display = "none";
+
+  document.getElementById("thankYouScreen").style.display = "block";
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+// function to save email address
+async function saveCompensation() {
+  const email = document.getElementById("giftCardEmail").value.trim();
+
+  if (!email) {
+    alert("Please enter an email address.");
+
+    return false;
+  }
+
+  await addDoc(collection(db, "compensation"), {
+    email: email,
+
+    submittedAt: new Date().toISOString(),
+  });
+
+  return true;
+}
+
+// button handler for final submission
+document.getElementById("finalSubmitBtn").onclick = async function () {
+  const success = await saveCompensation();
+
+  if (!success) {
+    return;
+  }
+
+  await deleteDoc(doc(db, "studyProgress", participantId));
+
+  await setDoc(
+    doc(db, "postStudy", participantId),
+    {
+      studyCompleted: true,
+      completedAt: new Date().toISOString(),
+    },
+    {
+      merge: true,
+    },
+  );
+
+  document.getElementById("thankYouScreen").innerHTML = `
+        <div class="case-card">
+
+            <h2>
+                Thank You
+            </h2>
+
+            <p>
+                Your responses have been successfully recorded.
+            </p>
+
+            <p>
+                Your compensation information has been received.
+            </p>
+
+            <p>
+                You may now close this browser window.
+            </p>
+
+        </div>
+    `;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+};
+
+function updateReviewSummary(){
+
+    const diagnosis =
+        document.getElementById("diagnosis").value;
+
+    const diagnoses =
+        Array.from(
+            document.querySelectorAll(
+                '#diagnoses input[type="text"]'
+            )
+        )
+        .map(x => x.value)
+        .filter(Boolean);
+
+    const tests =
+        [
+            ...Array.from(
+                document.querySelectorAll(
+                    '#tests-manual input[type="text"]'
+                )
+            ),
+            ...Array.from(
+                document.querySelectorAll(
+                    '#tests-ai input[type="text"]'
+                )
+            )
+        ]
+        .map(x => x.value)
+        .filter(Boolean);
+
+    const management =
+        [
+            ...Array.from(
+                document.querySelectorAll(
+                    '#management-manual input[type="text"]'
+                )
+            ),
+            ...Array.from(
+                document.querySelectorAll(
+                    '#management-ai input[type="text"]'
+                )
+            )
+        ]
+        .map(x => x.value)
+        .filter(Boolean);
+
+    const disposition =
+        document.querySelector(
+            ".care-btn.selected"
+        )?.textContent.trim() || "Not selected";
+
+    document.getElementById("reviewSummary")
+        .innerHTML = `
+            <div class="review-section">
+                <div class="review-label">Most Likely Diagnosis</div>
+                <div>${diagnosis || "Not entered"}</div>
+            </div>
+
+            <div class="review-section">
+                <div class="review-label">Other Diagnoses</div>
+                <div>${diagnoses.join("<br>") || "None"}</div>
+            </div>
+
+            <div class="review-section">
+                <div class="review-label">Tests</div>
+                <div>${tests.join("<br>") || "None"}</div>
+            </div>
+
+            <div class="review-section">
+                <div class="review-label">Management</div>
+                <div>${management.join("<br>") || "None"}</div>
+            </div>
+
+            <div class="review-section">
+                <div class="review-label">Next Medical Visit</div>
+                <div>${disposition}</div>
+            </div>
+        `;
+}
+
+window.openChat = function () {
+
+    transcriptViewed = true;
+    transcriptOpenCount++;
+
+    const chatWindow =
+        document.getElementById("chatWindow");
+
+    chatWindow.innerHTML = "";
+
+    (window.currentTranscript?.messages || [])
+        .forEach(msg => {
+
+            chatWindow.innerHTML += `
+                <div class="chat-message ${
+                    msg.speaker === "User"
+                        ? "user"
+                        : "ai"
+                }">
+
+                    <strong>${msg.speaker}:</strong>
+
+                    ${msg.message}
+
+                </div>
+            `;
+        });
+
+    document.getElementById(
+        "chatModal"
+    ).style.display = "flex";
+
+};   // <-- THIS IS MISSING
+
+window.closeChat = function () {
+
+    document.getElementById(
+        "chatModal"
+    ).style.display = "none";
+};
+
+window.closeChat = function(){
+
+    document.getElementById(
+        "chatModal"
+    ).style.display = "none";
+};
+
+const aiSelections=[];
+
+let transcriptViewed = false;
+let transcriptOpenCount = 0;
+
+/* AI auto-fill */
+
+document.addEventListener("change",function(e){
+
+    if(!e.target.classList.contains("ai-checkbox")){
+        return;
+    }
+
+    const value=e.target.dataset.value;
+    const target=e.target.dataset.target;
+
+    if(e.target.checked){
+
+        if(!aiSelections.includes(value)){
+            aiSelections.push(value);
+        }
+
+        addAIFill(target,value);
+
+    }else{
+
+        removeAIFill(value);
+
+        const index=aiSelections.indexOf(value);
+
+        if(index>-1){
+            aiSelections.splice(index,1);
+        }
+    }
+	updateReviewSummary();
+
+});
+
+
+function addAIFill(containerId,value){
+
+    const container =
+        document.getElementById(containerId);
+
+    const exists =
+        container.querySelector(
+            `[data-ai="${value}"]`
+        );
+
+    if(exists) return;
+
+    const row = document.createElement("div");
+
+    row.className = "dynamic-row";
+    row.dataset.ai = value;
+
+row.innerHTML = `
+    <input
+        type="text"
+        value="${value}"
+        readonly
+        class="ai-filled">
+
+    <span class="tag tag-ai">
+        AI
+    </span>
+`;
+
+
+    container.appendChild(row);
+}
+
+function removeAIFill(value){
+
+    const stillChecked =
+        [...document.querySelectorAll(
+            '.ai-checkbox:checked'
+        )]
+        .some(
+            checkbox =>
+                checkbox.dataset.value === value
+        );
+
+    if(stillChecked){
+        return;
+    }
+
+    const item =
+        document.querySelector(
+            '[data-ai="' + value + '"]'
+        );
+
+    if(item){
+        item.remove();
+    }
+}
+
+/* care option */
+
+document.querySelectorAll(".care-btn")
+.forEach(btn=>{
+
+    btn.addEventListener("click",function(){
+
+        document.querySelectorAll(".care-btn")
+        .forEach(b=>b.classList.remove("selected"));
+
+        this.classList.add("selected");
+
+        updateReviewSummary();
+
+    });
+
+});
+
+/* auto rows */
+
+function addGrowingRow(containerId){
+
+    const row = document.createElement("div");
+
+    row.className = "dynamic-row";
+
+    const input = document.createElement("input");
+
+    input.type = "text";
+
+    input.addEventListener("blur", function(){
+
+        const container =
+            document.getElementById(containerId);
+
+        const emptyRows =
+            [...container.querySelectorAll("input")]
+            .filter(i => i.value.trim() === "");
+
+        if(
+            input.value.trim() === "" &&
+            emptyRows.length > 1
+        ){
+            row.remove();
+        }
+
+    });
+
+    input.addEventListener("keydown", function(e){
+
+        if(
+            e.key === "Enter" &&
+            input.value.trim() !== ""
+        ){
+
+            e.preventDefault();
+
+            const container =
+                document.getElementById(containerId);
+
+            const inputs =
+                [...container.querySelectorAll("input")];
+
+            const currentIndex =
+                inputs.indexOf(input);
+
+            const isLast =
+                currentIndex === inputs.length - 1;
+
+            if(isLast){
+
+                addGrowingRow(containerId);
+
+                const updatedInputs =
+                    [...container.querySelectorAll("input")];
+
+                updatedInputs[
+                    updatedInputs.length - 1
+                ]?.focus();
+            }
+
+        }
+
+    });
+
+    const addBtn = document.createElement("button");
+
+    addBtn.type = "button";
+    addBtn.className = "inline-add-btn";
+    addBtn.textContent = "+";
+
+addBtn.onclick = function(){
+
+    const container =
+        document.getElementById(containerId);
+
+    const existingEmpty =
+        [...container.querySelectorAll("input")]
+        .find(i => i.value.trim() === "");
+
+    if(existingEmpty){
+
+        existingEmpty.focus();
+        return;
+
+    }
+
+    addGrowingRow(containerId);
+
+};
+    row.appendChild(input);
+    row.appendChild(addBtn);
+
+    document.getElementById(containerId)
+        .appendChild(row);
+}
+
+document.addEventListener(
+    "input",
+    updateReviewSummary
+);
+
+document.addEventListener(
+    "change",
+    updateReviewSummary
+);
+
+updateReviewSummary();
+addGrowingRow("diagnoses");
+addGrowingRow("tests-manual");
+addGrowingRow("management-manual");
