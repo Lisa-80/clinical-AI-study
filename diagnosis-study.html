@@ -1648,19 +1648,135 @@ async function saveStress(){
     );
 }
 
+// button handler for end of stress scale
 document
     .getElementById("stressNextBtn")
     .onclick = async function(){
 
-        if(!validateStress()){
-            return;
-        }
+    if(!validateStress()){
+        return;
+    }
 
-        await saveStress();
+    await saveStress();
 
-        alert("Survey Complete!");
+    document.getElementById(
+        "stressScreen"
+    ).style.display = "none";
+
+    document.getElementById(
+        "thankYouScreen"
+    ).style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 
 };
+
+// function to save email address
+async function saveCompensation(){
+
+    const email =
+        document.getElementById(
+            "giftCardEmail"
+        )
+        .value
+        .trim();
+
+    if(!email){
+
+        alert(
+            "Please enter an email address."
+        );
+
+        return false;
+    }
+
+    await addDoc(
+        collection(
+            db,
+            "compensation"
+        ),
+        {
+            email: email,
+
+            submittedAt:
+                new Date().toISOString()
+        }
+    );
+
+    return true;
+}
+
+
+// button handler for final submission
+document
+    .getElementById("finalSubmitBtn")
+    .onclick = async function(){
+
+    const success =
+        await saveCompensation();
+
+    if(!success){
+        return;
+    }
+
+    await deleteDoc(
+        doc(
+            db,
+            "studyProgress",
+            participantId
+        )
+    );
+
+    await setDoc(
+        doc(
+            db,
+            "postStudy",
+            participantId
+        ),
+        {
+            studyCompleted: true,
+            completedAt:
+                new Date().toISOString()
+        },
+        {
+            merge: true
+        }
+    );
+
+    document.getElementById(
+        "thankYouScreen"
+    ).innerHTML = `
+        <div class="case-card">
+
+            <h2>
+                Thank You
+            </h2>
+
+            <p>
+                Your responses have been successfully recorded.
+            </p>
+
+            <p>
+                Your compensation information has been received.
+            </p>
+
+            <p>
+                You may now close this browser window.
+            </p>
+
+        </div>
+    `;
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+};
+
 </script>
 
 <body>
@@ -2472,6 +2588,55 @@ document
         <button id="stressNextBtn"
         class="submit-btn">
             Submit
+        </button>
+
+    </div>
+    </div>
+<div id="thankYouScreen" style="display:none;">
+
+    <div class="case-card">
+
+        <h2>
+            Thank You
+        </h2>
+
+        <p>
+            Thank you for participating in this study.
+        </p>
+
+        <p>
+            Your responses have been successfully recorded.
+        </p>
+
+        <p>
+            You have completed all study tasks and questionnaires.
+        </p>
+        <p>
+            If you would like to receive a gift card for participating in this study,
+            please provide an email address below.
+        </p>
+
+        <p>
+            Your email address will be stored separately from your study responses
+            and will only be used for compensation purposes.
+        </p>
+
+        <label>
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="giftCardEmail"
+            placeholder="name@example.com">
+
+        <br><br>
+
+        <button
+            id="finalSubmitBtn"
+            class="submit-btn">
+
+            Submit Resposnes
         </button>
 
     </div>
