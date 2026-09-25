@@ -695,7 +695,9 @@ input[type=text]{
 #scalesScreen .case-card,
 #maximizerScreen .case-card,
 #stressScreen .case-card,
-#qualitativeScreen .case-card{
+#qualitativeScreen .case-card,
+#thankYouScreen .case-card
+{
     max-width:1000px;
     margin:40px auto;
 }
