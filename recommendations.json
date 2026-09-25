@@ -1,0 +1,2152 @@
+[
+  {
+    "diagnosisID": "viralDiarrhea",
+    "type": "TEST",
+    "value": "GI PCR"
+  },
+  {
+    "diagnosisID": "viralDiarrhea",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "viralDiarrhea",
+    "type": "MGMT",
+    "value": "Loperamide"
+  },
+  {
+    "diagnosisID": "bacterialDiarrhea",
+    "type": "TEST",
+    "value": "GI PCR"
+  },
+  {
+    "diagnosisID": "bacterialDiarrhea",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "bacterialDiarrhea",
+    "type": "MGMT",
+    "value": "Ciprofloxacin"
+  },
+  {
+    "diagnosisID": "protozoalDiarrhea",
+    "type": "TEST",
+    "value": "CBC, Chem 7"
+  },
+  {
+    "diagnosisID": "protozoalDiarrhea",
+    "type": "TEST",
+    "value": "GI PCR"
+  },
+  {
+    "diagnosisID": "protozoalDiarrhea",
+    "type": "TEST",
+    "value": "Stool O&P"
+  },
+  {
+    "diagnosisID": "protozoalDiarrhea",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "protozoalDiarrhea",
+    "type": "MGMT",
+    "value": "Metronidazole"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "TEST",
+    "value": "ESR/CRP"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "TEST",
+    "value": "Fecal calprotectin"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Gastroenterology consult"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Colonoscopy with biopsy"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Mesalamine"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Budesonide"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Infliximab"
+  },
+  {
+    "diagnosisID": "IBS",
+    "type": "MGMT",
+    "value": "Counseling for stress & lifestyle management"
+  },
+  {
+    "diagnosisID": "IBS",
+    "type": "MGMT",
+    "value": "Dietary alterations"
+  },
+  {
+    "diagnosisID": "IBS",
+    "type": "MGMT",
+    "value": "Antispasmodics"
+  },
+  {
+    "diagnosisID": "IBS",
+    "type": "MGMT",
+    "value": "Fiber (diet or supplement)"
+  },
+  {
+    "diagnosisID": "IBS",
+    "type": "MGMT",
+    "value": "Loperamide"
+  },
+  {
+    "diagnosisID": "FoodPoisoning",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "FoodPoisoning",
+    "type": "MGMT",
+    "value": "Anti-emetic (Zofran, etc.)"
+  },
+  {
+    "diagnosisID": "Diverticulitis",
+    "type": "TEST",
+    "value": "CBC, Chem 7"
+  },
+  {
+    "diagnosisID": "Diverticulitis",
+    "type": "TEST",
+    "value": "CT abdomen/pelvis"
+  },
+  {
+    "diagnosisID": "Diverticulitis",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "Diverticulitis",
+    "type": "MGMT",
+    "value": "Amoxicillin-clavulanate"
+  },
+  {
+    "diagnosisID": "Malabsorption",
+    "type": "TEST",
+    "value": "Fecal elastase, fecal fat, CBC"
+  },
+  {
+    "diagnosisID": "Malabsorption",
+    "type": "TEST",
+    "value": "Vitamin levels (B12, folate, iron, vit K, vit D)"
+  },
+  {
+    "diagnosisID": "Malabsorption",
+    "type": "TEST",
+    "value": "Celiac panel"
+  },
+  {
+    "diagnosisID": "Malabsorption",
+    "type": "MGMT",
+    "value": "Gastroenterology consult"
+  },
+  {
+    "diagnosisID": "Malabsorption",
+    "type": "MGMT",
+    "value": "Upper endoscopy"
+  },
+  {
+    "diagnosisID": "LaxativeMisuse",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "LaxativeMisuse",
+    "type": "MGMT",
+    "value": "Mental health counseling"
+  },
+  {
+    "diagnosisID": "STI",
+    "type": "TEST",
+    "value": "Gonorrhea/chlamydia PCR"
+  },
+  {
+    "diagnosisID": "STI",
+    "type": "MGMT",
+    "value": "Hydration (sugar-electrolyte solutions)"
+  },
+  {
+    "diagnosisID": "STI",
+    "type": "MGMT",
+    "value": "Ceftriaxone"
+  },
+  {
+    "diagnosisID": "STI",
+    "type": "MGMT",
+    "value": "Doxycycline"
+  },
+  {
+    "diagnosisID": "STI",
+    "type": "MGMT",
+    "value": "Partner notification"
+  },
+  {
+    "diagnosisID": "PanicAttack",
+    "type": "MGMT",
+    "value": "Psychiatry consult"
+  },
+  {
+    "diagnosisID": "PanicAttack",
+    "type": "MGMT",
+    "value": "Cognitive behavioral therapy referral"
+  },
+  {
+    "diagnosisID": "PanicAttack",
+    "type": "MGMT",
+    "value": "Sertraline"
+  },
+  {
+    "diagnosisID": "PanicAttack",
+    "type": "MGMT",
+    "value": "Propranolol"
+  },
+  {
+    "diagnosisID": "PanicAttack",
+    "type": "MGMT",
+    "value": "Lorazepam"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "TEST",
+    "value": "CBC, Chem 7"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "TEST",
+    "value": "Serum toxicology"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "TEST",
+    "value": "Urine toxicology"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "MGMT",
+    "value": "Addiction medicine consult"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "MGMT",
+    "value": "Naltrexone"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "MGMT",
+    "value": "Nicotine replacement"
+  },
+  {
+    "diagnosisID": "Conversion_disorder",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Conversion_disorder",
+    "type": "TEST",
+    "value": "MRI brain"
+  },
+  {
+    "diagnosisID": "Conversion_disorder",
+    "type": "TEST",
+    "value": "EEG"
+  },
+  {
+    "diagnosisID": "Conversion_disorder",
+    "type": "MGMT",
+    "value": "Psychiatry referral"
+  },
+  {
+    "diagnosisID": "MedicationSideEffect",
+    "type": "MGMT",
+    "value": "Psychiatry referral to evaluate medications"
+  },
+  {
+    "diagnosisID": "GERD",
+    "type": "MGMT",
+    "value": "Omeprazole"
+  },
+  {
+    "diagnosisID": "GERD",
+    "type": "MGMT",
+    "value": "Gastroenterology consult"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "TEST",
+    "value": "PT/PTT"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "TEST",
+    "value": "MRI brain"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "TEST",
+    "value": "CTA/MRA"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "TEST",
+    "value": "ECG"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "MGMT",
+    "value": "Aspirin"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "MGMT",
+    "value": "Clopidogrel"
+  },
+  {
+    "diagnosisID": "MechanicalObstruction",
+    "type": "TEST",
+    "value": "CBC, Chem 7"
+  },
+  {
+    "diagnosisID": "MechanicalObstruction",
+    "type": "TEST",
+    "value": "CT neck/chest"
+  },
+  {
+    "diagnosisID": "MechanicalObstruction",
+    "type": "MGMT",
+    "value": "Speech pathology consult"
+  },
+  {
+    "diagnosisID": "MechanicalObstruction",
+    "type": "MGMT",
+    "value": "Otolaryngology (ENT) consult"
+  },
+  {
+    "diagnosisID": "MechanicalObstruction",
+    "type": "MGMT",
+    "value": "Gastroenterology consult"
+  },
+  {
+    "diagnosisID": "EsophagealDisorder",
+    "type": "TEST",
+    "value": "Chem 12"
+  },
+  {
+    "diagnosisID": "EsophagealDisorder",
+    "type": "TEST",
+    "value": "Barium esophagram"
+  },
+  {
+    "diagnosisID": "EsophagealDisorder",
+    "type": "TEST",
+    "value": "Esophageal manometry"
+  },
+  {
+    "diagnosisID": "EsophagealDisorder",
+    "type": "MGMT",
+    "value": "GI consult (Upper Endoscopy etc.)"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "TEST",
+    "value": "EEG"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "TEST",
+    "value": "MRI brain"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "MGMT",
+    "value": "Neurology consult"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "MGMT",
+    "value": "Lamotrigine"
+  },
+  {
+    "diagnosisID": "BPPV",
+    "type": "TEST",
+    "value": "Dix-Hallpike"
+  },
+  {
+    "diagnosisID": "BPPV",
+    "type": "MGMT",
+    "value": "Vestibular rehabilitation"
+  },
+  {
+    "diagnosisID": "BPPV",
+    "type": "MGMT",
+    "value": "Epley maneuver"
+  },
+  {
+    "diagnosisID": "BPPV",
+    "type": "MGMT",
+    "value": "Meclizine"
+  },
+  {
+    "diagnosisID": "DentalInfection",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "DentalInfection",
+    "type": "TEST",
+    "value": "CT head and neck"
+  },
+  {
+    "diagnosisID": "DentalInfection",
+    "type": "TEST",
+    "value": "Wound culture"
+  },
+  {
+    "diagnosisID": "DentalInfection",
+    "type": "MGMT",
+    "value": "Amoxicillin-clavulanate"
+  },
+  {
+    "diagnosisID": "DentalInfection",
+    "type": "MGMT",
+    "value": "Dental consult"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "TEST",
+    "value": "CT head & neck"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "TEST",
+    "value": "Blood cultures"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "MGMT",
+    "value": "Ampicillin-sulbactam"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "MGMT",
+    "value": "Hospital admission"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "MGMT",
+    "value": "Otolaryngology (ENT) consult"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "MGMT",
+    "value": "Anesthesiology consult for airway managemen"
+  },
+  {
+    "diagnosisID": "Lymphoma",
+    "type": "TEST",
+    "value": "CBC with peripheral smear"
+  },
+  {
+    "diagnosisID": "Lymphoma",
+    "type": "TEST",
+    "value": "Chem 12"
+  },
+  {
+    "diagnosisID": "Lymphoma",
+    "type": "TEST",
+    "value": "CT head & neck"
+  },
+  {
+    "diagnosisID": "Lymphoma",
+    "type": "TEST",
+    "value": "PET/CT"
+  },
+  {
+    "diagnosisID": "Lymphoma",
+    "type": "TEST",
+    "value": "Lymph node biopsy"
+  },
+  {
+    "diagnosisID": "Lymphoma",
+    "type": "MGMT",
+    "value": "Oncology consult"
+  },
+  {
+    "diagnosisID": "Parotitis",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Parotitis",
+    "type": "TEST",
+    "value": "Anti-SSA/SSB antibodies"
+  },
+  {
+    "diagnosisID": "Parotitis",
+    "type": "TEST",
+    "value": "Parotid ultrasound"
+  },
+  {
+    "diagnosisID": "Parotitis",
+    "type": "MGMT",
+    "value": "Otolaryngology (ENT) consult"
+  },
+  {
+    "diagnosisID": "HeadNeckCancer",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "HeadNeckCancer",
+    "type": "TEST",
+    "value": "CT head & neck"
+  },
+  {
+    "diagnosisID": "HeadNeckCancer",
+    "type": "TEST",
+    "value": "PET/CT"
+  },
+  {
+    "diagnosisID": "HeadNeckCancer",
+    "type": "MGMT",
+    "value": "Oncology consult"
+  },
+  {
+    "diagnosisID": "HeadNeckCancer",
+    "type": "MGMT",
+    "value": "Otolaryngology (ENT) consult"
+  },
+  {
+    "diagnosisID": "ChronicSinusitus",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "ChronicSinusitus",
+    "type": "TEST",
+    "value": "CT sinuses"
+  },
+  {
+    "diagnosisID": "ChronicSinusitus",
+    "type": "MGMT",
+    "value": "Amoxicillin-clavulanate"
+  },
+  {
+    "diagnosisID": "ChronicSinusitus",
+    "type": "MGMT",
+    "value": "Fluticasone nasal spray"
+  },
+  {
+    "diagnosisID": "ChronicSinusitus",
+    "type": "MGMT",
+    "value": "Otolaryngology (ENT) consult"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "TEST",
+    "value": "ESR/CRP"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "TEST",
+    "value": "HLA-B51"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "TEST",
+    "value": "Pathergy test"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "MGMT",
+    "value": "Triamcinolone dental paste"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "MGMT",
+    "value": "Azathioprine"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "MGMT",
+    "value": "Infliximab"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "ANA"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "Anti-dsDNA"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "Complement C3, C4"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "Urinalysis"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "MGMT",
+    "value": "Hydroxychloroquine"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "MGMT",
+    "value": "Sun protection counseling"
+  },
+  {
+    "diagnosisID": "TrigeminalNeuralgia",
+    "type": "TEST",
+    "value": "MRI brain"
+  },
+  {
+    "diagnosisID": "TrigeminalNeuralgia",
+    "type": "MGMT",
+    "value": "Carbamazepine"
+  },
+  {
+    "diagnosisID": "TrigeminalNeuralgia",
+    "type": "MGMT",
+    "value": "Neurology consult"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "Serum testosterone"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "Hemoglobin A1c"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "TSH"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "Lipid panel"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "MGMT",
+    "value": "Counseling referral"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "MGMT",
+    "value": "Sildenafil"
+  },
+  {
+    "diagnosisID": "VaricoSpermatoHydrocele ",
+    "type": "TEST",
+    "value": "Scrotal/inguinal ultrasound"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "TEST",
+    "value": "Chem 12"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "TEST",
+    "value": "Urinalysis"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "TEST",
+    "value": "Scrotal ultrasound"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "TEST",
+    "value": "Urine gonorrhea/chlamydia PCR"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "MGMT",
+    "value": "Doxycycline"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "MGMT",
+    "value": "Ceftriaxone"
+  },
+  {
+    "diagnosisID": "Epididymitis",
+    "type": "MGMT",
+    "value": "Urology consult"
+  },
+  {
+    "diagnosisID": "InguinalHernia",
+    "type": "TEST",
+    "value": "Scrotal/inguinal ultrasound"
+  },
+  {
+    "diagnosisID": "InguinalHernia",
+    "type": "MGMT",
+    "value": "General surgery consult"
+  },
+  {
+    "diagnosisID": "Diabetes",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Diabetes",
+    "type": "TEST",
+    "value": "Chem 12"
+  },
+  {
+    "diagnosisID": "Diabetes",
+    "type": "TEST",
+    "value": "Hemoglobin A1c"
+  },
+  {
+    "diagnosisID": "Diabetes",
+    "type": "TEST",
+    "value": "Fasting plasma glucose"
+  },
+  {
+    "diagnosisID": "Diabetes",
+    "type": "MGMT",
+    "value": "Metformin"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "TEST",
+    "value": "Scrotal/inguinal ultrasound"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "TEST",
+    "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "TEST",
+    "value": "Prostate-specific antigen (PSA)"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "TEST",
+    "value": "Testicular tumor markers (AFP, beta-hCG, LDH)"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "MGMT",
+    "value": "Urology consult"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "MGMT",
+    "value": "Oncology consult"
+  },
+  {
+    "diagnosisID": "ProstatitisUTI",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "ProstatitisUTI",
+    "type": "TEST",
+    "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "ProstatitisUTI",
+    "type": "TEST",
+    "value": "Urinalysis"
+  },
+  {
+    "diagnosisID": "ProstatitisUTI",
+    "type": "TEST",
+    "value": "Urine culture"
+  },
+  {
+    "diagnosisID": "ProstatitisUTI",
+    "type": "MGMT",
+    "value": "Ciprofloxacin"
+  },
+  {
+    "diagnosisID": "ProstatitisUTI",
+    "type": "MGMT",
+    "value": "Trimethoprim-sulfamethoxazole"
+  },
+  {
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "type": "TEST",
+    "value": "MRI lumbar spine"
+  },
+  {
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "type": "MGMT",
+    "value": "Gabapentin"
+  },
+  {
+    "diagnosisID": "Hypogonadism",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Hypogonadism",
+    "type": "TEST",
+    "value": "Chem 12"
+  },
+  {
+    "diagnosisID": "Hypogonadism",
+    "type": "TEST",
+    "value": "Serum testosterone"
+  },
+  {
+    "diagnosisID": "Hypogonadism",
+    "type": "TEST",
+    "value": "LH, FSH"
+  },
+  {
+    "diagnosisID": "Hypogonadism",
+    "type": "MGMT",
+    "value": "Testosterone replacement"
+  },
+  {
+    "diagnosisID": "Hypogonadism",
+    "type": "MGMT",
+    "value": "Endocrinology consult"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "TEST",
+    "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "TEST",
+    "value": "Urinalysis"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "TEST",
+    "value": "Renal ultrasound"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "TEST",
+    "value": "CT abdomen/pelvis without contrast"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "MGMT",
+    "value": "Hydration"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "MGMT",
+    "value": "Ketorolac"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "MGMT",
+    "value": "Tamsulosin"
+  },
+  {
+    "diagnosisID": "UrinaryCalculi",
+    "type": "MGMT",
+    "value": "Urology consult"
+  },
+  {
+    "diagnosisID": "BeeSting",
+    "type": "MGMT",
+    "value": "Cetirizine"
+  },
+  {
+    "diagnosisID": "BeeSting",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "Cellulitis",
+    "type": "MGMT",
+    "value": "Cephalexin"
+  },
+  {
+    "diagnosisID": "Cellulitis",
+    "type": "MGMT",
+    "value": "Amoxicillin-clavulanate"
+  },
+  {
+    "diagnosisID": "Cellulitis",
+    "type": "MGMT",
+    "value": "Trimethoprim-sulfamethoxazole"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "TEST",
+    "value": "CT hand"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "TEST",
+    "value": "Wound culture"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "MGMT",
+    "value": "Incision and drainage"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "MGMT",
+    "value": "Amoxicillin-clavulanate"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "MGMT",
+    "value": "Vancomycin"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "MGMT",
+    "value": "Emergency department evaluation"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "MGMT",
+    "value": "Hand surgery consult"
+  },
+  {
+    "diagnosisID": "Urticaria ",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Urticaria ",
+    "type": "TEST",
+    "value": "Cetirizine"
+  },
+  {
+    "diagnosisID": "Dermatitis",
+    "type": "MGMT",
+    "value": "Cetirizine"
+  },
+  {
+    "diagnosisID": "Dermatitis",
+    "type": "MGMT",
+    "value": "Triamcinolone cream"
+  },
+  {
+    "diagnosisID": "Lyme",
+    "type": "MGMT",
+    "value": "Doxycycline"
+  },
+  {
+    "diagnosisID": "Thrombophlebitis ",
+    "type": "TEST",
+    "value": "D-dimer"
+  },
+  {
+    "diagnosisID": "Thrombophlebitis ",
+    "type": "TEST",
+    "value": "Venous duplex ultrasound"
+  },
+  {
+    "diagnosisID": "Thrombophlebitis ",
+    "type": "MGMT",
+    "value": "Warm compresses"
+  },
+  {
+    "diagnosisID": "Thrombophlebitis ",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "InjectionDrugUse",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "InjectionDrugUse",
+    "type": "TEST",
+    "value": "Urine toxicology"
+  },
+  {
+    "diagnosisID": "InjectionDrugUse",
+    "type": "MGMT",
+    "value": "Addiction medicine consult"
+  },
+  {
+    "diagnosisID": "Anaphylaxis ",
+    "type": "MGMT",
+    "value": "Intramuscular epinephrine"
+  },
+  {
+    "diagnosisID": "Anaphylaxis ",
+    "type": "MGMT",
+    "value": "Emergency department evaluation"
+  },
+  {
+    "diagnosisID": "Anaphylaxis ",
+    "type": "MGMT",
+    "value": "Cetirizine"
+  },
+  {
+    "diagnosisID": "Anaphylaxis ",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "RecurrentBacteremia",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "RecurrentBacteremia",
+    "type": "TEST",
+    "value": "Blood cultures x2"
+  },
+  {
+    "diagnosisID": "RecurrentBacteremia",
+    "type": "TEST",
+    "value": "Transthoracic echocardiogram"
+  },
+  {
+    "diagnosisID": "RecurrentBacteremia",
+    "type": "MGMT",
+    "value": "Linezolid "
+  },
+  {
+    "diagnosisID": "RecurrentBacteremia",
+    "type": "MGMT",
+    "value": "Infectious disease consult"
+  },
+  {
+    "diagnosisID": "MuscleSpasm",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "MuscleSpasm",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "MuscleSpasm",
+    "type": "MGMT",
+    "value": "Cyclobenzaprine"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "TEST",
+    "value": "MRI cervical/thoracic spine"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "MGMT",
+    "value": "Gabapentin"
+  },
+  {
+    "diagnosisID": "RibFracture",
+    "type": "TEST",
+    "value": "Rib X-ray"
+  },
+  {
+    "diagnosisID": "RibFracture",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "RibFracture",
+    "type": "MGMT",
+    "value": "Incentive spirometry"
+  },
+  {
+    "diagnosisID": "Pleurisy",
+    "type": "TEST",
+    "value": "Chest X-ray"
+  },
+  {
+    "diagnosisID": "Pleurisy",
+    "type": "TEST",
+    "value": "CT chest"
+  },
+  {
+    "diagnosisID": "Pleurisy",
+    "type": "MGMT",
+    "value": "Pulmonology consult"
+  },
+  {
+    "diagnosisID": "Pleurisy",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "PulmonaryEmbolism",
+    "type": "TEST",
+    "value": "D-dimer"
+  },
+  {
+    "diagnosisID": "PulmonaryEmbolism",
+    "type": "TEST",
+    "value": "CT pulmonary angiogram"
+  },
+  {
+    "diagnosisID": "PulmonaryEmbolism",
+    "type": "MGMT",
+    "value": "Apixaban"
+  },
+  {
+    "diagnosisID": "PulmonaryEmbolism",
+    "type": "MGMT",
+    "value": "Emergency department evaluation"
+  },
+  {
+    "diagnosisID": "GERD",
+    "type": "MGMT",
+    "value": "Omeprazole"
+  },
+  {
+    "diagnosisID": "GERD",
+    "type": "MGMT",
+    "value": "Gastroenterology consult"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "TEST",
+    "value": "MRI spine"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "MGMT",
+    "value": "Spine surgery consult"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "MGMT",
+    "value": "Oncology consult"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "MGMT",
+    "value": "Infectious disease consult"
+  },
+  {
+    "diagnosisID": "AorticAneurysm",
+    "type": "TEST",
+    "value": "CT angiogram chest"
+  },
+  {
+    "diagnosisID": "AorticAneurysm",
+    "type": "MGMT",
+    "value": "Cardiothoracic surgery consult"
+  },
+  {
+    "diagnosisID": "AorticAneurysm",
+    "type": "MGMT",
+    "value": "Emergency department evaluation"
+  },
+  {
+    "diagnosisID": "Pneumonia",
+    "type": "TEST",
+    "value": "Chest X-ray"
+  },
+  {
+    "diagnosisID": "Pneumonia",
+    "type": "MGMT",
+    "value": "Amoxicillin-clavulanate"
+  },
+  {
+    "diagnosisID": "Pneumonia",
+    "type": "MGMT",
+    "value": "Azithromycin"
+  },
+  {
+    "diagnosisID": "HerpesZoster",
+    "type": "MGMT",
+    "value": "Valacyclovir"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "RF"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "Anti-CCP"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "ANA"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "X-rays of affected joints"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "MGMT",
+    "value": "Methotrexate"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "TEST",
+    "value": "ANA"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "TEST",
+    "value": "RF"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "TEST",
+    "value": "Hand X-rays"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "MGMT",
+    "value": "Methotrexate"
+  },
+  {
+    "diagnosisID": "OtherArthritis",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "TSH"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Duloxetine"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Cognitive behavioral therapy referral"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "TEST",
+    "value": "X-rays of affected joints"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "MGMT",
+    "value": "Acetaminophen"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "AmitriptylineEffect",
+    "type": "TEST",
+    "value": "Orthostatic vital signs"
+  },
+  {
+    "diagnosisID": "AmitriptylineEffect",
+    "type": "TEST",
+    "value": "Serum amitriptyline level"
+  },
+  {
+    "diagnosisID": "AmitriptylineEffect",
+    "type": "MGMT",
+    "value": "Discontinue amitriptyline"
+  },
+  {
+    "diagnosisID": "Menieres",
+    "type": "TEST",
+    "value": "Audiometry"
+  },
+  {
+    "diagnosisID": "Menieres",
+    "type": "TEST",
+    "value": "MRI brain"
+  },
+  {
+    "diagnosisID": "Menieres",
+    "type": "MGMT",
+    "value": "Otolaryngology (ENT) consult"
+  },
+  {
+    "diagnosisID": "Menieres",
+    "type": "MGMT",
+    "value": "Vestibular rehabilitation"
+  },
+  {
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "TEST",
+    "value": "Audiometry"
+  },
+  {
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "TEST",
+    "value": "Cartilage biopsy"
+  },
+  {
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "MGMT",
+    "value": "Methotrexate"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "Chest X-ray"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "CT chest"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "ACE level"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "Serum calcium"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "MGMT",
+    "value": "Pulmonology consult"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "Hypothyroidism",
+    "type": "TEST",
+    "value": "TSH"
+  },
+  {
+    "diagnosisID": "Hypothyroidism",
+    "type": "TEST",
+    "value": "Free T4"
+  },
+  {
+    "diagnosisID": "Hypothyroidism",
+    "type": "MGMT",
+    "value": "Levothyroxine"
+  },
+  {
+    "diagnosisID": "Hypothyroidism",
+    "type": "MGMT",
+    "value": "Endocrinology consult"
+  },
+  {
+    "diagnosisID": "FacetJointPain",
+    "type": "TEST",
+    "value": "MRI thoracic spine"
+  },
+  {
+    "diagnosisID": "FacetJointPain",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "FacetJointPain",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "FacetJointPain",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "FacetJointPain",
+    "type": "MGMT",
+    "value": "Facet joint steroid injection"
+  },
+  {
+    "diagnosisID": "ParaspinalPain",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "ParaspinalPain",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "ParaspinalPain",
+    "type": "MGMT",
+    "value": "Cyclobenzaprine"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "TEST",
+    "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "TEST",
+    "value": "Urinalysis"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "TEST",
+    "value": "CT abdomen/pelvis without contrast"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "TEST",
+    "value": "Renal ultrasound"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "MGMT",
+    "value": "Hydration"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "MGMT",
+    "value": "Ketorolac"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "MGMT",
+    "value": "Tamsulosin"
+  },
+  {
+    "diagnosisID": "Nephrolithiasis",
+    "type": "MGMT",
+    "value": "Urology consult"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "TEST",
+    "value": "MRI thoracic spine"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "TEST",
+    "value": "EMG/NCS"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "MGMT",
+    "value": "Gabapentin"
+  },
+  {
+    "diagnosisID": "SpleenSplenic",
+    "type": "TEST",
+    "value": "CT abdomen with contrast"
+  },
+  {
+    "diagnosisID": "SpleenSplenic",
+    "type": "TEST",
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "SpleenSplenic",
+    "type": "MGMT",
+    "value": "General surgery consult"
+  },
+  {
+    "diagnosisID": "SpleenSplenic",
+    "type": "MGMT",
+    "value": "Hematology consult"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "TEST",
+    "value": "CT abdomen with contrast"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "TEST",
+    "value": "Renal ultrasound"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "TEST",
+    "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "TEST",
+    "value": "Urine microalbumin"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "MGMT",
+    "value": "Urology consult"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "MGMT",
+    "value": "Nephrology consult"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "TEST",
+    "value": "CT abdomen/pelvis with contrast"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "TEST",
+    "value": "MRI abdomen"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "MGMT",
+    "value": "Urology consult"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "MGMT",
+    "value": "Nephrology consult"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "RetroperitonealMalignancy",
+    "type": "TEST",
+    "value": "CT abdomen/pelvis with contrast"
+  },
+  {
+    "diagnosisID": "RetroperitonealMalignancy",
+    "type": "MGMT",
+    "value": "Oncology consult"
+  },
+  {
+    "diagnosisID": "RetroperitonealMalignancy",
+    "type": "MGMT",
+    "value": "Image-guided biopsy"
+  },
+  {
+    "diagnosisID": "AbdominalAorticAneurysm",
+    "type": "TEST",
+    "value": "CT angiogram abdomen"
+  },
+  {
+    "diagnosisID": "AbdominalAorticAneurysm",
+    "type": "TEST",
+    "value": "Abdominal ultrasound"
+  },
+  {
+    "diagnosisID": "AbdominalAorticAneurysm",
+    "type": "MGMT",
+    "value": "Vascular surgery consult"
+  },
+  {
+    "diagnosisID": "AbdominalAorticAneurysm",
+    "type": "MGMT",
+    "value": "Emergency department evaluation"
+  },
+  {
+    "diagnosisID": "MajorDepression",
+    "type": "TEST",
+    "value": "PHQ-9"
+  },
+  {
+    "diagnosisID": "MajorDepression",
+    "type": "MGMT",
+    "value": "Sertraline"
+  },
+  {
+    "diagnosisID": "MajorDepression",
+    "type": "MGMT",
+    "value": "Psychotherapy referral"
+  },
+  {
+    "diagnosisID": "MajorDepression",
+    "type": "MGMT",
+    "value": "Psychiatry consult"
+  },
+  {
+    "diagnosisID": "Grief",
+    "type": "MGMT",
+    "value": "Grief counseling referral"
+  },
+  {
+    "diagnosisID": "PolymalgiaRheumatica",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "PolymalgiaRheumatica",
+    "type": "TEST",
+    "value": "ANA"
+  },
+  {
+    "diagnosisID": "PolymalgiaRheumatica",
+    "type": "TEST",
+    "value": "RF"
+  },
+  {
+    "diagnosisID": "PolymalgiaRheumatica",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "PolymalgiaRheumatica",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "FioricetButalbitalWithdrawal",
+    "type": "MGMT",
+    "value": "Taper butalbital"
+  },
+  {
+    "diagnosisID": "FioricetButalbitalWithdrawal",
+    "type": "MGMT",
+    "value": "Neurology consult"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "TEST",
+    "value": "Creatine kinase"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "TEST",
+    "value": "Myositis antibody panel"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "TEST",
+    "value": "EMG"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "MGMT",
+    "value": "Methotrexate"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "TEST",
+    "value": "X-rays of affected joints"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "MGMT",
+    "value": "Acetaminophen"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "MGMT",
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "Osteoarthritis",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "CRP/ESR"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "TSH"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Duloxetine"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Cognitive behavioral therapy referral"
+  },
+  {
+    "diagnosisID": "AdrenalInsufficiency",
+    "type": "TEST",
+    "value": "AM cortisol"
+  },
+  {
+    "diagnosisID": "AdrenalInsufficiency",
+    "type": "TEST",
+    "value": "Cosyntropin stimulation test"
+  },
+  {
+    "diagnosisID": "AdrenalInsufficiency",
+    "type": "TEST",
+    "value": "MRI brain"
+  },
+  {
+    "diagnosisID": "AdrenalInsufficiency",
+    "type": "TEST",
+    "value": "CT abdomen"
+  },
+  {
+    "diagnosisID": "AdrenalInsufficiency",
+    "type": "MGMT",
+    "value": "Hydrocortisone"
+  },
+  {
+    "diagnosisID": "Pregnancy",
+    "type": "TEST",
+    "value": "Urine hCG"
+  },
+  {
+    "diagnosisID": "Pregnancy",
+    "type": "TEST",
+    "value": "Pelvic ultrasound"
+  },
+  {
+    "diagnosisID": "Pregnancy",
+    "type": "MGMT",
+    "value": "Obstetrics consult"
+  },
+  {
+    "diagnosisID": "Pregnancy",
+    "type": "MGMT",
+    "value": "Prenatal vitamin"
+  },
+  {
+    "diagnosisID": "MenstrualPhysiology",
+    "type": "MGMT",
+    "value": "Reassurance"
+  },
+  {
+    "diagnosisID": "MenstrualPhysiology",
+    "type": "MGMT",
+    "value": "Routine follow-up"
+  },
+  {
+    "diagnosisID": "HormonalEffect",
+    "type": "TEST",
+    "value": "Estradiol level"
+  },
+  {
+    "diagnosisID": "HormonalEffect",
+    "type": "MGMT",
+    "value": "Gynecology consult"
+  },
+  {
+    "diagnosisID": "HormonalEffect",
+    "type": "MGMT",
+    "value": "Nexplanon removal"
+  },
+  {
+    "diagnosisID": "VaginalCandidasis",
+    "type": "TEST",
+    "value": "Vaginal wet mount"
+  },
+  {
+    "diagnosisID": "VaginalCandidasis",
+    "type": "TEST",
+    "value": "KOH prep"
+  },
+  {
+    "diagnosisID": "VaginalCandidasis",
+    "type": "TEST",
+    "value": "Vaginal pH"
+  },
+  {
+    "diagnosisID": "VaginalCandidasis",
+    "type": "TEST",
+    "value": "Vaginitis PCR panel"
+  },
+  {
+    "diagnosisID": "VaginalCandidasis",
+    "type": "MGMT",
+    "value": "Fluconazole"
+  },
+  {
+    "diagnosisID": "BacterialVaginosis",
+    "type": "TEST",
+    "value": "Vaginal wet mount"
+  },
+  {
+    "diagnosisID": "BacterialVaginosis",
+    "type": "TEST",
+    "value": "Whiff test"
+  },
+  {
+    "diagnosisID": "BacterialVaginosis",
+    "type": "TEST",
+    "value": "Vaginal pH"
+  },
+  {
+    "diagnosisID": "BacterialVaginosis",
+    "type": "TEST",
+    "value": "Vaginitis PCR panel"
+  },
+  {
+    "diagnosisID": "BacterialVaginosis",
+    "type": "MGMT",
+    "value": "Metronidazole"
+  },
+  {
+    "diagnosisID": "STI2",
+    "type": "TEST",
+    "value": "Gonorrhea/chlamydia PCR"
+  },
+  {
+    "diagnosisID": "STI2",
+    "type": "MGMT",
+    "value": "Ceftriaxone"
+  },
+  {
+    "diagnosisID": "STI2",
+    "type": "MGMT",
+    "value": "Doxycycline"
+  },
+  {
+    "diagnosisID": "STI2",
+    "type": "MGMT",
+    "value": "Partner notification"
+  },
+  {
+    "diagnosisID": "OvarianTumor",
+    "type": "TEST",
+    "value": "Pelvic ultrasound"
+  },
+  {
+    "diagnosisID": "OvarianTumor",
+    "type": "TEST",
+    "value": "Inhibin B"
+  },
+  {
+    "diagnosisID": "OvarianTumor",
+    "type": "TEST",
+    "value": "Estradiol"
+  },
+  {
+    "diagnosisID": "OvarianTumor",
+    "type": "MGMT",
+    "value": "Gynecology consult"
+  },
+  {
+    "diagnosisID": "ExogenousEstrogen",
+    "type": "TEST",
+    "value": "Estradiol level"
+  },
+  {
+    "diagnosisID": "ExogenousEstrogen",
+    "type": "MGMT",
+    "value": "Discontinue estrogen-containing product"
+  },
+  {
+    "diagnosisID": "UTI",
+    "type": "TEST",
+    "value": "Urinalysis"
+  },
+  {
+    "diagnosisID": "UTI",
+    "type": "TEST",
+    "value": "Urine culture"
+  },
+  {
+    "diagnosisID": "UTI",
+    "type": "MGMT",
+    "value": "Nitrofurantoin"
+  },
+  {
+    "diagnosisID": "PMDD",
+    "type": "MGMT",
+    "value": "Sertraline"
+  },
+  {
+    "diagnosisID": "PMDD",
+    "type": "MGMT",
+    "value": "Combined oral contraceptive"
+  }
+]

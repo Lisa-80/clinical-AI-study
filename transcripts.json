@@ -1,0 +1,1423 @@
+[
+  {
+    "caseID": 1,
+    "messages": [
+      {
+        "speaker": "User",
+        "message": "22-year-old woman. Pain in stomach, with gas and bloating. Uncontrollable diarrhea. Headache and nausea."
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for sharing your concerns with me. I understand that you are experiencing stomach pain, gas, bloating, uncontrollable diarrhea, headache, and nausea. I will do my best to help you. Could you please describe where exactly in your stomach you feel the pain and its intensity on a scale of 1 to 10?"
+      },
+      {
+        "speaker": "User",
+        "message": "4"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for letting me know. Could you describe the quality of the pain? For example, is it sharp, dull, crampy, or something else?"
+      },
+      {
+        "speaker": "User",
+        "message": "Something else"
+      },
+      {
+        "speaker": "AI",
+        "message": "I see. Could you please describe in your own words what the pain feels like?"
+      },
+      {
+        "speaker": "User",
+        "message": "Like bubbles in my stomach"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for describing that. When did you first notice these symptoms, and have they been continuous or do they come and go?"
+      },
+      {
+        "speaker": "User",
+        "message": "Continuous for 5 days"
+      },
+      {
+        "speaker": "AI",
+        "message": "I understand; thank you. Have you noticed anything that makes your symptoms better or worse?"
+      },
+      {
+        "speaker": "User",
+        "message": "Eating makes it worse"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for sharing that. Are there any other symptoms associated with your stomach pain, such as fever, vomiting, or changes in appetite?"
+      },
+      {
+        "speaker": "User",
+        "message": "Fever and no appetite"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for providing that information. Have you had any previous similar episodes in the past, or is this the first time you've experienced these symptoms?"
+      },
+      {
+        "speaker": "User",
+        "message": "Yes, similar 2-3 times in past few years."
+      },
+      {
+        "speaker": "AI",
+        "message": "Have you traveled?"
+      },
+      {
+        "speaker": "User",
+        "message": "Cruise to Jamaica a month ago"
+      },
+      {
+        "speaker": "AI",
+        "message": "Got it. Have you had any major illnesses, surgeries, or hospitalizations in the past?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you. Are you currently taking any medications or have you recently changed any medications?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for confirming that. Have you received any preventive health measures recently, such as vaccinations or routine check-ups?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you. Do you use any alcohol, drugs, or tobacco?"
+      },
+      {
+        "speaker": "User",
+        "message": "I drink a few beers a night"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for sharing that. Do you have any family history of major illnesses such as diabetes, heart disease, gastrointestinal issues, or migraines?"
+      },
+      {
+        "speaker": "User",
+        "message": "Yes"
+      },
+      {
+        "speaker": "AI",
+        "message": "I see. Could you please specify which illnesses and which family members are affected?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for telling me. What is your occupation, and do you have any recent changes or stress related to your work or studies?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you. Now, I'd like to perform a quick review of systems to ensure we haven't missed anything. Do you have any issues with your vision, hearing, or breathing?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you, I think I have enough information. Is there anything else you want to tell me about your health history?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for sharing this with me, please give me a minute to think."
+      }
+    ]
+  },
+
+  {
+    "caseID": 2,
+    "messages": [
+      {
+        "speaker": "User",
+        "message": "Male, 31, felt suddenly dizzy, issues formulating speech and articulating thoughts, issues swallowing food. Symptoms faded within 20-30 minutes. Meds taken as prescribed: 20mg Escitalopram, 60mg Vyvanse, 200mg quetiapine, 7.5mg mirtazapine."
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for clarifying that. Let's make sure I understand your main concerns. You experienced a sudden episode of dizziness, trouble forming speech and articulating thoughts, and difficulty swallowing food. These symptoms lasted about 20–30 minutes and then faded. To get a clearer picture, could you tell me if you had any other symptoms during this episode, such as weakness or numbness on one side of your body, vision changes, headache, loss of consciousness, or chest pain?"
+      },
+      {
+        "speaker": "User",
+        "message": "None of these"
+      },
+      {
+        "speaker": "AI",
+        "message": "Thanks for letting me know. Could you describe exactly what you mean by issues formulating speech and articulating thoughts?"
+      },
+      {
+        "speaker": "User",
+        "message": "Trouble formulating sentences. I had the abstract idea of what I was trying to say but when I tried to speak formulate a sentence, I tripped over every word, ending with just gibberish beginnings of sentences."
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for describing that so clearly."
+      },
+      {
+        "speaker": "User",
+        "message": "It felt like it was stuck in the back of my throat and I had no way of triggering the act of swallowing. Like I had lost the skill."
+      },
+      {
+        "speaker": "AI",
+        "message": "That's very helpful information. Losing the ability to initiate swallowing, especially suddenly, is a significant symptom."
+      },
+      {
+        "speaker": "User",
+        "message": "Like before starting to fall unconscious. I expected my vision to go black within the next few seconds but it did not. A general weak feeling in every part of my body."
+      },
+      {
+        "speaker": "AI",
+        "message": "Thank you for describing that so precisely. Feeling as if you're about to lose consciousness, with generalized weakness, is important to note."
+      },
+      {
+        "speaker": "User",
+        "message": "Pretty suddenly. I was eating, lying down. Nothing like this ever happened before."
+      },
+      {
+        "speaker": "AI",
+        "message": "Did you notice any facial drooping, asymmetry, or weakness in your face or limbs during the episode?"
+      },
+      {
+        "speaker": "User",
+        "message": "No."
+      },
+      {
+        "speaker": "AI",
+        "message": "Did you notice confusion, trouble understanding what others were saying, or difficulty recognizing familiar people or places?"
+      },
+      {
+        "speaker": "User",
+        "message": "Confusion yes, but not extreme. No to the rest."
+      },
+      {
+        "speaker": "AI",
+        "message": "Since the episode, have you had any lingering symptoms or have you felt completely back to normal?"
+      },
+      {
+        "speaker": "User",
+        "message": "Back to normal"
+      },
+      {
+        "speaker": "AI",
+        "message": "Do you have any history of migraines, seizures, heart problems, or neurological conditions in yourself or your family?"
+      },
+      {
+        "speaker": "User",
+        "message": "Heart problems on father's side, nothing else."
+      },
+      {
+        "speaker": "AI",
+        "message": "Did you experience any palpitations, chest pain, or shortness of breath during or before the episode?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Did you have any sensation of choking, or did food or liquid go down the wrong way?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Have you had any recent illnesses, infections, head injuries, falls, or accidents?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      },
+      {
+        "speaker": "AI",
+        "message": "Do you have any chronic medical conditions or psychiatric diagnoses?"
+      },
+      {
+        "speaker": "User",
+        "message": "Psychiatric: major depression, ADHD, schizoid personality disorder"
+      },
+      {
+        "speaker": "AI",
+        "message": "Are these conditions currently stable?"
+      },
+      {
+        "speaker": "User",
+        "message": "Rather stable"
+      },
+      {
+        "speaker": "AI",
+        "message": "Please confirm your medications."
+      },
+      {
+        "speaker": "User",
+        "message": "Escitalopram 20 mg; Vyvanse 60 mg; Quetiapine 200 mg; Mirtazapine 7.5 mg"
+      },
+      {
+        "speaker": "AI",
+        "message": "Do you have any medication, food, or environmental allergies?"
+      },
+      {
+        "speaker": "User",
+        "message": "No"
+      }
+    ]
+  },
+{
+  "caseID": 3,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "66-year-old woman with fluid and pain in jaw and under ears, off and on low grade fever, headache, intermittent ear pain, diarrhea, sores in mouth"
+    },
+      {"speaker": "AI",
+      "message": "I'm sorry to hear you're experiencing these symptoms. It sounds quite uncomfortable. Let's take this step by step. First, can you describe the jaw and ear pain in more detail? Specifically, where exactly is the pain located, does it radiate to other areas, and how intense is it on a scale of 1 to 10?"
+    },
+    {
+      "speaker": "User",
+      "message": "pain on the right side, radiates to front of neck and collar bone, from 5-10"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for providing more details. Let's discuss the fluid accumulation next. Do you notice any swelling or visible fluid buildup around your jaw or under your ears? If so, does the swelling fluctuate in size, and does anything make it feel better or worse?"
+    },
+    {
+      "speaker": "User",
+      "message": "it's constant and heat makes it worse"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that information. Let's discuss the low-grade fever next. When did the fever start, how often do you experience it, and what temperature does it usually reach?"
+    },
+    {
+      "speaker": "User",
+      "message": "starred few months ago, gets up to 100, it's very random"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for the details about your fever. Let's move on to the headaches. Can you describe your headaches in terms of location, intensity, frequency, and any factors that seem to trigger or alleviate them?"
+    },
+    {
+      "speaker": "User",
+      "message": "headaches are intermittent, gets worse as fluid and pain under ears gets worse from the pressure"
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand, thank you for clarifying. Let's discuss the ear pain next. Can you describe the ear pain? Is it also on the right side, and does it come and go or is it constant? Also, is it a sharp, dull, or throbbing pain?"
+    },
+    {
+      "speaker": "User",
+      "message": "it's on the right side, comes and goes and is dull ache"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for providing those details. Now, let's talk about the diarrhea. How long have you been experiencing diarrhea, and how frequent are the episodes? Have you noticed any specific foods or situations that seem to trigger it?"
+    },
+    {
+      "speaker": "User",
+      "message": "about 1 month, unsure of what's triggering it"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Now, let's discuss the sores in your mouth. Can you describe the sores, such as their size, location, and appearance? Have you noticed any patterns regarding when they appear or any triggers that make them worse?"
+    },
+    {
+      "speaker": "User",
+      "message": "they look like cold sores on the back of the right side of my throat and back of tongue where it meets my throat on the right side. no patterns noticed"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for the detailed information about the sores in your mouth. Now, let's discuss your past medical history. Have you had any significant illnesses or medical conditions during your childhood or adulthood?"
+    },
+    {
+      "speaker": "User",
+      "message": "kidney infections many years ago"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Have you had any major injuries, surgeries, or been hospitalized for any reason in the past?"
+    },
+    {
+      "speaker": "User",
+      "message": "had a blood clot in the leg many years ago"
+    },
+    {
+      "speaker": "AI",
+      "message": "I appreciate you sharing that. Do you have any known drug allergies?"
+    },
+    {
+      "speaker": "User",
+      "message": "allergic to keflex, iodine topical, sulfur, gabapentin"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for informing me about your allergies. Are you currently taking any medications, including over-the-counter drugs or supplements? Have there been any recent changes to your medication regimen?"
+    },
+    {
+      "speaker": "User",
+      "message": "blood pressure medication and cholesterol medication"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Now, let's discuss preventive health measures. Have you had any recent preventive health screenings, such as mammograms, colonoscopies, or routine blood tests? If so, when were they and what were the results?"
+    },
+    {
+      "speaker": "User",
+      "message": "yes"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for confirming. Let's discuss your social history next. Do you use alcohol, tobacco, or recreational drugs?"
+    },
+    {
+      "speaker": "User",
+      "message": "no"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Now, let's discuss your family history. Are there any major illnesses that run in your family, such as heart disease, diabetes, cancer, or others?"
+    },
+    {
+      "speaker": "User",
+      "message": "dad had congestive heart failure and sister has rheumatoid arthritis"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Now, let's discuss your occupational history. Are you currently working, and if so, what type of work do you do? Have you had any occupational exposures that might be relevant to your symptoms?"
+    },
+    {
+      "speaker": "User",
+      "message": "retired educator"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing. Now, let's do a brief review of systems to ensure we haven't missed anything. Have you experienced any other symptoms such as weight loss, night sweats, skin changes, or any other unusual symptoms recently?"
+    },
+    {
+      "speaker": "User",
+      "message": "lost 10 pounds, have had precancer on head that keeps coming back after freezing"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you, I think I have enough information, is there anything else you want to tell me about your health history?"
+    },
+    {
+      "speaker": "User",
+      "message": "have had covid 3 times"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for the additional info, please give me a minute to think."
+    }
+  ]
+},
+{
+  "caseID": 4,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "I'm 48 and I have a urological health concern to discuss."
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm here to help. Can you please tell me more about your urological health concern? Specifically, what symptoms are you experiencing?"
+    },
+    {
+      "speaker": "User",
+      "message": "Testicles feel heavy feel tightness and groin lack of erection frequent urination foamy urine"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing this with me. I understand that you're experiencing heaviness and tightness in the testicles and groin, a lack of erections, frequent urination, and foamy urine. Let's start by discussing each symptom in detail. Can you tell me more about the heaviness and tightness in your testicles and groin? Specifically, when did you first notice these sensations, and have they changed over time?"
+    },
+    {
+      "speaker": "User",
+      "message": "Few months ago"
+    },
+    {
+      "speaker": "AI",
+      "message": "I see. Thank you for sharing that. Can you describe the intensity of the heaviness and tightness in your testicles and groin on a scale of 1 to 10, with 1 being very mild and 10 being extremely severe?"
+    },
+    {
+      "speaker": "User",
+      "message": "5"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Is there anything that seems to make the heaviness and tightness in your testicles and groin better or worse? For example, does it change with physical activity, rest, or certain positions?"
+    },
+    {
+      "speaker": "User",
+      "message": "No change"
+    },
+    {
+      "speaker": "AI",
+      "message": "Got it. Have you noticed any swelling, lumps, or changes in the size or shape of your testicles?"
+    },
+    {
+      "speaker": "User",
+      "message": "One of the testicles seems larger than the other one"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for letting me know. Now, let's discuss your lack of erections. When did you first notice this issue, and has it been consistent since then?"
+    },
+    {
+      "speaker": "User",
+      "message": "When I experienced the testicle heaviness"
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand. Thank you for clarifying. Let's move on to your frequent urination. How often do you need to urinate during the day and night?"
+    },
+    {
+      "speaker": "User",
+      "message": "Just during the day"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. How many times during the day do you typically need to urinate?"
+    },
+    {
+      "speaker": "User",
+      "message": "Maybe 5-6"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Regarding the foamy urine, how long have you been noticing this, and does it happen every time you urinate?"
+    },
+    {
+      "speaker": "User",
+      "message": "Not all the time"
+    },
+    {
+      "speaker": "AI",
+      "message": "I see. Now, I'd like to get a bit of your medical history. Have you had any major illnesses, injuries, surgeries, or hospitalizations in the past?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for letting me know. Are you currently taking any medications, including over-the-counter drugs or supplements? Have there been any recent changes to your medications?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Understood. Let's discuss some preventive health measures. When was your last general health check-up, and have you had any recent urological examinations?"
+    },
+    {
+      "speaker": "User",
+      "message": "Check up 5 months ago"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Can you tell me about your social history? Do you use alcohol, tobacco, or any recreational drugs? If so, how much and how often?"
+    },
+    {
+      "speaker": "User",
+      "message": "I drink alcohol"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. How often do you drink alcohol, and how many drinks do you typically have in one sitting?"
+    },
+    {
+      "speaker": "User",
+      "message": "On weekends"
+    },
+    {
+      "speaker": "AI",
+      "message": "Understood. Now, let's discuss your family history. Are there any major illnesses, particularly urological issues, that run in your family?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    { 
+      "speaker": "AI",
+      "message": "Can you tell me about your occupational history? What kind of work do you do, and does it involve any heavy lifting or prolonged sitting?"
+    },
+    { 
+      "speaker": "User",
+      "message": "Drive forklift"
+    },
+    { "speaker": "AI",
+      "message": "Thank you. Lastly, let's perform a brief review of systems. Besides the symptoms you've already mentioned, have you noticed any other issues such as weight loss, fever, fatigue, or changes in appetite?"
+    },
+    { 
+      "speaker": "User",
+      "message": "none"
+    }
+  ]
+},
+{
+  "caseID": 5,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "43-year-old man My hand keeps swelling up sore, sensative"
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm sorry to hear that. Let's gather more details about your hand swelling. Can you describe exactly where on your hand the swelling occurs?"
+    },
+    {
+      "speaker": "User",
+      "message": "Top from knuckles to wrist"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. How intense is the swelling on a scale from 1 to 10, with 10 being the most severe?"
+    },
+    {
+      "speaker": "User",
+      "message": "6"
+    },
+    {
+      "speaker": "AI",
+      "message": "I appreciate your response. When did you first notice the swelling, and how long has it been occurring?"
+    },
+    {
+      "speaker": "User",
+      "message": "Swollen for about 3 days, and did it a month ago also when I got stung"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. Do you remember what kind of sting it was, and did you have any other symptoms at the time, like itching, redness, or difficulty breathing?"
+    },
+    {
+      "speaker": "User",
+      "message": "Bee or wasp, itches, red, breathing ok"
+    },
+    {
+      "speaker": "AI",
+      "message": "Got it, thank you. Besides itching and redness, are there any other symptoms you're experiencing now, such as fever, warmth around the swollen area, or pus?"
+    },
+    {
+      "speaker": "User",
+      "message": "I feel hot, and the hand feels warm"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Does anything make the swelling or discomfort better or worse, such as resting, applying ice, or movement?"
+    },
+    {
+      "speaker": "User",
+      "message": "Movement makes it worse"
+    },
+    {
+      "speaker": "AI",
+      "message": "Understood. Can you recall any recent activities or injuries to your hand besides the sting that could have contributed to the swelling?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thanks for letting me know. Have you experienced any functional impairment, such as difficulty moving your fingers or using your hand?"
+    },
+    {
+      "speaker": "User",
+      "message": "It's hard to use my hand because hurts"
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand. That sounds uncomfortable. Have you taken any medications or tried any care plans for the swelling, such as antihistamines, pain relievers, or topical creams?"
+    },
+    {
+      "speaker": "User",
+      "message": "Ibeprofen and Tylenol"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Have you noticed any recent changes in your overall health or any other symptoms elsewhere on your body?"
+    },
+    {
+      "speaker": "User",
+      "message": "Felt sick to my stomach for a few days, and not much appetite, today I have had a headache and my vision grayed out"
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm sorry you're experiencing this. Do you have any known allergies, including allergies to medications, foods, or environmental factors?"
+    },
+    {
+      "speaker": "User",
+      "message": "None"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Have you had any significant illnesses or medical conditions in the past, including during your childhood?"
+    },
+    {
+      "speaker": "User",
+      "message": "Endocarditis and blood infection"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing your medical history. Have you undergone any surgeries or been hospitalized recently?"
+    },
+    {
+      "speaker": "User",
+      "message": "Not in about a year"
+    },
+    {
+      "speaker": "AI",
+      "message": "I appreciate your response. Are you currently taking any other medications besides ibuprofen and Tylenol?"
+    },
+    {
+      "speaker": "User",
+      "message": "Yes I take Suboxone, mental medication,"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Can you tell me more about the mental medication you are taking, including the name and dosage?"
+    },
+    {
+      "speaker": "User",
+      "message": "Oxcarbazepine 90mg, hydroxyzine pomate 25mg, prazosin 2mg, olanzapine 10mg"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for the details. Do you smoke, consume alcohol, or use any recreational drugs?"
+    },
+    {
+      "speaker": "User",
+      "message": "Occasionally drink, smoke weed, and vape"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for your honesty. Do you have any family history of major illnesses, such as heart disease, diabetes, or autoimmune conditions?"
+    },
+    {
+      "speaker": "User",
+      "message": "I had endocarditis and my mom has heart issues"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Can you describe your occupation and any work-related activities that might impact your health or contribute to your symptoms?"
+    },
+    {
+      "speaker": "User",
+      "message": "Home dad"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Is there anything else about your health history or symptoms that I should know?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing this with me, please give me a minute to think."
+    }
+  ]
+},
+{
+  "caseID": 6,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "I am a 47-year-old woman."
+    },
+    {
+      "speaker": "AI",
+      "message": "Sure, I'm here to help. Could you please start by telling me what your main symptom or chief complaint is?"
+    },
+    {
+      "speaker": "User",
+      "message": "Pain in upper back that sometimes hurts into chest too"
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm sorry to hear you're experiencing this pain. Could you please describe the pain for me? For example, is it sharp, dull, burning, or something else?"
+    },
+    {
+      "speaker": "User",
+      "message": "Like a sharp achy"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for describing that. Can you tell me when this pain started? Also, is it constant, or does it come and go?"
+    },
+    {
+      "speaker": "User",
+      "message": "Earlier today and comes n goes maybe certain movements or different breathing"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that detail. Can you describe the intensity of the pain on a scale from 1 to 10, with 1 being very mild and 10 being the worst pain you can imagine?"
+    },
+    {
+      "speaker": "User",
+      "message": "When it is sharp prob a 7-8 and when just achy like a 4-5"
+    },
+    {
+      "speaker": "AI",
+      "message": "Got it. Have you noticed if anything makes the pain better or worse, such as changing positions, taking deep breaths, or any other activities?"
+    },
+    {
+      "speaker": "User",
+      "message": "If I keep back straighter sometimes it helps"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Have you experienced any other symptoms along with the pain, such as shortness of breath, sweating, nausea, or anything else?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "I appreciate your responses. Have you had any similar pain in the past, or is this the first time you're experiencing this?"
+    },
+    {
+      "speaker": "User",
+      "message": "Similar yes"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for letting me know. Have you had any recent injuries or activities that might have strained your back, such as heavy lifting, intense exercise, or an accident?"
+    },
+    {
+      "speaker": "User",
+      "message": "No but have low back issues and lower extremity issues"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Could you please share more details about your low back and lower extremity issues? For example, do you have any diagnosed conditions, previous surgeries, or ongoing treatments for these issues?"
+    },
+    {
+      "speaker": "User",
+      "message": "Diagnosed yes. I have lumbar ddd, stenosis, my s1 disc is completely gone and my L4-L5 vertebrae are hitting together and I have nerve involvement. Have rt leg weakness also Dr diagnosed and issues in rt foot and left knee"
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm sorry to hear about your condition. Are you currently taking any medications for these issues, or for any other health conditions? If so, could you please list them?"
+    },
+    {
+      "speaker": "User",
+      "message": "Metoprolol,zocor, zofran, gabapentin and flexril as needed. Also on antibiotics for sinus infection and bronchitis"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for providing that information. Do you have any allergies to medications or other substances?"
+    },
+    {
+      "speaker": "User",
+      "message": "CT contrast, tramadol, toradol, sulph"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Can you tell me about any significant health issues or major illnesses you had during childhood or as an adult, besides what we've already discussed?"
+    },
+    {
+      "speaker": "User",
+      "message": "Svt and high cholesterol also recently diagnosed with essential tremors"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Do you use tobacco, alcohol, or recreational drugs? If so, could you please specify the type and frequency?"
+    },
+    {
+      "speaker": "User",
+      "message": "I smoke weed for pain and vape"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Could you also let me know about any significant health conditions that run in your family? For example, heart disease, diabetes, cancer, or others?"
+    },
+    {
+      "speaker": "User",
+      "message": "Heart disease, diabetes, cancer, arthritis"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Could you please describe your occupation and if it involves any physical activity or prolonged positions that might affect your symptoms?"
+    },
+    {
+      "speaker": "User",
+      "message": "Recently lost my job"
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm sorry to hear that. Lastly, let's go through a quick review of systems to ensure we haven't missed anything: - Have you experienced any recent weight changes, fevers, or night sweats? - Any changes in your appetite or bowel habits? - Any urinary symptoms, like pain or urgency? - Any other unusual symptoms or anything else you'd like to mention?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you, I think I have enough information, is there anything else you want to tell me about your health history?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    }
+  ]
+},
+{
+  "caseID": 7,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "I am a 49-year-old man."
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for coming to see me. How can I help you today? What seems to be the main issue or concern that you are experiencing?"
+    },
+    {
+      "speaker": "User",
+      "message": "Do I have rheumatoid arthritis"
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand you're concerned about rheumatoid arthritis. Could you please describe the symptoms you are experiencing?"
+    },
+    {
+      "speaker": "User",
+      "message": "Joint pain in finger with small raised bumps by joints. Pain in one of my toe joints and neck and shoulder pain"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that information. Let's delve deeper into your symptoms. Could you tell me when the joint pain in your fingers, toe, neck, and shoulders began?"
+    },
+    {
+      "speaker": "User",
+      "message": "Years ago"
+    },
+    {
+      "speaker": "AI",
+      "message": "I see. Can you describe the intensity of the pain on a scale of 1 to 10, with 1 being very mild and 10 being the worst pain imaginable?"
+    },
+    {
+      "speaker": "User",
+      "message": "Finger pain 1-2 toe pain 4 neck pain can be an 8"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Can you tell me if there are any specific activities or situations that seem to make the pain worse?"
+    },
+    {
+      "speaker": "User",
+      "message": "Waking up in the morning everything feels tight"
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand. Do you notice any activities or care plans that alleviate or reduce the pain and stiffness?"
+    },
+    {
+      "speaker": "User",
+      "message": "Movement and heat"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Have you noticed any other symptoms associated with your joint pain, such as fatigue, fever, or redness around the joints?"
+    },
+    {
+      "speaker": "User",
+      "message": "Always fatigued. I suspect I have Menier’s disease."
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand your concern. Let's gather more information to understand your situation better. Could you please describe the symptoms that make you suspect Meniere's disease?"
+    },
+    {
+      "speaker": "User",
+      "message": "Tinnitus ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, feeling off balance"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for providing these details. Now, let's focus on your past medical history. Have you had any significant illnesses, injuries, surgeries, hospitalizations, or psychiatric problems in the past?"
+    },
+    {
+      "speaker": "User",
+      "message": "Cochlear implant in July of 2024"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Are you currently taking any medications, and have there been any recent changes to your medication regimen?"
+    },
+    {
+      "speaker": "User",
+      "message": "Yes amitriptyline for about 6 weeks"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Let's discuss your preventive health measures. Are you up-to-date with your preventive health screenings, such as blood pressure checks, cholesterol levels, and routine vaccinations?"
+    },
+    {
+      "speaker": "User",
+      "message": "Yes"
+    },
+    {
+      "speaker": "AI",
+      "message": "That's good to hear. Now, let's talk about your social history. Do you use alcohol, tobacco, or recreational drugs?"
+    },
+    {
+      "speaker": "User",
+      "message": "Maybe 1-2 drinks a week"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Let's discuss your family history next. Do any of your close family members have a history of major illnesses, such as arthritis, hearing problems, or autoimmune diseases?"
+    },
+    {
+      "speaker": "User",
+      "message": "Yes autoimmune"
+    },
+    {
+      "speaker": "AI",
+      "message": "I appreciate the information. Could you specify which autoimmune diseases are present in your family history and who in your family has them?"
+    },
+    {
+      "speaker": "User",
+      "message": "Graves' disease, and others I don't remember"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Now, let's discuss your occupational history. What type of work do you do, and does your job involve any physical activities that might impact your symptoms?"
+    },
+    {
+      "speaker": "User",
+      "message": "Bus driver"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Lastly, let's perform a review of systems. Aside from the symptoms you've already mentioned, do you have any issues with other systems in your body, such as gastrointestinal problems, respiratory issues, cardiovascular concerns, or skin conditions?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you, I think I have enough information, is there anything else you want to tell me about your health history?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    }
+  ]
+},
+{
+  "caseID": 8,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "I am a 56-year-old man. Here's my MRI."
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing your MRI results with me. Let's start by discussing your primary concerns. Can you tell me more about your flank pain? Specifically, where exactly is the pain located, and how would you describe it (e.g., sharp, dull, constant, intermittent)?"
+    },
+    {
+      "speaker": "User",
+      "message": "It's a dull pain that wakes me up at night. I don't feel it when I'm standing up. It's on my left side under my rib cage"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for providing that information. When did this pain first start, and how long does it typically last when it occurs?"
+    },
+    {
+      "speaker": "User",
+      "message": "About 3-4 weeks ago. When I stand up and am moving, the pain goes away."
+    },
+    {
+      "speaker": "AI",
+      "message": "I understand. Thank you for that detail. Is there anything specific that seems to make the pain worse or better, aside from standing up and moving?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Alright, thank you. Have you noticed any other symptoms accompanying this pain, such as changes in bowel or bladder habits, nausea, or weight loss?"
+    },
+    {
+      "speaker": "User",
+      "message": "Not really. Maybe some slight headaches here and there but nothing remarkable"
+    },
+    {
+      "speaker": "AI",
+      "message": "Got it, thank you. Do you have any past medical history of illnesses, major injuries, surgeries, psychiatric problems, or hospitalizations?"
+    },
+    {
+      "speaker": "User",
+      "message": "I had a herniated disc in my lumbar spine about 10 years ago and had surgery to fix the pinched nerve. I also have hypertension that's controlled by medication."
+    },
+    {
+      "speaker": "AI",
+      "message": "Thanks for sharing that with me. Are you currently taking any medications, and have there been any recent changes to your medication regimen?"
+    },
+    {
+      "speaker": "User",
+      "message": "Just the medication for my hypertension"
+    },
+    {
+      "speaker": "AI",
+      "message": "Alright, thank you. Do you take any preventive health measures, such as regular check-ups, vaccinations, or screenings?"
+    },
+    {
+      "speaker": "User",
+      "message": "Yes"
+    },
+    {
+      "speaker": "AI",
+      "message": "Good to know. Can you tell me about your social history? Specifically, do you use alcohol, tobacco, or any recreational drugs?"
+    },
+    {
+      "speaker": "User",
+      "message": "I quit drinking about a year ago, and quit smoking about 17 years ago."
+    },
+    {
+      "speaker": "AI",
+      "message": "That's great to hear. Thank you for sharing. Do you have any family history of major illnesses, such as heart disease, cancer, or neurological conditions?"
+    },
+    {
+      "speaker": "User",
+      "message": "Hypertension and kidney failure"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Can you tell me about your occupation? What kind of work do you do, and does it involve any physical strain or prolonged sitting?"
+    },
+    {
+      "speaker": "User",
+      "message": "I used to work in a factory driving a forklift but am now retired"
+    },
+    {
+      "speaker": "AI",
+      "message": "Understood, thank you. Lastly, I would like to perform a review of systems to ensure we cover all aspects of your health. Have you experienced any issues with any of the following? - Unexplained weight changes - Fatigue - Fever or chills - Vision or hearing changes - Respiratory problems - Heart palpitations - Gastrointestinal issues - Urinary problems - Joint or muscle pain - Skin changes. Please let me know if any of these apply to you."
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    }
+  ]
+},
+{
+  "caseID": 9,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "I'm 60 years old. After death of my wife of 30 years about a year ago, I started to experience headaches."
+    },
+    {
+      "speaker": "AI",
+      "message": "I'm so sorry for your loss. Could you please share more about the symptoms or experiences you've been having since wife passing? For example, are you noticing changes in your mood, sleep, appetite, physical health, or anything else that's concerning you?"
+    },
+    {
+      "speaker": "User",
+      "message": "all over body pain after periods of rest"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Just to clarify, is this pain something new since your wife's passing, or have you experienced it before? Also, does the pain improve after you start moving around, or does it persist throughout the day regardless of activity?"
+    },
+    {
+      "speaker": "User",
+      "message": "I don't remember the whole body pain before my wife’s passing, but sometimes I had similar pain in my feet and hands in the morning"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. Since you're experiencing new, widespread body pain after periods of rest‚ especially given the recent change in your health pattern‚ it's important to have this evaluated further to determine the underlying cause."
+    },
+    {
+      "speaker": "User",
+      "message": "I don't remember the whole-body pain before my wife’s passing, but sometimes I had similar pain in my feet and hands in the morning"
+    },
+    {
+      "speaker": "AI",
+      "message": "Absolutely, I can help with that. Quick question - what's your age and biological sex? It helps me give you more relevant and personalized information."
+    },
+    {
+      "speaker": "User",
+      "message": "I am a 60-year-old woman."
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. Let's talk a bit more about your pain so I can better understand what you're experiencing. Can you describe the pain for me? For example, is it aching, throbbing, burning, or stiff? And how would you rate the intensity of the pain on a scale from 0 (no pain) to 10 (worst pain imaginable)?"
+    },
+    {
+      "speaker": "User",
+      "message": "It is dull pain that somewhat restricts my movements. Intensity is probably 2-3. It gets better after I move for awhile. However if I walk a lot or do something with my hands, the pain intensifies in my feet or hands respectively and doesn't go away for many hours"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for describing that so clearly. Just to make sure I understand: - The pain is a dull ache, mostly mild (2-3 out of 10), and it restricts your movement somewhat. - It's worse after periods of rest (like in the morning) but improves as you move around. - If you use your hands or feet a lot, the pain in those areas gets worse and can last for hours. Let's get a bit more detail to help narrow things down: When did you first start noticing this pain all over your body after rest? Has it been gradually getting worse, or has it stayed about the same since it started?"
+    },
+    {
+      "speaker": "User",
+      "message": "I started noticing it last November. It's getting worse then better in waves over 2-3 months"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that timeline. So, the pain began around last November and seems to come and go in waves, sometimes getting worse and sometimes improving, with each wave lasting a couple of months. To help me further, could you tell me if there are any other symptoms that occur along with the pain? For example, have you noticed any joint swelling, redness, morning stiffness (and if so, how long does it last), fever, fatigue, weight changes, or changes in mood or sleep?"
+    },
+    {
+      "speaker": "User",
+      "message": "No swelling. It feels like muscle aches. I only feel my joints when I overexert my hands or feet"
+    },
+    {
+      "speaker": "AI",
+      "message": "That's helpful to know, so no swelling, and the pain feels more like muscle aches rather than joint pain, except when you overuse your hands or feet. Let's clarify a bit more about your symptoms: - How long does the stiffness or pain last after you wake up or after resting? - Do you ever have muscle weakness, numbness, tingling, or any other unusual sensations? - Have you noticed any changes in your energy level or experienced significant fatigue?"
+    },
+    {
+      "speaker": "User",
+      "message": "In the mornings it usually goes away in 1-3 hours, faster if I have to move more. No other sensations, but I often experience fatigue. It's not always correspond to the levels of pain though"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. So, your morning pain and stiffness typically resolve within 1-3 hours, and movement helps. You don't have numbness or tingling, but you do often feel fatigued, and the fatigue doesn't always match the pain level. A few more questions to help me understand the bigger picture: - Has your sleep changed since these symptoms started (difficulty falling asleep, staying asleep, or waking up unrefreshed)? - Have you noticed any changes in your mood, such as feeling more down, anxious, or less interested in things you used to enjoy? - Do you have any history of autoimmune diseases (like thyroid disease, lupus, or rheumatoid arthritis) in yourself or your family?"
+    },
+    {
+      "speaker": "User",
+      "message": "Yes. Yes and no"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for your responses. Just to summarize: - You have noticed changes in your sleep since the symptoms started. - You have also noticed changes in your mood, such as feeling more down or anxious, or less interested in things you used to enjoy. - You do not have a personal or family history of autoimmune diseases. Let's talk about your overall health history. Do you have any chronic medical conditions (such as high blood pressure, diabetes, thyroid issues, or depression), or have you had any major illnesses, injuries, or hospitalizations in the past?"
+    },
+    {
+      "speaker": "User",
+      "message": "I had anxiety that occasionally had my hands shaking and gave me cold sweats that even soaked my shoes through. It was work related. Medications didn't help. It went away after switching jobs about 7 years ago. I don't have any chronic conditions except headaches and weren't hospitalized ever except for giving birth to my 2 children"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing your health history. So, you previously experienced significant anxiety related to work, which improved after a job change about 7 years ago, and you haven't had chronic conditions aside from headaches. You've never been hospitalized except for childbirth. Let's talk about your current medications. Are you taking any medications or supplements regularly right now? If so, could you tell me the names, doses, and how often you take them? If you take anything for your headaches, please include that as well."
+    },
+    {
+      "speaker": "User",
+      "message": "I have long history with headaches. They started with puberty. I was taking exedrin for many years until it stopped working. Then I took advil. That stopped working too. I was prescribed maxalt, and it worked for me until it gave me an episode where I felt like I was having a heart attack. Heart in my throat, tunnel vision, feeling like I was about to pass out. I never took it since. Then i was prescribed fioricet, and it worked for me until it gave me an episode where I felt like I was having a heat attack. Heart in my throat, tunnel vision, feeling like I was about to pass out. I never took it since. Then i was prescribed fioricet. It worked most of the time. I take it almost daily. Some days I have to take it a few times. When that doesn't work, I take ubrelvy"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for providing those details about your headache history and medications. Just to make sure I have this right, here's what you've shared: - Excedrin (acetaminophen/aspirin/caffeine): used for years, but stopped working. - Advil (ibuprofen): used after Excedrin, but also stopped working. - Maxalt (rizatriptan): worked but caused a severe reaction (heart racing, tunnel vision, near-fainting), so you stopped. - Fioricet (acetaminophen/butalbital/caffeine): currently taking almost daily, sometimes multiple times a day. - Ubrelvy (ubrogepant): used when Fioricet doesn't work. A few follow-up questions: 1. Are you taking any other medications or supplements regularly (for any reason)? 2. Do you take Fioricet for any reason other than headaches? 3. Do you take anything specifically for your fatigue, sleep, or mood? Also, since you mentioned headaches are a long-standing issue, do you take any preventive medications for them, or only the ones you listed above for acute relief?"
+    },
+    {
+      "speaker": "User",
+      "message": "I buy supplements quite often but then don't really take them, so, no, I don't take other medications or supplements. I don't take fioricet for reasons other than headaches. I do not take preventing medicines because it's expensive and I also don't want extra meds in my system"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. So, you don't take any other regular medications or supplements, only use Fioricet for headaches, and you avoid preventive medicines due to cost and a preference to limit medications. Now, I'd like to ask about allergies. Do you have any allergies to medications, foods, or other substances? If so, could you tell me what you're allergic to, what kind of reaction you had, and when it last happened?"
+    },
+    {
+      "speaker": "User",
+      "message": "I had a severe reaction to sulfanylamide I developed red spots mostly on my hands, feet, and neck, and mucous membranes were sloughing off in my mouth, so I couldn't eat or drink anything, even water burned like acid. The spots on my skin turned to brown and also sloughed off leaving new glossy skin underneath like after a bad burn. They were extremely itchy and it lasted for about a month. It didn't help that I was misdiagnosed and told to continue antibiotic. It gradually became better after I finished it"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing those details. That sounds like a very severe allergic reaction, possibly a serious drug reaction such as Stevens-Johnson syndrome. It's extremely important that you avoid all sulfonamide antibiotics in the future. To confirm, you have a severe allergy to sulfonamide antibiotics, which caused: - Red spots on hands, feet, neck - Mouth sores with sloughing of mucous membranes - Severe skin reaction with peeling and itching - Lasted about a month. Do you have any other allergies to medications, foods, or anything else? If so, could you describe the reaction and when it last occurred?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    }
+  ]
+},
+{
+  "caseID": 10,
+  "messages": [
+    {
+      "speaker": "User",
+      "message": "Female Tender nipples slight discolored tummy line sticky discharge"
+    },
+    {
+      "speaker": "AI",
+      "message": "Are you currently pregnant or is there a chance you could be pregnant?"
+    },
+    {
+      "speaker": "User",
+      "message": "No it has to be something else"
+    },
+    {
+      "speaker": "AI",
+      "message": "Have you recently started any new medications, supplements, or experienced any changes in your menstrual cycle?"
+    },
+    {
+      "speaker": "User",
+      "message": "My last period was on Friday my period before the last one lasted for 20 days I recently took iron pills when my period started to go past 7 days other than that"
+    },
+    {
+      "speaker": "AI",
+      "message": "Please tell me your age and sex, and we can begin your symptom analysis."
+    },
+    {
+      "speaker": "User",
+      "message": "I am a 25 year old woman."
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Let's make sure I understand your main concerns: - Tender nipples - Slightly discolored tummy line - Sticky discharge - Recent changes in your periods (one lasted 20 days, last period started on a Friday) - Recently started iron pills. Are there any other symptoms or health concerns you're experiencing right now? For example: pain, fever, fatigue, itching, abdominal discomfort, or anything else unusual?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Let's talk more about each of your symptoms to get a clearer picture. First, about your tender nipples: - When did you first notice the tenderness? - Is it constant or does it come and go? - How would you describe the intensity (mild, moderate, severe)? - Is there any redness, swelling, or discharge from the nipples?"
+    },
+    {
+      "speaker": "User",
+      "message": "I first noticed tenderness July 6th it's only comes it's now July 13 when I poke it or squeeze it goes away right after it instantly goes away there is a tiny bit of redness no swelling or discharge"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for those details. Now, about the slightly discolored tummy line: - Where exactly is the discoloration (for example, is it a line running from your belly button downward)? - When did you first notice this discoloration? - Has the color changed over time, and if so, how (darker, lighter, etc.)? - Is there any itching, pain, or texture change to the skin in that area?"
+    },
+    {
+      "speaker": "User",
+      "message": "Line from belly button sits lower than belly button not yet no the line is noticed yesterday"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. Let's discuss the sticky discharge: - When did you first notice the sticky discharge? - What color is it? - Does it have any odor? - How much discharge are you having (just a little, moderate, or a lot)? - Are you experiencing any itching, burning, or irritation in the vaginal area?"
+    },
+    {
+      "speaker": "User",
+      "message": "7 days ago white moderate no"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for that information. Now, regarding your periods: - You mentioned one period lasted 20 days and your last period started on a Friday. How long did your most recent period last? - Are your periods usually regular, or have you noticed other changes in your cycle recently? - Have you experienced any unusual bleeding or spotting between periods?"
+    },
+    {
+      "speaker": "User",
+      "message": "7 days, no"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thanks for clarifying. Just to review, you recently started taking iron pills when your period lasted longer than usual. - Are you still taking the iron pills now? - Did you notice any changes in your symptoms (nipple tenderness, discharge, tummy line) after starting the iron pills, or did they begin before you started them?"
+    },
+    {
+      "speaker": "User",
+      "message": "No they just started hurting later after all that"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for explaining the timeline. Have you ever had any similar symptoms in the past‚ such as nipple tenderness, changes in vaginal discharge, or skin discoloration on your abdomen‚ or is this the first time you've experienced these issues?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. Have you had any recent illnesses, fevers, or contact with anyone who has been sick in the past few weeks?"
+    },
+    {
+      "speaker": "User",
+      "message": "My mother"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thanks for letting me know. What kind of illness did your mother have, and did you have any similar symptoms (such as cough, sore throat, fever, stomach upset, etc.)?"
+    },
+    {
+      "speaker": "User",
+      "message": "Runny nose I don't know what kind of sick my mom was"
+    },
+    {
+      "speaker": "AI",
+      "message": "Understood. Have you had any recent injuries, heavy exercise, or physical strain‚ especially around your chest, abdomen, or pelvic area‚ that might relate to your symptoms?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for clarifying. What are you hoping to find out or achieve from this consultation today? Are you mainly looking for a possible diagnosis, reassurance, or advice on what to do next?"
+    },
+    {
+      "speaker": "User",
+      "message": "Possible diagnosis"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing your concerns and being so thorough. Before I provide a summary and possible causes, I need to ask about your medical history: Do you have any chronic medical conditions, major illnesses, or have you ever been hospitalized for anything significant in the past?"
+    },
+    {
+      "speaker": "User",
+      "message": "No"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Now, let's review your medications to make sure we have a complete picture. Are you currently taking any medications or supplements at all (including the iron pills you mentioned earlier)? If so, please list the name, dose, and how often you take each one. If you stopped the iron pills, let me know when you stopped."
+    },
+    {
+      "speaker": "User",
+      "message": "Airborne gummy vitamin daily"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you. Just to confirm, are you taking anything else for menstrual issues, such as birth control pills or other supplements, or any medications for other health reasons?"
+    },
+    {
+      "speaker": "User",
+      "message": "I have nexplanon birth control in my arm"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for letting me know you have a Nexplanon implant. Are you taking any medications specifically for your periods, or for any other health conditions, besides the Airborne gummy vitamin and the iron pills you took previously?"
+    },
+    {
+      "speaker": "User",
+      "message": "No no"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for confirming. Now, to complete your medical profile, do you have any allergies to medications, foods, or other substances? If so, what kind of reaction do you have, and when did it last occur?"
+    },
+    {
+      "speaker": "User",
+      "message": "Hydrocortisone cream never"
+    },
+    {
+      "speaker": "AI",
+      "message": "Thank you for sharing that. Just to clarify, you are allergic to hydrocortisone cream, but you've never had a reaction‚ did I understand that correctly? If you have had a reaction, could you describe what happened?"
+    },
+    {
+      "speaker": "User",
+      "message": "Correct"
+    }
+  ]
+}
+]

@@ -1,0 +1,1002 @@
+[
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "viralDiarrhea",
+    "probability": 35,
+    "diagnosisName": "Viral diarrhea",
+    "cantMiss": false,
+    "description": "Self-limited; testing and treatment rarely alter management",
+    "Rank": 1
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "bacterialDiarrhea",
+    "probability": 25,
+    "diagnosisName": "Bacterial diarrhea",
+    "cantMiss": false,
+    "description": "Generally self-limited; testing and treatment if severe or travel related",
+    "Rank": 2
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "protozoalDiarrhea",
+    "probability": 10,
+    "diagnosisName": "Protozoal diarrhea",
+    "cantMiss": true,
+    "description": "Often prolonged; test to guide targeted treatment",
+    "Rank": 3
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "IBD",
+    "probability": 10,
+    "diagnosisName": "Inflammatory bowel disease",
+    "cantMiss": true,
+    "description": "Chronic relapsing intestinal inflammation — Crohn’s disease or ulcerative colitis",
+    "Rank": 4
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "IBS",
+    "probability": 10,
+    "diagnosisName": "Irritable bowel syndrome",
+    "cantMiss": false,
+    "description": "Functional diarrhea, diagnosed by symptoms, with limited testing to exclude mimics",
+    "Rank": 5
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "FoodPoisoning",
+    "probability": 3,
+    "diagnosisName": "Food poisoning",
+    "cantMiss": false,
+    "description": "Abrupt onset, usually self-limited, testing rarely changes management",
+    "Rank": 6
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "Diverticulitis",
+    "probability": 3,
+    "diagnosisName": "Diverticulitis",
+    "cantMiss": false,
+    "description": "Acute inflammation of diverticula; uncomplicated cases do not require antibiotics",
+    "Rank": 7
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "Malabsorption",
+    "probability": 2,
+    "diagnosisName": "Malabsorption syndrome",
+    "cantMiss": false,
+    "description": "A chronic syndrome with targeted testing for the underlying cause",
+    "Rank": 8
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "LaxativeMisuse",
+    "probability": 1,
+    "diagnosisName": "Laxative misuse",
+    "cantMiss": false,
+    "description": "Ongoing diarrhea caused by laxatives",
+    "Rank": 9
+  },
+  {
+    "caseID": 1,
+    "presentation": "Summary: A 22-year-old woman presented with a 5-day history of diffuse crampy (“bubble-like”) abdominal pain (4/10), bloating, gas, uncontrollable diarrhea, nausea, fever, and loss of appetite, with eating exacerbating symptoms. She reports 2–3 similar self-limited episodes over the past few years and traveled on a cruise to Jamaica approximately one month prior. She takes no medications, drinks several beers nightly, and has an unspecified family history of illness.",
+    "diagnosisID": "STI",
+    "probability": 1,
+    "diagnosisName": "Sexually transmitted infection",
+    "cantMiss": true,
+    "description": "Gonorrhea; often asymptomatic; treat promptly with partner notification",
+    "Rank": 10
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "PanicAttack",
+    "probability": 60,
+    "diagnosisName": "Panic attack",
+    "cantMiss": false,
+    "description": "Intense physical symptoms that peak and pass spontaneously",
+    "Rank": 1
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "Alcohol_SUD",
+    "probability": 10,
+    "diagnosisName": "Alcohol or other substance use disorder",
+    "cantMiss": false,
+    "description": "Intoxication, withdrawal, and chronic effects that can mimic other conditions",
+    "Rank": 2
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "Conversion_disorder",
+    "probability": 10,
+    "diagnosisName": "Conversion disorder",
+    "cantMiss": false,
+    "description": "Diagnosis based on clinical signs; symptoms are real and not feigned",
+    "Rank": 3
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "MedicationSideEffect",
+    "probability": 5,
+    "diagnosisName": "Medication side effect",
+    "cantMiss": false,
+    "description": "Symptoms caused by a medicine; medication review precedes further testing",
+    "Rank": 4
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "GERD",
+    "probability": 5,
+    "diagnosisName": "Gastroesophageal reflux disease",
+    "cantMiss": false,
+    "description": "Acid reflux causing chest or epigastric pain; commonly diagnosed and treated empirically",
+    "Rank": 5
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "TIA",
+    "probability": 3,
+    "diagnosisName": "Transient ischemic attack",
+    "cantMiss": true,
+    "description": "Transient neurological symptoms; requires urgent evaluation for stroke prevention",
+    "Rank": 6
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "MechanicalObstruction",
+    "probability": 3,
+    "diagnosisName": "Mechanical obstrution",
+    "cantMiss": true,
+    "description": "A physical blockage; needs prompt imaging and sometimes surgery",
+    "Rank": 7
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "EsophagealDisorder",
+    "probability": 2,
+    "diagnosisName": "Esophageal motility disorder",
+    "cantMiss": false,
+    "description": "The esophagus does not move food normally",
+    "Rank": 8
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "Seizure",
+    "probability": 1,
+    "diagnosisName": "Simple partial seizure",
+    "cantMiss": true,
+    "description": "Brief, stereotyped, recurrent episodes with preserved awareness; diagnosed by EEG and imaging",
+    "Rank": 9
+  },
+  {
+    "caseID": 2,
+    "presentation": "Summary: A 31-year-old male with a psychiatric history of major depression, ADHD, and schizoid personality disorder presented with a sudden-onset episode of expressive dysphasia, dysphagia (inability to initiate the swallowing reflex), presyncope, and generalized weakness while eating in a recumbent position. Symptoms resolved completely within 20–30 minutes with no residual deficits. He takes escitalopram 20 mg, lisdexamphetamine 60 mg, quetiapine 200 mg, and mirtazapine 7.5 mg, and has a paternal family history of cardiac disease. No focal motor deficits, facial asymmetry, loss of consciousness, or cardiorespiratory symptoms were reported. ",
+    "diagnosisID": "BPPV",
+    "probability": 1,
+    "diagnosisName": "Benign paroxysmal positional vertigo",
+    "cantMiss": false,
+    "description": "Episodic spinning sensation",
+    "Rank": 10
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "DentalInfection",
+    "probability": 30,
+    "diagnosisName": "Dental infection",
+    "cantMiss": true,
+    "description": "Infection of a tooth or surrounding tissue; needs source control plus antibiotics",
+    "Rank": 1
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "NeckSpaceInfection",
+    "probability": 25,
+    "diagnosisName": "Neck space infection",
+    "cantMiss": true,
+    "description": "Deep neck space infection; with risk of airway compromise and mediastial spread",
+    "Rank": 2
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "Lymphoma",
+    "probability": 15,
+    "diagnosisName": "Lymphoma",
+    "cantMiss": true,
+    "description": "Malignancy of lymphocytes",
+    "Rank": 3
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "Parotitis",
+    "probability": 10,
+    "diagnosisName": "Parotitis",
+    "cantMiss": false,
+    "description": "Inflammation of the parotid gland —obstructive, infectious, or autoimmune",
+    "Rank": 4
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "HeadNeckCancer",
+    "probability": 8,
+    "diagnosisName": "Head and neck cancer",
+    "cantMiss": true,
+    "description": "Squamous cell carcinoma of the upper aerodigestive tract",
+    "Rank": 5
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "ChronicSinusitus",
+    "probability": 4,
+    "diagnosisName": "Chronic sinusitus",
+    "cantMiss": false,
+    "description": "Sinus inflammation lasting 12 weeks or longer",
+    "Rank": 6
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "BehçetSyndrome",
+    "probability": 4,
+    "diagnosisName": "Behçet’s syndrome",
+    "cantMiss": false,
+    "description": "Systemic vasculitis with recurrent oral and genital ulcers",
+    "Rank": 7
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "Lupus",
+    "probability": 2,
+    "diagnosisName": "Systemic lupus erythematosus",
+    "cantMiss": true,
+    "description": "Multisystem autoimmune disease; serology plus organ involvement makes the diagnosis",
+    "Rank": 8
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "IBD",
+    "probability": 1,
+    "diagnosisName": "Inflammatory bowel disease",
+    "cantMiss": true,
+    "description": "chronic relapsing intestinal inflammation — Crohn’s disease or ulcerative colitis",
+    "Rank": 9
+  },
+  {
+    "caseID": 3,
+    "presentation": "Summary: 66-year-old woman with several months of constant right-sided pre-/post-auricular and jaw/upper neck swelling and pain (5 - 10/10) radiating to the neck and clavicle, worsened by heat, associated with intermittent dull right earache, pressure-related headaches, low-grade fevers (~100F), and oral ulcerative lesions on the right posterior oropharynx and tongue base. She also reports 1 month of non-bloody diarrhea of unclear trigger and unintentional 10-lb weight loss. Past history notable for prior kidney infections, remote leg DVT, recurrent precancerous scalp lesions treated with cryotherapy, and three prior COVID-19 infections; family history includes congestive heart failure and rheumatoid arthritis. No tobacco, alcohol, or drug use; on antihypertensive and statin; multiple drug allergies (keflex, topical iodine, sulfa, gabapentin)",
+    "diagnosisID": "TrigeminalNeuralgia",
+    "probability": 1,
+    "diagnosisName": "Trigeminal neuralgia",
+    "cantMiss": false,
+    "description": "Paroxysmal, electric-shock facial pain in a trigeminal nerve distribution",
+    "Rank": 10
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "ErectileDysfunction",
+    "probability": 45,
+    "diagnosisName": "Erectile dysfuction",
+    "cantMiss": false,
+    "description": "Inability to achieve or maintain an erection",
+    "Rank": 1
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "VaricoSpermatoHydrocele ",
+    "probability": 15,
+    "diagnosisName": " Varicocele, spermatocele, hydrocele ",
+    "cantMiss": false,
+    "description": "Benign scrotal masses; distinguished by ultrasound",
+    "Rank": 2
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "Epididymitis",
+    "probability": 11,
+    "diagnosisName": "Chronic epididymitis",
+    "cantMiss": true,
+    "description": "Pain, swelling, and tenderness of the scrotum lasting more than six weeks",
+    "Rank": 3
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "InguinalHernia",
+    "probability": 10,
+    "diagnosisName": " Inguinal hernia",
+    "cantMiss": false,
+    "description": "Abdominal contents protruding through the inguinal canal",
+    "Rank": 4
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "Diabetes",
+    "probability": 5,
+    "diagnosisName": "Diabetes mellitus, type 2",
+    "cantMiss": true,
+    "description": "Chronic hyperglycemia with associated consequences",
+    "Rank": 5
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "TesticularProstateCancer ",
+    "probability": 5,
+    "diagnosisName": "Testicular or prostate cancer ",
+    "cantMiss": true,
+    "description": "Scrotal or prostatic malignancy",
+    "Rank": 6
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "ProstatitisUTI",
+    "probability": 3,
+    "diagnosisName": "Prostatitis or urinary tract infection",
+    "cantMiss": true,
+    "description": "Bacterial infection of the prostate or urinary tract; dysuria and urinary frequency",
+    "Rank": 7
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "probability": 3,
+    "diagnosisName": "Referred pain lumbar spine pathology",
+    "cantMiss": false,
+    "description": "Lumbar nerve root compression or irritation causing radiating pain",
+    "Rank": 8
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "Hypogonadism",
+    "probability": 2,
+    "diagnosisName": "Hypogonadism",
+    "cantMiss": false,
+    "description": "Low testosterone",
+    "Rank": 9
+  },
+  {
+    "caseID": 4,
+    "presentation": "Summary: 48-year-old man with several months of bilateral testicular/groin heaviness and tightness that is not position- or activity-dependent, with one testicle appearing larger than the other. Concurrent onset of erectile dysfunction. Reports daytime urinary frequency (~6 times/day) without nocturia and intermittent foamy urine. No prior major illnesses, surgeries, or medications; drinks alcohol on weekends and works as a forklift driver. No family history of urologic disease. No systemic symptoms reported.",
+    "diagnosisID": "UrinaryCalculi",
+    "probability": 1,
+    "diagnosisName": "Urinary calculi ",
+    "cantMiss": false,
+    "description": "Kidney or ureteral stones that can cause obstruction and infection",
+    "Rank": 10
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "BeeSting",
+    "probability": 50,
+    "diagnosisName": "Local reaction to bee sting",
+    "cantMiss": false,
+    "description": "Localized swelling after envenomation; resolves without treatment",
+    "Rank": 1
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Cellulitis",
+    "probability": 20,
+    "diagnosisName": "Cellulitis/superficial infection",
+    "cantMiss": true,
+    "description": "Bacterial skin infection; diagnosed clinically and treated empirically",
+    "Rank": 2
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Abscess",
+    "probability": 15,
+    "diagnosisName": "Abscess/deep infection ",
+    "cantMiss": true,
+    "description": "Walled-off collection of pus generally requiring drainage",
+    "Rank": 3
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Urticaria ",
+    "probability": 5,
+    "diagnosisName": "Urticaria ",
+    "cantMiss": false,
+    "description": "Transient itchy wheals from mast cell activation",
+    "Rank": 4
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Dermatitis",
+    "probability": 3,
+    "diagnosisName": "Contact dermatitis ",
+    "cantMiss": false,
+    "description": "iIchy rash where an irritant or allergen touched the skin",
+    "Rank": 5
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Lyme",
+    "probability": 2,
+    "diagnosisName": "Erythema migrans/Lyme",
+    "cantMiss": false,
+    "description": "The expanding rash of early Lyme disease; treat on appearance alone",
+    "Rank": 6
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Thrombophlebitis ",
+    "probability": 2,
+    "diagnosisName": "Superficial thrombophlebitis ",
+    "cantMiss": false,
+    "description": "Clot and inflammation in a superficial vein",
+    "Rank": 7
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "InjectionDrugUse",
+    "probability": 1,
+    "diagnosisName": "Injection drug use",
+    "cantMiss": true,
+    "description": "Injection-related skin and bloodstream infection",
+    "Rank": 8
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "Anaphylaxis ",
+    "probability": 1,
+    "diagnosisName": "Anaphylaxis ",
+    "cantMiss": true,
+    "description": "Rapid multisystem allergic reaction",
+    "Rank": 9
+  },
+  {
+    "caseID": 5,
+    "presentation": "Summary: 43-year-old man with history of endocarditis and prior bloodstream infection presents with 3 days of swelling, warmth, redness, itching, and pain (6/10) over the dorsum of the hand from knuckles to wrist, worsened by movement and limiting hand use. Similar episode occurred about a month ago after a bee/wasp sting; current episode again follows a sting, with systemic symptoms of feeling hot, nausea, reduced appetite, headache, and a brief episode of grayed-out vision, but no dyspnea. Medications include Suboxone, oxcarbazepine, hydroxyzine pamoate, prazosin, and olanzapine; uses alcohol occa.sionally, cannabis, and vapes. No recent trauma or surgery; no known drug or other allergies",
+    "diagnosisID": "RecurrentBacteremia",
+    "probability": 1,
+    "diagnosisName": "Recurrent bacteremia",
+    "cantMiss": true,
+    "description": "Repeat bloodstream infection; look for an endovascular source",
+    "Rank": 10
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "MuscleSpasm",
+    "probability": 50,
+    "diagnosisName": "Muscle spasm or strain",
+    "cantMiss": false,
+    "description": "Self-limited musculoskeletal strain; no imaging needed",
+    "Rank": 1
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "Radioculopathy",
+    "probability": 30,
+    "diagnosisName": "Radiculopathy from cervical/thoracic disease",
+    "cantMiss": false,
+    "description": "Cervical or thoracic nerve root compression or irritation causing radiating pain",
+    "Rank": 2
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "RibFracture",
+    "probability": 8,
+    "diagnosisName": "Rib fracture or pathology",
+    "cantMiss": false,
+    "description": "Bone injury or lesion causing focal chest wall pain",
+    "Rank": 3
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "Pleurisy",
+    "probability": 4,
+    "diagnosisName": "Pleurisy",
+    "cantMiss": false,
+    "description": "Inflammation of the pleura; pain worse with breathing",
+    "Rank": 4
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "PulmonaryEmbolism",
+    "probability": 2,
+    "diagnosisName": "Pulmonary embolism",
+    "cantMiss": true,
+    "description": "Clot in the pulmonary arteries",
+    "Rank": 5
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "GERD",
+    "probability": 2,
+    "diagnosisName": "Gastroesophageal reflux disease",
+    "cantMiss": false,
+    "description": "Acid reflux causing chest or epigastric pain; commonly diagnosed and treated empirically",
+    "Rank": 6
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "SpinalInfection",
+    "probability": 1,
+    "diagnosisName": "Spinal infection or malignancy",
+    "cantMiss": true,
+    "description": "Destructive lesion of the spine causing pain or fever",
+    "Rank": 7
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "AorticAneurysm",
+    "probability": 1,
+    "diagnosisName": "Aortic aneurysm",
+    "cantMiss": true,
+    "description": "Dilated thoracic aorta at risk for dissection or rupture",
+    "Rank": 8
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "Pneumonia",
+    "probability": 1,
+    "diagnosisName": "Pneumonia",
+    "cantMiss": true,
+    "description": "Lung infection; fever, cough, and focal chest findings",
+    "Rank": 9
+  },
+  {
+    "caseID": 6,
+    "presentation": "Summary: 47-year-old woman with history of SVT, hyperlipidemia, lumbar degenerative disc disease with severe S1 disc loss, L4-L5 contact, spinal stenosis, and right leg weakness presents with acute onset sharp, achy upper back pain radiating into the chest. Pain is intermittent, rated up to 7-8/10 when sharp, 4-5/10 when achy, appears to be movement- and possibly respiration-related, and improves when she keeps her back straighter. She denies shortness of breath, diaphoresis, nausea, fever, weight loss, or other systemic symptoms. Medications include metoprolol, simvastatin (Zocor), ondansetron, gabapentin, and PRN cyclobenzaprine; currently on antibiotics for sinus infection/bronchitis. She vapes and uses marijuana; family history notable for heart disease, diabetes, cancer, and arthritis. No recent trauma or heavy exertion reported.",
+    "diagnosisID": "HerpesZoster",
+    "probability": 1,
+    "diagnosisName": "Herpes zoster (shingles)",
+    "cantMiss": false,
+    "description": "Reactivated varicella-zoster virus in a band-like pattern",
+    "Rank": 10
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "RheumArthritis",
+    "probability": 65,
+    "diagnosisName": "Rheumatoid arthritis",
+    "cantMiss": true,
+    "description": "Symmetric inflammatory polyarthritis leading to joint destruction",
+    "Rank": 1
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "OtherArthritis",
+    "probability": 15,
+    "diagnosisName": "Other inflammatory arthritis",
+    "cantMiss": true,
+    "description": "Psoriatic, reactive, or axial spondyloarthritis",
+    "Rank": 2
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "Fibromyalgia",
+    "probability": 8,
+    "diagnosisName": "Fibromyalgia",
+    "cantMiss": false,
+    "description": "Chronic widespread pain with fatigue and nonrestorative sleep",
+    "Rank": 3
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "Osteoarthritis",
+    "probability": 5,
+    "diagnosisName": "Osteoarthritis",
+    "cantMiss": false,
+    "description": "Degenerative joint disease causing pain with use and brief morning stiffness",
+    "Rank": 4
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "AmitriptylineEffect",
+    "probability": 2,
+    "diagnosisName": "Amitriptyline side effect",
+    "cantMiss": false,
+    "description": "Anticholinergic and orthostatic effects of a recently started medicine",
+    "Rank": 5
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "Menieres",
+    "probability": 1,
+    "diagnosisName": "Ménière's disease",
+    "cantMiss": false,
+    "description": "Episodic vertigo with fluctuating hearing loss and tinnitus",
+    "Rank": 6
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "RelapsePolychondritis",
+    "probability": 1,
+    "diagnosisName": "Relapsing polychondritis",
+    "cantMiss": true,
+    "description": "Recurrent inflammation of cartilage — ear, nose, and airway",
+    "Rank": 7
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "Sarcoidosis",
+    "probability": 1,
+    "diagnosisName": "Sarcoidosis",
+    "cantMiss": true,
+    "description": "Non-caseating granulomas, most often in lung and lymph nodes",
+    "Rank": 8
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "Hypothyroidism",
+    "probability": 1,
+    "diagnosisName": "Hypothyroidism",
+    "cantMiss": false,
+    "description": "Low thyroid hormone causing fatigue and diffuse symptoms",
+    "Rank": 9
+  },
+  {
+    "caseID": 7,
+    "presentation": "Summary: 49-year-old man with years-long history of mild finger joint pain (1-2/10) with small, raised bumps near finger joints, moderate toe joint pain (4/10), and severe episodic neck pain (up to 8/10). Symptoms are worse with morning stiffness and improve with movement and heat, and there is chronic fatigue. He reports tinnitus, ear fullness, sensorineural hearing loss, episodic vertigo, dizziness, and imbalance, with a cochlear implant placed in July 2024. Past medical history otherwise unremarkable; on amitriptyline for 6 weeks. Family history notable for autoimmune disease (including Graves). No significant GI, respiratory, cardiovascular, or skin complaints; drinks 1-2 alcoholic drinks per week and works as a bus driver.",
+    "diagnosisID": "Lupus",
+    "probability": 1,
+    "diagnosisName": "Systemic lupus erythematosus with joint involvement",
+    "cantMiss": true,
+    "description": "Multisystem autoimmune disease; serology plus organ involvement makes the diagnosis",
+    "Rank": 10
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "FacetJointPain",
+    "probability": 44,
+    "diagnosisName": "Facet joint pain (T-spine)",
+    "cantMiss": false,
+    "description": "Positional mechanical back pain that is a clinical diagnosis",
+    "Rank": 1
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "ParaspinalPain",
+    "probability": 20,
+    "diagnosisName": "Paraspinal or other muscular pain",
+    "cantMiss": false,
+    "description": "Self-limited musculoskeletal strain",
+    "Rank": 2
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "Nephrolithiasis",
+    "probability": 17,
+    "diagnosisName": "Nephrolithiasis",
+    "cantMiss": true,
+    "description": "Kidney or ureteral stone that can cause obstruction and infection",
+    "Rank": 3
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "NerveSpinePain",
+    "probability": 8,
+    "diagnosisName": "Nerve pain referred from spine",
+    "cantMiss": false,
+    "description": "Thoracic nerve root compression or irritation causing radiating pain",
+    "Rank": 4
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "SpleenSplenic",
+    "probability": 3,
+    "diagnosisName": "Spleen infarct or other splenic pathology",
+    "cantMiss": true,
+    "description": "Blockage of splenic blood supply causing left upper quadrant and flank pain",
+    "Rank": 5
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "RenalMassCysticDisease",
+    "probability": 3,
+    "diagnosisName": "Renal mass or cystic disease",
+    "cantMiss": true,
+    "description": "Solid or cystic kidney lesion identified by imaging",
+    "Rank": 6
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "RibFracture",
+    "probability": 2,
+    "diagnosisName": "Rib fracture",
+    "cantMiss": false,
+    "description": "Bone injury or lesion causing focal chest wall pain",
+    "Rank": 7
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "RetroperitonealFibrosis",
+    "probability": 1,
+    "diagnosisName": "Retroperitoneal fibrosis",
+    "cantMiss": true,
+    "description": "Fibrous tissue that can encase ureters and great vessels",
+    "Rank": 8
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "RetroperitonealMalignancy",
+    "probability": 1,
+    "diagnosisName": "Retroperitoneal malignancy",
+    "cantMiss": false,
+    "description": "Sarcoma, lymphoma, or metastasis in the retroperitoneum",
+    "Rank": 9
+  },
+  {
+    "caseID": 8,
+    "presentation": "Summary: 56-year-old man with history of lumbar disc herniation (surgically treated) and well-controlled hypertension, presenting with 3-4 weeks of dull left-sided flank pain under the rib cage that wakes him at night but resolves completely when standing or moving. No associated bowel/bladder changes, systemic symptoms, or significant neurologic complaints aside from occasional mild headaches. Thoracic spine MRI shows a very small mid-thoracic syrinx at T5-T7 (1 mm), multilevel disc desiccation and height loss, ligamentum flavum infoldings, and facet arthropathy without high-grade canal stenosis or foraminal narrowing. Family history notable for hypertension and kidney failure; former smoker and drinker, now abstinent; retired factory worker/forklift driver.",
+    "diagnosisID": "AbdominalAorticAneurysm",
+    "probability": 1,
+    "diagnosisName": "Abdominal aortic aneurysm",
+    "cantMiss": true,
+    "description": "Dilated abdominal aorta at risk for dissection or rupture",
+    "Rank": 10
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "MajorDepression",
+    "probability": 45,
+    "diagnosisName": "Major depression",
+    "cantMiss": true,
+    "description": "Persistent low mood and anhedonia",
+    "Rank": 1
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "Grief",
+    "probability": 12,
+    "diagnosisName": "Prolonged grief/bereavement",
+    "cantMiss": false,
+    "description": "Persistent, disabling grief beyond the expected course",
+    "Rank": 2
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "PolymalgiaRheumatica",
+    "probability": 10,
+    "diagnosisName": "Polymyalgia rheumatica",
+    "cantMiss": true,
+    "description": "Proximal girdle pain and stiffness in older adults; dramatic steroid response",
+    "Rank": 3
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "FioricetButalbitalWithdrawal",
+    "probability": 8,
+    "diagnosisName": "Fioricet/butalbital withdrawal",
+    "cantMiss": false,
+    "description": "Rebound headache and malaise from stopping frequent butalbital use",
+    "Rank": 4
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "RheumArthritis",
+    "probability": 7,
+    "diagnosisName": "Rheumatoid arthritis",
+    "cantMiss": true,
+    "description": "Symmetric inflammatory polyarthritis leading to joint destruction",
+    "Rank": 5
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "Polymyositis",
+    "probability": 5,
+    "diagnosisName": "Polymyositis",
+    "cantMiss": true,
+    "description": "Inflammatory muscle disease with proximal weakness and elevated creatine kinase",
+    "Rank": 6
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "Osteoarthritis",
+    "probability": 5,
+    "diagnosisName": "Osteoarthritis",
+    "cantMiss": false,
+    "description": "Degenerative joint disease causing pain with use and brief morning stiffness",
+    "Rank": 7
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "Fibromyalgia",
+    "probability": 4,
+    "diagnosisName": "Fibromyalgia",
+    "cantMiss": false,
+    "description": "Chronic widespread pain with fatigue and nonrestorative sleep",
+    "Rank": 8
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "Lupus",
+    "probability": 2,
+    "diagnosisName": "Systemic lupus erythematosus",
+    "cantMiss": true,
+    "description": "Multisystem autoimmune disease; serology plus organ involvement makes the diagnosis",
+    "Rank": 9
+  },
+  {
+    "caseID": 9,
+    "presentation": "Summary: 60-year-old woman with long-standing migraine headaches (near-daily Fioricet use, occasional Ubrelvy; prior intolerance to rizatriptan and probable medication overuse) presents with ~6 months of progressive, fluctuating, dull, generalized musculoskeletal pain and stiffness after rest, improving with movement but recurring and worsening with overuse of hands/feet. Morning stiffness lasts 1-3 hours; pain is typically mild (2-3/10) but functionally limiting. She reports significant fatigue, nonrestorative sleep, and mood changes (low mood/anxiety) following the death of her long-term partner about a year ago. No joint swelling, redness, neurologic symptoms, or known autoimmune history. Past history notable for severe sulfonamide antibiotic reaction consistent with Stevens-Johnson syndrome. No other chronic medical conditions reported.",
+    "diagnosisID": "AdrenalInsufficiency",
+    "probability": 2,
+    "diagnosisName": "Adrenal insufficiency",
+    "cantMiss": true,
+    "description": "Cortisol deficiency; fatigue, weakness, and diffuse pain",
+    "Rank": 10
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "Pregnancy",
+    "probability": 40,
+    "diagnosisName": "Pregnancy",
+    "cantMiss": true,
+    "description": "Confirm or exclude before any other workup",
+    "Rank": 1
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "MenstrualPhysiology",
+    "probability": 30,
+    "diagnosisName": "Physiologic symptoms related to normal menstrual cycle",
+    "cantMiss": false,
+    "description": "Cyclic breast tenderness and discharge",
+    "Rank": 2
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "HormonalEffect",
+    "probability": 10,
+    "diagnosisName": "Hormonal effect from Nexplanon",
+    "cantMiss": false,
+    "description": "Side effects of the etonogestrel implant",
+    "Rank": 3
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "VaginalCandidasis",
+    "probability": 7,
+    "diagnosisName": "Vaginal candidiasis",
+    "cantMiss": false,
+    "description": "Yeast vaginitis; thick discharge with itching",
+    "Rank": 4
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "BacterialVaginosis",
+    "probability": 5,
+    "diagnosisName": "Bacterial vaginosis",
+    "cantMiss": false,
+    "description": "Overgrowth of vaginal anaerobes; thin discharge with odor",
+    "Rank": 5
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "STI2",
+    "probability": 3,
+    "diagnosisName": "Sexually transmitted infection (gonorrhea/chlamydia)",
+    "cantMiss": true,
+    "description": "Often asymptomatic; treat promptly with partner notification",
+    "Rank": 6
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "OvarianTumor",
+    "probability": 2,
+    "diagnosisName": "Ovarian stromal tumor secreting estrogen",
+    "cantMiss": true,
+    "description": "Rare hormone-producing ovarian tumor",
+    "Rank": 7
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "ExogenousEstrogen",
+    "probability": 1,
+    "diagnosisName": "Exogenous unreported source of estrogen",
+    "cantMiss": false,
+    "description": "Estrogen from a supplement or another person’s medication",
+    "Rank": 8
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "UTI",
+    "probability": 1,
+    "diagnosisName": "Urinary tract infection",
+    "cantMiss": false,
+    "description": "Bacterial infection of the urinary tract; dysuria and urinary frequency",
+    "Rank": 9
+  },
+  {
+    "caseID": 10,
+    "presentation": "Summary: 25-year-old woman with Nexplanon implant presents with 1 week of bilateral nipple tenderness (mild, only with pressure, minimal redness, no swelling or nipple discharge), a newly noticed faint vertical line of discoloration on the lower abdomen (from umbilicus downward, non-itchy, non-painful), and 7 days of moderate white, odorless, sticky vaginal discharge without itching or burning. Menstrual history notable for one prolonged 20-day bleed recently, followed by a 7-day period starting last Friday; otherwise no intermenstrual bleeding. She recently took iron pills during the prolonged menses and now only takes a daily Airborne gummy; no chronic illnesses. Pregnancy is denied, but no pregnancy testing has been documented. No systemic symptoms (fever, pain, fatigue) or prior similar episodes.",
+    "diagnosisID": "PMDD",
+    "probability": 1,
+    "diagnosisName": "Premenstrual dysphoric disorder (PMDD)",
+    "cantMiss": false,
+    "description": "Severe mood symptoms confined to the luteal phase",
+    "Rank": 10
+  }
+]

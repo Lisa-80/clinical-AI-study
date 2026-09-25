@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clinical AI Study</title>
+  <style>
+  :root{
+    --bg:#f6f4f8;
+    --card:#ffffff;
+    --border:#e5e7eb;
+    --blue:#2563eb;
+    --text:#1f2937;
+    --muted:#6b7280;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+}
+
+.page-container{
+    max-width:1000px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.intro-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+}
+
+.intro-card h1{
+    margin-top:0;
+}
+
+.intro-card p{
+    font-size:18px;
+}
+
+.intro-card ul{
+    line-height:1.8;
+}
+
+.card-title{
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+input[type=text]{
+    width:100%;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    padding:12px;
+    font-size:16px;
+}
+
+.submit-btn{
+    background:var(--blue);
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:14px 20px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.login-row{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-top:12px;
+}
+
+#participantId{
+    width:180px;
+    flex:none;
+}
+
+#startBtn{
+    flex:none;
+    white-space:nowrap;
+}
+</style>
+</head>
+<body>
+
+<div class="page-container">
+
+    <div class="case-card">
+
+<h2>Clinical Case Review Study</h2>
+<p>
+    Thank you for participating in this study.
+</p>
+
+<p>
+    You are a clinician evaluating a patient who completed an initial intake assessment using an AI-based system before seeing you. Based on the information provided, you will recommend next steps in the patient's care.
+</p>
+
+<p>
+    For each case, you may:
+</p>
+
+<ul>
+    <li>
+        Recommend diagnostic testing
+    </li>
+
+    <li>
+        Recommend treatment and management
+    </li>
+
+    <li>
+        Determine the appropriate level of follow-up care, including routine follow-up, urgent care, or emergency department evaluation
+    </li>
+</ul>
+
+<p>
+    Your goal is to provide the best possible care using only the information available in the case.
+</p>
+
+<p>
+    <strong>
+        Please do not use any external resources while completing the study
+        (e.g., AI tools, UpToDate, clinical references, search engines,
+        or other decision-support resources).
+    </strong>
+</p>
+<p><strong>This study is designed to be completed on a desktop or laptop computer or tablet. Do not attempt to complete the study on a mobile phone.</strong></p>
+<p>The AI information presented during the study may vary across participants as part of the study design.</p>
+<p>There are <strong>10 patient cases</strong> followed by additional questionnaires.</p>
+
+<p>Your progress is automatically saved after each case. If you leave before completing the study, return to this page and enter the same Participant ID to resume where you left off.
+</p>
+
+<div
+    id="loginError"
+    style="
+        display:none;
+        color:#b91c1c;
+        background:#fee2e2;
+        border:1px solid #fecaca;
+        padding:12px;
+        border-radius:8px;
+        margin-top:12px;
+    ">
+</div>
+ <div class="login-row">
+
+    <input
+        type="text"
+        id="participantId"
+        placeholder="Enter Participant ID">
+
+    <button
+        id="startBtn"
+        class="submit-btn">
+
+        Begin Study
+
+    </button>
+
+</div>
+
+</div>
+
+<script type="module">
+
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-app.js";
+
+import {
+    getFirestore,
+    doc,
+    getDoc
+}
+from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
+
+function showLoginError(message){
+
+    const errorDiv =
+        document.getElementById(
+            "loginError"
+        );
+
+    errorDiv.textContent = message;
+    errorDiv.style.display = "block";
+}
+
+window.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        const participantInput =
+            document.getElementById(
+                "participantId"
+            );
+
+        participantInput.focus();
+
+        participantInput.addEventListener(
+            "input",
+            () => {
+
+                document.getElementById(
+                    "loginError"
+                ).style.display = "none";
+
+            }
+        );
+
+        participantInput.addEventListener(
+            "keydown",
+            function(event){
+
+                if(event.key === "Enter"){
+
+                    document.getElementById(
+                        "startBtn"
+                    ).click();
+
+                }
+
+            }
+        );
+
+    }
+);
+
+const firebaseConfig = {
+
+    apiKey:
+        "AIzaSyC4uAUWrO03pxOL2DtvOMVRWN4aR5YignA",
+
+    authDomain:
+        "clinical-ai-study.firebaseapp.com",
+
+    projectId:
+        "clinical-ai-study",
+
+    storageBucket:
+        "clinical-ai-study.firebasestorage.app",
+
+    messagingSenderId:
+        "470693626185",
+
+    appId:
+        "1:470693626185:web:3abc35f26fee7f10ac5a98"
+
+};
+
+const app =
+    initializeApp(firebaseConfig);
+
+const db =
+    getFirestore(app);
+
+document
+    .getElementById("startBtn")
+    .onclick = async () => {
+
+    document.getElementById(
+        "loginError"
+    ).style.display = "none";
+
+    const participantId =
+        document.getElementById(
+            "participantId"
+        )
+        .value
+        .trim();
+
+    if(!participantId){
+
+        showLoginError(
+            "Please enter a Participant ID."
+        );
+
+        return;
+    }
+
+    const assignmentSnap =
+        await getDoc(
+            doc(
+                db,
+                "assignments",
+                participantId
+            )
+        );
+
+    if(!assignmentSnap.exists()){
+
+        showLoginError(
+            "Participant ID not found."
+        );
+
+        document.getElementById(
+            "participantId"
+        ).focus();
+
+        document.getElementById(
+            "participantId"
+        ).select();
+
+        return;
+    }
+
+    const studyArm =
+        assignmentSnap.data().studyArm;
+
+    window.location.href =
+        `diagnosis-study.html?id=${participantId}&arm=${studyArm}`;
+
+};
+
+</script>
+
+</body>
+
+</html>
