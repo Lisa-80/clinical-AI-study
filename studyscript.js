@@ -337,7 +337,7 @@ window.showCase = function (index) {
     container.innerHTML = `
         <div class="sidebar-header">
         <h2>AI-Generated Diagnoses</h2>
-        <p>Recommended tests and treatments that can be automatically added to your assessment.</p>
+        <p>Click &#9654; for recommended tests and treatments that can be automatically added to your assessment.</p>
         </div>
         <div class="dx-section-header">
             MOST LIKELY DIAGNOSES
