@@ -32,7 +32,12 @@
   {
     "diagnosisID": "protozoalDiarrhea",
     "type": "TEST",
-    "value": "CBC, Chem 7"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "protozoalDiarrhea",
+    "type": "TEST",
+    "value": "Chem 7"
   },
   {
     "diagnosisID": "protozoalDiarrhea",
@@ -57,7 +62,12 @@
   {
     "diagnosisID": "IBD",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "IBD",
@@ -132,7 +142,12 @@
   {
     "diagnosisID": "Diverticulitis",
     "type": "TEST",
-    "value": "CBC, Chem 7"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Diverticulitis",
+    "type": "TEST",
+    "value": "Chem 7"
   },
   {
     "diagnosisID": "Diverticulitis",
@@ -237,7 +252,12 @@
   {
     "diagnosisID": "Alcohol_SUD",
     "type": "TEST",
-    "value": "CBC, Chem 7"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "TEST",
+    "value": "Chem 7"
   },
   {
     "diagnosisID": "Alcohol_SUD",
@@ -267,7 +287,12 @@
   {
     "diagnosisID": "Conversion_disorder",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Conversion_disorder",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Conversion_disorder",
@@ -302,7 +327,12 @@
   {
     "diagnosisID": "TIA",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "TIA",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "TIA",
@@ -337,7 +367,12 @@
   {
     "diagnosisID": "MechanicalObstruction",
     "type": "TEST",
-    "value": "CBC, Chem 7"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "MechanicalObstruction",
+    "type": "TEST",
+    "value": "Chem 7"
   },
   {
     "diagnosisID": "MechanicalObstruction",
@@ -382,7 +417,12 @@
   {
     "diagnosisID": "Seizure",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Seizure",
@@ -427,7 +467,12 @@
   {
     "diagnosisID": "DentalInfection",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "DentalInfection",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "DentalInfection",
@@ -452,7 +497,12 @@
   {
     "diagnosisID": "NeckSpaceInfection",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "NeckSpaceInfection",
@@ -517,7 +567,12 @@
   {
     "diagnosisID": "Parotitis",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Parotitis",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Parotitis",
@@ -537,7 +592,12 @@
   {
     "diagnosisID": "HeadNeckCancer",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "HeadNeckCancer",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "HeadNeckCancer",
@@ -587,7 +647,12 @@
   {
     "diagnosisID": "BehçetSyndrome",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "BehçetSyndrome",
@@ -632,7 +697,12 @@
   {
     "diagnosisID": "Lupus",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Lupus",
@@ -1002,12 +1072,12 @@
   {
     "diagnosisID": "Abscess",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
   },
   {
     "diagnosisID": "Abscess",
     "type": "TEST",
-    "value": "Wound culture"
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Abscess",
@@ -1018,16 +1088,6 @@
     "diagnosisID": "Abscess",
     "type": "MGMT",
     "value": "Amoxicillin-clavulanate"
-  },
-  {
-    "diagnosisID": "Abscess",
-    "type": "MGMT",
-    "value": "Vancomycin"
-  },
-  {
-    "diagnosisID": "Abscess",
-    "type": "MGMT",
-    "value": "Incision and drainage"
   },
   {
     "diagnosisID": "Abscess",
@@ -1087,7 +1147,12 @@
   {
     "diagnosisID": "InjectionDrugUse",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "InjectionDrugUse",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "InjectionDrugUse",
@@ -1252,7 +1317,12 @@
   {
     "diagnosisID": "SpinalInfection",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "SpinalInfection",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "SpinalInfection",
@@ -1317,7 +1387,12 @@
   {
     "diagnosisID": "RheumArthritis",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "RheumArthritis",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "RheumArthritis",
@@ -1397,7 +1472,12 @@
   {
     "diagnosisID": "Fibromyalgia",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Fibromyalgia",
@@ -1922,7 +2002,12 @@
   {
     "diagnosisID": "Fibromyalgia",
     "type": "TEST",
-    "value": "CBC, Chem 12"
+    "value": "CBC"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "TEST",
+    "value": "Chem 12"
   },
   {
     "diagnosisID": "Fibromyalgia",
