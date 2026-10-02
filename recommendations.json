@@ -72,16 +72,6 @@
   {
     "diagnosisID": "IBD",
     "type": "MGMT",
-    "value": "Gastroenterology consult"
-  },
-  {
-    "diagnosisID": "IBD",
-    "type": "MGMT",
-    "value": "Colonoscopy with biopsy"
-  },
-  {
-    "diagnosisID": "IBD",
-    "type": "MGMT",
     "value": "Mesalamine"
   },
   {
@@ -93,6 +83,16 @@
     "diagnosisID": "IBD",
     "type": "MGMT",
     "value": "Infliximab"
+  },
+    {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Gastroenterology consult"
+  },
+  {
+    "diagnosisID": "IBD",
+    "type": "MGMT",
+    "value": "Colonoscopy with biopsy"
   },
   {
     "diagnosisID": "IBS",
@@ -107,12 +107,12 @@
   {
     "diagnosisID": "IBS",
     "type": "MGMT",
-    "value": "Antispasmodics"
-  },
+    "value": "Fiber (diet or supplement)"
+  }, 
   {
     "diagnosisID": "IBS",
     "type": "MGMT",
-    "value": "Fiber (diet or supplement)"
+    "value": "Antispasmodics"
   },
   {
     "diagnosisID": "IBS",
@@ -197,6 +197,11 @@
   {
     "diagnosisID": "STI",
     "type": "MGMT",
+    "value": "Partner notification"
+  },
+  {
+    "diagnosisID": "STI",
+    "type": "MGMT",
     "value": "Ceftriaxone"
   },
   {
@@ -205,19 +210,9 @@
     "value": "Doxycycline"
   },
   {
-    "diagnosisID": "STI",
-    "type": "MGMT",
-    "value": "Partner notification"
-  },
-  {
     "diagnosisID": "PanicAttack",
     "type": "MGMT",
     "value": "Psychiatry consult"
-  },
-  {
-    "diagnosisID": "PanicAttack",
-    "type": "MGMT",
-    "value": "Cognitive behavioral therapy referral"
   },
   {
     "diagnosisID": "PanicAttack",
@@ -233,6 +228,11 @@
     "diagnosisID": "PanicAttack",
     "type": "MGMT",
     "value": "Lorazepam"
+  },
+  {
+    "diagnosisID": "PanicAttack",
+    "type": "MGMT",
+    "value": "Cognitive behavioral therapy referral"
   },
   {
     "diagnosisID": "Alcohol_SUD",
@@ -252,17 +252,17 @@
   {
     "diagnosisID": "Alcohol_SUD",
     "type": "MGMT",
-    "value": "Addiction medicine consult"
-  },
-  {
-    "diagnosisID": "Alcohol_SUD",
-    "type": "MGMT",
     "value": "Naltrexone"
   },
   {
     "diagnosisID": "Alcohol_SUD",
     "type": "MGMT",
     "value": "Nicotine replacement"
+  },
+    {
+    "diagnosisID": "Alcohol_SUD",
+    "type": "MGMT",
+    "value": "Addiction medicine consult"
   },
   {
     "diagnosisID": "Conversion_disorder",
@@ -387,22 +387,22 @@
   {
     "diagnosisID": "Seizure",
     "type": "TEST",
-    "value": "EEG"
-  },
-  {
-    "diagnosisID": "Seizure",
-    "type": "TEST",
     "value": "MRI brain"
   },
   {
     "diagnosisID": "Seizure",
-    "type": "MGMT",
-    "value": "Neurology consult"
+    "type": "TEST",
+    "value": "EEG"
   },
   {
     "diagnosisID": "Seizure",
     "type": "MGMT",
     "value": "Lamotrigine"
+  },
+  {
+    "diagnosisID": "Seizure",
+    "type": "MGMT",
+    "value": "Neurology consult"
   },
   {
     "diagnosisID": "BPPV",
@@ -417,12 +417,12 @@
   {
     "diagnosisID": "BPPV",
     "type": "MGMT",
-    "value": "Epley maneuver"
+    "value": "Meclizine"
   },
   {
     "diagnosisID": "BPPV",
     "type": "MGMT",
-    "value": "Meclizine"
+    "value": "Epley maneuver"
   },
   {
     "diagnosisID": "DentalInfection",
@@ -432,12 +432,12 @@
   {
     "diagnosisID": "DentalInfection",
     "type": "TEST",
-    "value": "CT head and neck"
+    "value": "Wound culture"
   },
   {
     "diagnosisID": "DentalInfection",
     "type": "TEST",
-    "value": "Wound culture"
+    "value": "CT head and neck"
   },
   {
     "diagnosisID": "DentalInfection",
@@ -457,12 +457,12 @@
   {
     "diagnosisID": "NeckSpaceInfection",
     "type": "TEST",
-    "value": "CT head & neck"
+    "value": "Blood cultures"
   },
   {
     "diagnosisID": "NeckSpaceInfection",
     "type": "TEST",
-    "value": "Blood cultures"
+    "value": "CT head & neck"
   },
   {
     "diagnosisID": "NeckSpaceInfection",
@@ -472,17 +472,17 @@
   {
     "diagnosisID": "NeckSpaceInfection",
     "type": "MGMT",
-    "value": "Hospital admission"
-  },
-  {
-    "diagnosisID": "NeckSpaceInfection",
-    "type": "MGMT",
     "value": "Otolaryngology (ENT) consult"
   },
   {
     "diagnosisID": "NeckSpaceInfection",
     "type": "MGMT",
-    "value": "Anesthesiology consult for airway managemen"
+    "value": "Anesthesiology consult for airway management"
+  },
+  {
+    "diagnosisID": "NeckSpaceInfection",
+    "type": "MGMT",
+    "value": "Hospital admission"
   },
   {
     "diagnosisID": "Lymphoma",
@@ -502,12 +502,12 @@
   {
     "diagnosisID": "Lymphoma",
     "type": "TEST",
-    "value": "PET/CT"
+    "value": "Lymph node biopsy"
   },
   {
     "diagnosisID": "Lymphoma",
     "type": "TEST",
-    "value": "Lymph node biopsy"
+    "value": "PET/CT"
   },
   {
     "diagnosisID": "Lymphoma",
@@ -617,17 +617,22 @@
   {
     "diagnosisID": "BehçetSyndrome",
     "type": "MGMT",
-    "value": "Rheumatology consult"
-  },
-  {
-    "diagnosisID": "BehçetSyndrome",
-    "type": "MGMT",
     "value": "Azathioprine"
   },
   {
     "diagnosisID": "BehçetSyndrome",
     "type": "MGMT",
     "value": "Infliximab"
+  },
+  {
+    "diagnosisID": "BehçetSyndrome",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "TEST",
+    "value": "CBC, Chem 12"
   },
   {
     "diagnosisID": "Lupus",
@@ -647,17 +652,7 @@
   {
     "diagnosisID": "Lupus",
     "type": "TEST",
-    "value": "CBC, Chem 12"
-  },
-  {
-    "diagnosisID": "Lupus",
-    "type": "TEST",
     "value": "Urinalysis"
-  },
-  {
-    "diagnosisID": "Lupus",
-    "type": "MGMT",
-    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "Lupus",
@@ -673,6 +668,11 @@
     "diagnosisID": "Lupus",
     "type": "MGMT",
     "value": "Sun protection counseling"
+  },
+  {
+    "diagnosisID": "Lupus",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "TrigeminalNeuralgia",
@@ -692,22 +692,22 @@
   {
     "diagnosisID": "ErectileDysfunction",
     "type": "TEST",
-    "value": "Serum testosterone"
-  },
-  {
-    "diagnosisID": "ErectileDysfunction",
-    "type": "TEST",
-    "value": "Hemoglobin A1c"
-  },
-  {
-    "diagnosisID": "ErectileDysfunction",
-    "type": "TEST",
     "value": "CBC"
   },
   {
     "diagnosisID": "ErectileDysfunction",
     "type": "TEST",
     "value": "Chem 7"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "Serum testosterone"
+  },
+  {
+    "diagnosisID": "ErectileDysfunction",
+    "type": "TEST",
+    "value": "Hemoglobin A1c"
   },
   {
     "diagnosisID": "ErectileDysfunction",
@@ -722,12 +722,12 @@
   {
     "diagnosisID": "ErectileDysfunction",
     "type": "MGMT",
-    "value": "Counseling referral"
+    "value": "Sildenafil"
   },
   {
     "diagnosisID": "ErectileDysfunction",
     "type": "MGMT",
-    "value": "Sildenafil"
+    "value": "Counseling referral"
   },
   {
     "diagnosisID": "VaricoSpermatoHydrocele ",
@@ -752,12 +752,12 @@
   {
     "diagnosisID": "Epididymitis",
     "type": "TEST",
-    "value": "Scrotal ultrasound"
+    "value": "Urine gonorrhea/chlamydia PCR"
   },
   {
     "diagnosisID": "Epididymitis",
     "type": "TEST",
-    "value": "Urine gonorrhea/chlamydia PCR"
+    "value": "Scrotal ultrasound"
   },
   {
     "diagnosisID": "Epididymitis",
@@ -812,11 +812,6 @@
   {
     "diagnosisID": "TesticularProstateCancer ",
     "type": "TEST",
-    "value": "Scrotal/inguinal ultrasound"
-  },
-  {
-    "diagnosisID": "TesticularProstateCancer ",
-    "type": "TEST",
     "value": "CBC"
   },
   {
@@ -833,6 +828,11 @@
     "diagnosisID": "TesticularProstateCancer ",
     "type": "TEST",
     "value": "Testicular tumor markers (AFP, beta-hCG, LDH)"
+  },
+  {
+    "diagnosisID": "TesticularProstateCancer ",
+    "type": "TEST",
+    "value": "Scrotal/inguinal ultrasound"
   },
   {
     "diagnosisID": "TesticularProstateCancer ",
@@ -882,7 +882,12 @@
   {
     "diagnosisID": "ReferredPainLumbarSpine",
     "type": "MGMT",
-    "value": "Physiatry consult"
+    "value": "Ibuprofen"
+  },
+  {
+    "diagnosisID": "ReferredPainLumbarSpine",
+    "type": "MGMT",
+    "value": "Gabapentin"
   },
   {
     "diagnosisID": "ReferredPainLumbarSpine",
@@ -892,12 +897,7 @@
   {
     "diagnosisID": "ReferredPainLumbarSpine",
     "type": "MGMT",
-    "value": "Ibuprofen"
-  },
-  {
-    "diagnosisID": "ReferredPainLumbarSpine",
-    "type": "MGMT",
-    "value": "Gabapentin"
+    "value": "Physiatry consult"
   },
   {
     "diagnosisID": "Hypogonadism",
@@ -1007,17 +1007,12 @@
   {
     "diagnosisID": "Abscess",
     "type": "TEST",
-    "value": "CT hand"
-  },
-  {
-    "diagnosisID": "Abscess",
-    "type": "TEST",
     "value": "Wound culture"
   },
   {
     "diagnosisID": "Abscess",
-    "type": "MGMT",
-    "value": "Incision and drainage"
+    "type": "TEST",
+    "value": "CT hand"
   },
   {
     "diagnosisID": "Abscess",
@@ -1028,6 +1023,11 @@
     "diagnosisID": "Abscess",
     "type": "MGMT",
     "value": "Vancomycin"
+  },
+  {
+    "diagnosisID": "Abscess",
+    "type": "MGMT",
+    "value": "Incision and drainage"
   },
   {
     "diagnosisID": "Abscess",
@@ -1046,7 +1046,7 @@
   },
   {
     "diagnosisID": "Urticaria ",
-    "type": "TEST",
+    "type": "MGMT",
     "value": "Cetirizine"
   },
   {
@@ -1107,17 +1107,17 @@
   {
     "diagnosisID": "Anaphylaxis ",
     "type": "MGMT",
-    "value": "Emergency department evaluation"
-  },
-  {
-    "diagnosisID": "Anaphylaxis ",
-    "type": "MGMT",
     "value": "Cetirizine"
   },
   {
     "diagnosisID": "Anaphylaxis ",
     "type": "MGMT",
     "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "Anaphylaxis ",
+    "type": "MGMT",
+    "value": "Emergency department evaluation"
   },
   {
     "diagnosisID": "RecurrentBacteremia",
@@ -1147,11 +1147,6 @@
   {
     "diagnosisID": "MuscleSpasm",
     "type": "MGMT",
-    "value": "Physical therapy"
-  },
-  {
-    "diagnosisID": "MuscleSpasm",
-    "type": "MGMT",
     "value": "Ibuprofen"
   },
   {
@@ -1160,19 +1155,14 @@
     "value": "Cyclobenzaprine"
   },
   {
+    "diagnosisID": "MuscleSpasm",
+    "type": "MGMT",
+    "value": "Physical therapy"
+  },
+  {
     "diagnosisID": "Radioculopathy",
     "type": "TEST",
     "value": "MRI cervical/thoracic spine"
-  },
-  {
-    "diagnosisID": "Radioculopathy",
-    "type": "MGMT",
-    "value": "Physiatry consult"
-  },
-  {
-    "diagnosisID": "Radioculopathy",
-    "type": "MGMT",
-    "value": "Physical therapy"
   },
   {
     "diagnosisID": "Radioculopathy",
@@ -1183,6 +1173,16 @@
     "diagnosisID": "Radioculopathy",
     "type": "MGMT",
     "value": "Gabapentin"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "Radioculopathy",
+    "type": "MGMT",
+    "value": "Physical therapy"
   },
   {
     "diagnosisID": "RibFracture",
@@ -1212,12 +1212,12 @@
   {
     "diagnosisID": "Pleurisy",
     "type": "MGMT",
-    "value": "Pulmonology consult"
+    "value": "Ibuprofen"
   },
   {
     "diagnosisID": "Pleurisy",
     "type": "MGMT",
-    "value": "Ibuprofen"
+    "value": "Pulmonology consult"
   },
   {
     "diagnosisID": "PulmonaryEmbolism",
@@ -1347,8 +1347,8 @@
   {
     "diagnosisID": "RheumArthritis",
     "type": "MGMT",
-    "value": "Rheumatology consult"
-  },
+    "value": "Ibuprofen"
+  }, 
   {
     "diagnosisID": "RheumArthritis",
     "type": "MGMT",
@@ -1357,7 +1357,7 @@
   {
     "diagnosisID": "RheumArthritis",
     "type": "MGMT",
-    "value": "Ibuprofen"
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "OtherArthritis",
@@ -1382,7 +1382,7 @@
   {
     "diagnosisID": "OtherArthritis",
     "type": "MGMT",
-    "value": "Rheumatology consult"
+    "value": "Ibuprofen"
   },
   {
     "diagnosisID": "OtherArthritis",
@@ -1392,7 +1392,7 @@
   {
     "diagnosisID": "OtherArthritis",
     "type": "MGMT",
-    "value": "Ibuprofen"
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "Fibromyalgia",
@@ -1412,17 +1412,17 @@
   {
     "diagnosisID": "Fibromyalgia",
     "type": "MGMT",
-    "value": "Rheumatology consult"
-  },
-  {
-    "diagnosisID": "Fibromyalgia",
-    "type": "MGMT",
     "value": "Duloxetine"
   },
   {
     "diagnosisID": "Fibromyalgia",
     "type": "MGMT",
     "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "Fibromyalgia",
@@ -1452,12 +1452,12 @@
   {
     "diagnosisID": "AmitriptylineEffect",
     "type": "TEST",
-    "value": "Orthostatic vital signs"
+    "value": "Serum amitriptyline level"
   },
   {
     "diagnosisID": "AmitriptylineEffect",
     "type": "TEST",
-    "value": "Serum amitriptyline level"
+    "value": "Orthostatic vital signs"
   },
   {
     "diagnosisID": "AmitriptylineEffect",
@@ -1477,12 +1477,12 @@
   {
     "diagnosisID": "Menieres",
     "type": "MGMT",
-    "value": "Otolaryngology (ENT) consult"
+    "value": "Vestibular rehabilitation"
   },
   {
     "diagnosisID": "Menieres",
     "type": "MGMT",
-    "value": "Vestibular rehabilitation"
+    "value": "Otolaryngology (ENT) consult"
   },
   {
     "diagnosisID": "RelapsePolychondritis",
@@ -1502,11 +1502,6 @@
   {
     "diagnosisID": "RelapsePolychondritis",
     "type": "MGMT",
-    "value": "Rheumatology consult"
-  },
-  {
-    "diagnosisID": "RelapsePolychondritis",
-    "type": "MGMT",
     "value": "Prednisone"
   },
   {
@@ -1515,14 +1510,9 @@
     "value": "Methotrexate"
   },
   {
-    "diagnosisID": "Sarcoidosis",
-    "type": "TEST",
-    "value": "Chest X-ray"
-  },
-  {
-    "diagnosisID": "Sarcoidosis",
-    "type": "TEST",
-    "value": "CT chest"
+    "diagnosisID": "RelapsePolychondritis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "Sarcoidosis",
@@ -1541,6 +1531,21 @@
   },
   {
     "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "Chest X-ray"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "TEST",
+    "value": "CT chest"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
+    "type": "MGMT",
+    "value": "Prednisone"
+  },
+  {
+    "diagnosisID": "Sarcoidosis",
     "type": "MGMT",
     "value": "Pulmonology consult"
   },
@@ -1548,11 +1553,6 @@
     "diagnosisID": "Sarcoidosis",
     "type": "MGMT",
     "value": "Rheumatology consult"
-  },
-  {
-    "diagnosisID": "Sarcoidosis",
-    "type": "MGMT",
-    "value": "Prednisone"
   },
   {
     "diagnosisID": "Hypothyroidism",
@@ -1582,16 +1582,6 @@
   {
     "diagnosisID": "FacetJointPain",
     "type": "MGMT",
-    "value": "Physiatry consult"
-  },
-  {
-    "diagnosisID": "FacetJointPain",
-    "type": "MGMT",
-    "value": "Physical therapy"
-  },
-  {
-    "diagnosisID": "FacetJointPain",
-    "type": "MGMT",
     "value": "Ibuprofen"
   },
   {
@@ -1600,7 +1590,12 @@
     "value": "Facet joint steroid injection"
   },
   {
-    "diagnosisID": "ParaspinalPain",
+    "diagnosisID": "FacetJointPain",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "FacetJointPain",
     "type": "MGMT",
     "value": "Physical therapy"
   },
@@ -1613,6 +1608,11 @@
     "diagnosisID": "ParaspinalPain",
     "type": "MGMT",
     "value": "Cyclobenzaprine"
+  },
+  {
+    "diagnosisID": "ParaspinalPain",
+    "type": "MGMT",
+    "value": "Physical therapy"
   },
   {
     "diagnosisID": "Nephrolithiasis",
@@ -1672,16 +1672,6 @@
   {
     "diagnosisID": "NerveSpinePain",
     "type": "MGMT",
-    "value": "Physiatry consult"
-  },
-  {
-    "diagnosisID": "NerveSpinePain",
-    "type": "MGMT",
-    "value": "Physical therapy"
-  },
-  {
-    "diagnosisID": "NerveSpinePain",
-    "type": "MGMT",
     "value": "Ibuprofen"
   },
   {
@@ -1690,14 +1680,24 @@
     "value": "Gabapentin"
   },
   {
-    "diagnosisID": "SpleenSplenic",
-    "type": "TEST",
-    "value": "CT abdomen with contrast"
+    "diagnosisID": "NerveSpinePain",
+    "type": "MGMT",
+    "value": "Physiatry consult"
+  },
+  {
+    "diagnosisID": "NerveSpinePain",
+    "type": "MGMT",
+    "value": "Physical therapy"
   },
   {
     "diagnosisID": "SpleenSplenic",
     "type": "TEST",
     "value": "CBC"
+  },
+  {
+    "diagnosisID": "SpleenSplenic",
+    "type": "TEST",
+    "value": "CT abdomen with contrast"
   },
   {
     "diagnosisID": "SpleenSplenic",
@@ -1712,22 +1712,22 @@
   {
     "diagnosisID": "RenalMassCysticDisease",
     "type": "TEST",
-    "value": "CT abdomen with contrast"
-  },
-  {
-    "diagnosisID": "RenalMassCysticDisease",
-    "type": "TEST",
-    "value": "Renal ultrasound"
-  },
-  {
-    "diagnosisID": "RenalMassCysticDisease",
-    "type": "TEST",
     "value": "Chem 7"
   },
   {
     "diagnosisID": "RenalMassCysticDisease",
     "type": "TEST",
     "value": "Urine microalbumin"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "TEST",
+    "value": "CT abdomen with contrast"
+  },
+  {
+    "diagnosisID": "RenalMassCysticDisease",
+    "type": "TEST",
+    "value": "Renal ultrasound"
   },
   {
     "diagnosisID": "RenalMassCysticDisease",
@@ -1738,6 +1738,11 @@
     "diagnosisID": "RenalMassCysticDisease",
     "type": "MGMT",
     "value": "Nephrology consult"
+  },
+  {
+    "diagnosisID": "RetroperitonealFibrosis",
+    "type": "TEST",
+    "value": "CRP/ESR"
   },
   {
     "diagnosisID": "RetroperitonealFibrosis",
@@ -1751,8 +1756,8 @@
   },
   {
     "diagnosisID": "RetroperitonealFibrosis",
-    "type": "TEST",
-    "value": "CRP/ESR"
+    "type": "MGMT",
+    "value": "Prednisone"
   },
   {
     "diagnosisID": "RetroperitonealFibrosis",
@@ -1765,11 +1770,6 @@
     "value": "Nephrology consult"
   },
   {
-    "diagnosisID": "RetroperitonealFibrosis",
-    "type": "MGMT",
-    "value": "Prednisone"
-  },
-  {
     "diagnosisID": "RetroperitonealMalignancy",
     "type": "TEST",
     "value": "CT abdomen/pelvis with contrast"
@@ -1777,12 +1777,12 @@
   {
     "diagnosisID": "RetroperitonealMalignancy",
     "type": "MGMT",
-    "value": "Oncology consult"
+    "value": "Image-guided biopsy"
   },
   {
     "diagnosisID": "RetroperitonealMalignancy",
     "type": "MGMT",
-    "value": "Image-guided biopsy"
+    "value": "Oncology consult"
   },
   {
     "diagnosisID": "AbdominalAorticAneurysm",
@@ -1797,12 +1797,12 @@
   {
     "diagnosisID": "AbdominalAorticAneurysm",
     "type": "MGMT",
-    "value": "Vascular surgery consult"
+    "value": "Emergency department evaluation"
   },
   {
     "diagnosisID": "AbdominalAorticAneurysm",
     "type": "MGMT",
-    "value": "Emergency department evaluation"
+    "value": "Vascular surgery consult"
   },
   {
     "diagnosisID": "MajorDepression",
@@ -1847,12 +1847,12 @@
   {
     "diagnosisID": "PolymalgiaRheumatica",
     "type": "MGMT",
-    "value": "Rheumatology consult"
+    "value": "Prednisone"
   },
   {
     "diagnosisID": "PolymalgiaRheumatica",
     "type": "MGMT",
-    "value": "Prednisone"
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "FioricetButalbitalWithdrawal",
@@ -1887,17 +1887,17 @@
   {
     "diagnosisID": "Polymyositis",
     "type": "MGMT",
-    "value": "Rheumatology consult"
-  },
-  {
-    "diagnosisID": "Polymyositis",
-    "type": "MGMT",
     "value": "Prednisone"
   },
   {
     "diagnosisID": "Polymyositis",
     "type": "MGMT",
     "value": "Methotrexate"
+  },
+  {
+    "diagnosisID": "Polymyositis",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "Osteoarthritis",
@@ -1937,17 +1937,17 @@
   {
     "diagnosisID": "Fibromyalgia",
     "type": "MGMT",
-    "value": "Rheumatology consult"
-  },
-  {
-    "diagnosisID": "Fibromyalgia",
-    "type": "MGMT",
     "value": "Duloxetine"
   },
   {
     "diagnosisID": "Fibromyalgia",
     "type": "MGMT",
     "value": "Physical therapy"
+  },
+  {
+    "diagnosisID": "Fibromyalgia",
+    "type": "MGMT",
+    "value": "Rheumatology consult"
   },
   {
     "diagnosisID": "Fibromyalgia",
@@ -1992,12 +1992,12 @@
   {
     "diagnosisID": "Pregnancy",
     "type": "MGMT",
-    "value": "Obstetrics consult"
+    "value": "Prenatal vitamin"
   },
   {
     "diagnosisID": "Pregnancy",
     "type": "MGMT",
-    "value": "Prenatal vitamin"
+    "value": "Obstetrics consult"
   },
   {
     "diagnosisID": "MenstrualPhysiology",
@@ -2017,12 +2017,12 @@
   {
     "diagnosisID": "HormonalEffect",
     "type": "MGMT",
-    "value": "Gynecology consult"
+    "value": "Nexplanon removal"
   },
   {
     "diagnosisID": "HormonalEffect",
     "type": "MGMT",
-    "value": "Nexplanon removal"
+    "value": "Gynecology consult"
   },
   {
     "diagnosisID": "VaginalCandidasis",
@@ -2082,22 +2082,17 @@
   {
     "diagnosisID": "STI2",
     "type": "MGMT",
+    "value": "Partner notification"
+  },
+  {
+    "diagnosisID": "STI2",
+    "type": "MGMT",
     "value": "Ceftriaxone"
   },
   {
     "diagnosisID": "STI2",
     "type": "MGMT",
     "value": "Doxycycline"
-  },
-  {
-    "diagnosisID": "STI2",
-    "type": "MGMT",
-    "value": "Partner notification"
-  },
-  {
-    "diagnosisID": "OvarianTumor",
-    "type": "TEST",
-    "value": "Pelvic ultrasound"
   },
   {
     "diagnosisID": "OvarianTumor",
@@ -2108,6 +2103,11 @@
     "diagnosisID": "OvarianTumor",
     "type": "TEST",
     "value": "Estradiol"
+  },
+  {
+    "diagnosisID": "OvarianTumor",
+    "type": "TEST",
+    "value": "Pelvic ultrasound"
   },
   {
     "diagnosisID": "OvarianTumor",
