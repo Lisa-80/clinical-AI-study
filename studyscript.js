@@ -888,7 +888,9 @@ async function loadStudy() {
   }
 }
 
-loadStudy();
+if (!(await checkCompletionStatus())) {
+  loadStudy();
+}
 
 // hide years in residency for non-residents
 document.getElementById("demoResident").addEventListener("change", function () {
