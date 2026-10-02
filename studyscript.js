@@ -15,14 +15,11 @@ let caseResponses = [];
 // Current case being reviewed.
 let currentCase = 1;
 
-// Total number of study cases.
-const totalCases = 10;
-
 // Timestamp when the current case began.
 let caseStartTime = Date.now();
 
 const params = new URLSearchParams(window.location.search);
-const studyArm = params.get("arm");
+let studyArm = params.get("arm");
 let participantId = params.get("id");
 window.addEventListener("DOMContentLoaded", () => {
   const participantDisplay = document.getElementById("participantDisplay");
@@ -57,7 +54,7 @@ const armConfig = {
     showCantMissSection: true,
     showProbabilities: false,
     disclaimer:
-      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance if missed based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
     cantMissColor: "black",
     showDagger: true,
     showSidebar: true,
@@ -88,6 +85,25 @@ const armConfig = {
 };
 
 /**
+ * Randomize the case order
+ */
+const totalCases = 10;
+
+function shuffle(array) {
+  const arr = [...array];
+
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return arr;
+}
+
+let caseOrder = shuffle(Array.from({ length: totalCases }, (_, i) => i + 1));
+
+/**
  * Saves participant responses for the current case,
  * including diagnosis, testing decisions, management,
  * AI interactions, transcript use, and time spent.
@@ -95,6 +111,7 @@ const armConfig = {
 function saveCurrentCase() {
   const timeSpentSeconds = Math.round((Date.now() - caseStartTime) / 1000);
   caseResponses.push({
+    caseID: caseOrder[currentCase - 1],
     caseNumber: currentCase,
 
     diagnosis: document.getElementById("diagnosis").value,
@@ -257,9 +274,9 @@ function buildRecommendations(recommendations) {
 
 window.showCase = function (index) {
   caseStartTime = Date.now();
-  const currentCaseID = index + 1;
+  const currentCaseID = caseOrder[index];
   document.getElementById("caseLabel").textContent =
-    `Case ${currentCaseID} of ${totalCases}`;
+    `Case ${index + 1} of ${totalCases}`;
 
   // Apply randomized study arm settings
   // that control which AI decision-support
@@ -627,23 +644,22 @@ async function loadParticipantArm() {
 
   studyArm = snapshot.data().studyArm;
 }
+
+/**
+ * Save current progress
+ */
 async function saveProgress() {
   await setDoc(
     doc(db, "studyProgress", participantId),
-
     {
       participantId,
       studyArm,
-
       currentCase,
-
+      caseOrder,
       responses: caseResponses,
-
       completed: false,
-
       updated: new Date().toISOString(),
     },
-
     {
       merge: true,
     },
@@ -838,8 +854,8 @@ async function loadStudy() {
     const data = snapshot.data();
 
     currentCase = data.currentCase || 1;
-
     caseResponses = data.responses || [];
+    caseOrder = data.caseOrder || caseOrder;
 
     showCase(currentCase - 1);
   } else {
@@ -1269,59 +1285,40 @@ document.getElementById("finalSubmitBtn").onclick = async function () {
   });
 };
 
-function updateReviewSummary(){
+function updateReviewSummary() {
+  const diagnosis = document.getElementById("diagnosis").value;
 
-    const diagnosis =
-        document.getElementById("diagnosis").value;
+  const diagnoses = Array.from(
+    document.querySelectorAll('#diagnoses input[type="text"]'),
+  )
+    .map((x) => x.value)
+    .filter(Boolean);
 
-    const diagnoses =
-        Array.from(
-            document.querySelectorAll(
-                '#diagnoses input[type="text"]'
-            )
-        )
-        .map(x => x.value)
-        .filter(Boolean);
+  const tests = [
+    ...Array.from(
+      document.querySelectorAll('#tests-manual input[type="text"]'),
+    ),
+    ...Array.from(document.querySelectorAll('#tests-ai input[type="text"]')),
+  ]
+    .map((x) => x.value)
+    .filter(Boolean);
 
-    const tests =
-        [
-            ...Array.from(
-                document.querySelectorAll(
-                    '#tests-manual input[type="text"]'
-                )
-            ),
-            ...Array.from(
-                document.querySelectorAll(
-                    '#tests-ai input[type="text"]'
-                )
-            )
-        ]
-        .map(x => x.value)
-        .filter(Boolean);
+  const management = [
+    ...Array.from(
+      document.querySelectorAll('#management-manual input[type="text"]'),
+    ),
+    ...Array.from(
+      document.querySelectorAll('#management-ai input[type="text"]'),
+    ),
+  ]
+    .map((x) => x.value)
+    .filter(Boolean);
 
-    const management =
-        [
-            ...Array.from(
-                document.querySelectorAll(
-                    '#management-manual input[type="text"]'
-                )
-            ),
-            ...Array.from(
-                document.querySelectorAll(
-                    '#management-ai input[type="text"]'
-                )
-            )
-        ]
-        .map(x => x.value)
-        .filter(Boolean);
+  const disposition =
+    document.querySelector(".care-btn.selected")?.textContent.trim() ||
+    "Not selected";
 
-    const disposition =
-        document.querySelector(
-            ".care-btn.selected"
-        )?.textContent.trim() || "Not selected";
-
-    document.getElementById("reviewSummary")
-        .innerHTML = `
+  document.getElementById("reviewSummary").innerHTML = `
             <div class="review-section">
                 <div class="review-label">Most Likely Diagnosis</div>
                 <div>${diagnosis || "Not entered"}</div>
@@ -1350,23 +1347,17 @@ function updateReviewSummary(){
 }
 
 window.openChat = function () {
+  transcriptViewed = true;
+  transcriptOpenCount++;
 
-    transcriptViewed = true;
-    transcriptOpenCount++;
+  const chatWindow = document.getElementById("chatWindow");
 
-    const chatWindow =
-        document.getElementById("chatWindow");
+  chatWindow.innerHTML = "";
 
-    chatWindow.innerHTML = "";
-
-    (window.currentTranscript?.messages || [])
-        .forEach(msg => {
-
-            chatWindow.innerHTML += `
+  (window.currentTranscript?.messages || []).forEach((msg) => {
+    chatWindow.innerHTML += `
                 <div class="chat-message ${
-                    msg.speaker === "User"
-                        ? "user"
-                        : "ai"
+                  msg.speaker === "User" ? "user" : "ai"
                 }">
 
                     <strong>${msg.speaker}:</strong>
@@ -1375,85 +1366,61 @@ window.openChat = function () {
 
                 </div>
             `;
-        });
+  });
 
-    document.getElementById(
-        "chatModal"
-    ).style.display = "flex";
-
-};   // <-- THIS IS MISSING
+  document.getElementById("chatModal").style.display = "flex";
+};
 
 window.closeChat = function () {
-
-    document.getElementById(
-        "chatModal"
-    ).style.display = "none";
+  document.getElementById("chatModal").style.display = "none";
 };
 
-window.closeChat = function(){
-
-    document.getElementById(
-        "chatModal"
-    ).style.display = "none";
-};
-
-const aiSelections=[];
+const aiSelections = [];
 
 let transcriptViewed = false;
 let transcriptOpenCount = 0;
 
 /* AI auto-fill */
 
-document.addEventListener("change",function(e){
+document.addEventListener("change", function (e) {
+  if (!e.target.classList.contains("ai-checkbox")) {
+    return;
+  }
 
-    if(!e.target.classList.contains("ai-checkbox")){
-        return;
+  const value = e.target.dataset.value;
+  const target = e.target.dataset.target;
+
+  if (e.target.checked) {
+    if (!aiSelections.includes(value)) {
+      aiSelections.push(value);
     }
 
-    const value=e.target.dataset.value;
-    const target=e.target.dataset.target;
+    addAIFill(target, value);
+  } else {
+    removeAIFill(value);
 
-    if(e.target.checked){
+    const index = aiSelections.indexOf(value);
 
-        if(!aiSelections.includes(value)){
-            aiSelections.push(value);
-        }
-
-        addAIFill(target,value);
-
-    }else{
-
-        removeAIFill(value);
-
-        const index=aiSelections.indexOf(value);
-
-        if(index>-1){
-            aiSelections.splice(index,1);
-        }
+    if (index > -1) {
+      aiSelections.splice(index, 1);
     }
-	updateReviewSummary();
-
+  }
+  updateReviewSummary();
 });
 
+function addAIFill(containerId, value) {
+  const container = document.getElementById(containerId);
 
-function addAIFill(containerId,value){
+  const exists = container.querySelector(`[data-ai="${value}"]`);
 
-    const container =
-        document.getElementById(containerId);
+  if (exists) return;
 
-    const exists =
-        container.querySelector(
-            `[data-ai="${value}"]`
-        );
+  const row = document.createElement("div");
 
-    if(exists) return;
+  row.className = "dynamic-row";
+  row.dataset.ai = value;
 
-    const row = document.createElement("div");
-
-    row.className = "dynamic-row";
-    row.dataset.ai = value;
-
-row.innerHTML = `
+  row.innerHTML = `
     <input
         type="text"
         value="${value}"
@@ -1465,161 +1432,113 @@ row.innerHTML = `
     </span>
 `;
 
-
-    container.appendChild(row);
+  container.appendChild(row);
 }
 
-function removeAIFill(value){
+function removeAIFill(value) {
+  const stillChecked = [
+    ...document.querySelectorAll(".ai-checkbox:checked"),
+  ].some((checkbox) => checkbox.dataset.value === value);
 
-    const stillChecked =
-        [...document.querySelectorAll(
-            '.ai-checkbox:checked'
-        )]
-        .some(
-            checkbox =>
-                checkbox.dataset.value === value
-        );
+  if (stillChecked) {
+    return;
+  }
 
-    if(stillChecked){
-        return;
-    }
+  const item = document.querySelector('[data-ai="' + value + '"]');
 
-    const item =
-        document.querySelector(
-            '[data-ai="' + value + '"]'
-        );
-
-    if(item){
-        item.remove();
-    }
+  if (item) {
+    item.remove();
+  }
 }
 
 /* care option */
 
-document.querySelectorAll(".care-btn")
-.forEach(btn=>{
+document.querySelectorAll(".care-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    document
+      .querySelectorAll(".care-btn")
+      .forEach((b) => b.classList.remove("selected"));
 
-    btn.addEventListener("click",function(){
+    this.classList.add("selected");
 
-        document.querySelectorAll(".care-btn")
-        .forEach(b=>b.classList.remove("selected"));
-
-        this.classList.add("selected");
-
-        updateReviewSummary();
-
-    });
-
+    updateReviewSummary();
+  });
 });
 
 /* auto rows */
 
-function addGrowingRow(containerId){
+function addGrowingRow(containerId) {
+  const row = document.createElement("div");
 
-    const row = document.createElement("div");
+  row.className = "dynamic-row";
 
-    row.className = "dynamic-row";
+  const input = document.createElement("input");
 
-    const input = document.createElement("input");
+  input.type = "text";
 
-    input.type = "text";
+  input.addEventListener("blur", function () {
+    const container = document.getElementById(containerId);
 
-    input.addEventListener("blur", function(){
+    const emptyRows = [...container.querySelectorAll("input")].filter(
+      (i) => i.value.trim() === "",
+    );
 
-        const container =
-            document.getElementById(containerId);
+    if (input.value.trim() === "" && emptyRows.length > 1) {
+      row.remove();
+    }
+  });
 
-        const emptyRows =
-            [...container.querySelectorAll("input")]
-            .filter(i => i.value.trim() === "");
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && input.value.trim() !== "") {
+      e.preventDefault();
 
-        if(
-            input.value.trim() === "" &&
-            emptyRows.length > 1
-        ){
-            row.remove();
-        }
+      const container = document.getElementById(containerId);
 
-    });
+      const inputs = [...container.querySelectorAll("input")];
 
-    input.addEventListener("keydown", function(e){
+      const currentIndex = inputs.indexOf(input);
 
-        if(
-            e.key === "Enter" &&
-            input.value.trim() !== ""
-        ){
+      const isLast = currentIndex === inputs.length - 1;
 
-            e.preventDefault();
+      if (isLast) {
+        addGrowingRow(containerId);
 
-            const container =
-                document.getElementById(containerId);
+        const updatedInputs = [...container.querySelectorAll("input")];
 
-            const inputs =
-                [...container.querySelectorAll("input")];
+        updatedInputs[updatedInputs.length - 1]?.focus();
+      }
+    }
+  });
 
-            const currentIndex =
-                inputs.indexOf(input);
+  const addBtn = document.createElement("button");
 
-            const isLast =
-                currentIndex === inputs.length - 1;
+  addBtn.type = "button";
+  addBtn.className = "inline-add-btn";
+  addBtn.textContent = "+";
 
-            if(isLast){
+  addBtn.onclick = function () {
+    const container = document.getElementById(containerId);
 
-                addGrowingRow(containerId);
+    const existingEmpty = [...container.querySelectorAll("input")].find(
+      (i) => i.value.trim() === "",
+    );
 
-                const updatedInputs =
-                    [...container.querySelectorAll("input")];
-
-                updatedInputs[
-                    updatedInputs.length - 1
-                ]?.focus();
-            }
-
-        }
-
-    });
-
-    const addBtn = document.createElement("button");
-
-    addBtn.type = "button";
-    addBtn.className = "inline-add-btn";
-    addBtn.textContent = "+";
-
-addBtn.onclick = function(){
-
-    const container =
-        document.getElementById(containerId);
-
-    const existingEmpty =
-        [...container.querySelectorAll("input")]
-        .find(i => i.value.trim() === "");
-
-    if(existingEmpty){
-
-        existingEmpty.focus();
-        return;
-
+    if (existingEmpty) {
+      existingEmpty.focus();
+      return;
     }
 
     addGrowingRow(containerId);
+  };
+  row.appendChild(input);
+  row.appendChild(addBtn);
 
-};
-    row.appendChild(input);
-    row.appendChild(addBtn);
-
-    document.getElementById(containerId)
-        .appendChild(row);
+  document.getElementById(containerId).appendChild(row);
 }
 
-document.addEventListener(
-    "input",
-    updateReviewSummary
-);
+document.addEventListener("input", updateReviewSummary);
 
-document.addEventListener(
-    "change",
-    updateReviewSummary
-);
+document.addEventListener("change", updateReviewSummary);
 
 updateReviewSummary();
 addGrowingRow("diagnoses");
