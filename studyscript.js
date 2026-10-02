@@ -849,20 +849,37 @@ window.submitCase = async function () {
 
 /**Check completion status */
 async function checkCompletionStatus() {
-  const snapshot = await getDoc(
+
+  const responseDoc = await getDoc(
+    doc(db, "responses", participantId)
+  );
+
+  if (responseDoc.exists()) {
+    document.body.innerHTML = `
+      <div class="case-card">
+        <h2>Study Already Completed</h2>
+        <p>
+          This participant ID has already completed the study.
+        </p>
+      </div>
+    `;
+
+    return true;
+  }
+
+  const postStudyDoc = await getDoc(
     doc(db, "postStudy", participantId)
   );
 
   if (
-    snapshot.exists() &&
-    snapshot.data().studyCompleted
+    postStudyDoc.exists() &&
+    postStudyDoc.data().studyCompleted
   ) {
     document.body.innerHTML = `
       <div class="case-card">
         <h2>Study Already Completed</h2>
         <p>
-          This participant has already completed
-          the study.
+          This participant ID has already completed the study.
         </p>
       </div>
     `;
@@ -872,6 +889,7 @@ async function checkCompletionStatus() {
 
   return false;
 }
+
 async function loadStudy() {
   const snapshot = await getDoc(doc(db, "studyProgress", participantId));
 
