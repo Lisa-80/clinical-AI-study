@@ -422,7 +422,7 @@ ${
                     <details>
 
                         <summary>
-                            View Recommendations
+                            Recommended tests and management
                         </summary>
 
                         ${recommendationsHtml}
