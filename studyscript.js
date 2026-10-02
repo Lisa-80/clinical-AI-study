@@ -57,7 +57,7 @@ const armConfig = {
     showCantMissSection: true,
     showProbabilities: false,
     disclaimer:
-      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance if missed based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
     cantMissColor: "black",
     showDagger: true,
     showSidebar: true,
