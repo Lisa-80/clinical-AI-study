@@ -727,17 +727,16 @@
   {
     "diagnosisID": "Lupus",
     "type": "MGMT",
+    "value": "Sun protection counseling"
+  },{
+    "diagnosisID": "Lupus",
+    "type": "MGMT",
     "value": "Hydroxychloroquine"
   },
   {
     "diagnosisID": "Lupus",
     "type": "MGMT",
     "value": "Prednisone"
-  },
-  {
-    "diagnosisID": "Lupus",
-    "type": "MGMT",
-    "value": "Sun protection counseling"
   },
   {
     "diagnosisID": "Lupus",
