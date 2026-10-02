@@ -315,12 +315,12 @@
     "value": "Psychiatry referral to evaluate medications"
   },
   {
-    "diagnosisID": "GERD",
+    "diagnosisID": "GERD1",
     "type": "MGMT",
     "value": "Omeprazole"
   },
   {
-    "diagnosisID": "GERD",
+    "diagnosisID": "GERD1",
     "type": "MGMT",
     "value": "Gastroenterology consult"
   },
@@ -1980,62 +1980,62 @@
     "value": "Rheumatology consult"
   },
   {
-    "diagnosisID": "Osteoarthritis",
+    "diagnosisID": "Osteoarthritis1",
     "type": "TEST",
     "value": "X-rays of affected joints"
   },
   {
-    "diagnosisID": "Osteoarthritis",
+    "diagnosisID": "Osteoarthritis1",
     "type": "MGMT",
     "value": "Acetaminophen"
   },
   {
-    "diagnosisID": "Osteoarthritis",
+    "diagnosisID": "Osteoarthritis1",
     "type": "MGMT",
     "value": "Ibuprofen"
   },
   {
-    "diagnosisID": "Osteoarthritis",
+    "diagnosisID": "Osteoarthritis1",
     "type": "MGMT",
     "value": "Physical therapy"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "TEST",
     "value": "CBC"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "TEST",
     "value": "Chem 12"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "TEST",
     "value": "CRP/ESR"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "TEST",
     "value": "TSH"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "MGMT",
     "value": "Duloxetine"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "MGMT",
     "value": "Physical therapy"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "MGMT",
     "value": "Rheumatology consult"
   },
   {
-    "diagnosisID": "Fibromyalgia",
+    "diagnosisID": "Fibromyalgia1",
     "type": "MGMT",
     "value": "Cognitive behavioral therapy referral"
   },
