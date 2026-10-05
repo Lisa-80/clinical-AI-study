@@ -10,7 +10,7 @@
     "value": "Hydration (sugar-electrolyte solutions)"
   },
   {
-    "diagnosisID": "viralDiarrhea",
+    "diagnosisID": "viralDiarrhea",a
     "type": "MGMT",
     "value": "Loperamide"
   },
@@ -1855,7 +1855,7 @@
   },
   {
     "diagnosisID": "RetroperitonealMalignancy",
-    "type": "MGMT",
+    "type": "TEST",
     "value": "Image-guided biopsy"
   },
   {
