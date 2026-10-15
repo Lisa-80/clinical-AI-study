@@ -397,7 +397,7 @@ window.showCase = function (index) {
     ${row.diagnosisName}
     ${
       row.cantMiss && config.showDagger
-        ? '<span class="cantmiss-asterisk">&#8224;</span>'
+        ? '<span class="cantmiss-dagger">&#8224;</span>'
         : ""
     }
 </div>
