@@ -945,7 +945,7 @@ document.getElementById("demographicsNextBtn").onclick = async function () {
 };
 
 // Autofill for cases
-window.autoFillCase = function () {
+/* window.autoFillCase = function () {
   document.getElementById("diagnosis").value = "Test diagnosis";
 
   document
@@ -1030,6 +1030,7 @@ function validateMaximizer() {
 
   return true;
 }
+*/
 
 async function saveScales() {
   await setDoc(
