@@ -594,12 +594,10 @@ window.nextCase = async function () {
     return;
   }
   saveCurrentCase();
-
+ currentCase++;
   await saveProgress();
   resetCaseForm();
-
-  currentCase++;
-
+  
   if (currentCase <= totalCases) {
     showCase(currentCase - 1);
     caseStartTime = Date.now();
