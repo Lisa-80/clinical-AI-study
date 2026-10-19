@@ -54,9 +54,10 @@ const armConfig = {
     showCantMissSection: true,
     showProbabilities: false,
     disclaimer:
-      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance if missed based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance based on the available information. The groupings are not precise or definitive; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
     cantMissColor: "black",
     showDagger: true,
+    daggerColor: "black",
     showSidebar: true,
   },
 
@@ -66,8 +67,9 @@ const armConfig = {
     showCantMissSection: true,
     showProbabilities: true,
     disclaimer:
-      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance if missed based on the available information. Percent estimates and visual displays are intended to support consideration, not to provide a precise or definitive diagnosis; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
+      "These diagnostic possibilities are grouped by likely priority for consideration and possible clinical importance based on the available information. Percent estimates and visual displays are intended to support consideration, not to provide a precise or definitive diagnosis; clinicians should independently review the supporting information, consider other diagnoses, and exercise their own clinical judgment.",
     cantMissColor: "#dc2626",
+    daggerColor: "#dc2626",
     showDagger: true,
     showSidebar: true,
   },
@@ -354,10 +356,10 @@ window.showCase = function (index) {
     container.innerHTML = `
         <div class="sidebar-header">
         <h2>AI-Generated Diagnoses</h2>
-        <p>Below, click &#9654; for recommended tests and treatments that can be automatically added to your assessment.</p>
+        <p>Click &#9654; for recommended tests and treatments that can be automatically added to your assessment.</p>
         </div>
         <div class="dx-section-header">
-            MOST LIKELY DIAGNOSES
+            MOST LIKELY DIAGNOSES *
         </div>
     `;
   }
@@ -393,7 +395,7 @@ window.showCase = function (index) {
       !config.showProbabilities ? "dx-title-row-full" : ""
     }">
 
-<div class="dx-title">
+<div class="dx-title" style="color:${config.daggerColor};">
     ${row.diagnosisName}
     ${
       row.cantMiss && config.showDagger
@@ -456,7 +458,7 @@ ${
   if (displayedLikely.some((row) => row.cantMiss)) {
     if (config.showDagger && displayedLikely.some((row) => row.cantMiss)) {
       container.innerHTML += `
-        <div class="cantmiss-note">
+        <div class="cantmiss-note" style="color:${config.daggerColor}">
             † Important to consider
         </div>
     `;
@@ -594,10 +596,10 @@ window.nextCase = async function () {
     return;
   }
   saveCurrentCase();
- currentCase++;
+  currentCase++;
   await saveProgress();
   resetCaseForm();
-  
+
   if (currentCase <= totalCases) {
     showCase(currentCase - 1);
     caseStartTime = Date.now();
@@ -847,37 +849,15 @@ window.submitCase = async function () {
 
 /**Check completion status */
 async function checkCompletionStatus() {
+  const snapshot = await getDoc(doc(db, "postStudy", participantId));
 
-  const responseDoc = await getDoc(
-    doc(db, "responses", participantId)
-  );
-
-  if (responseDoc.exists()) {
+  if (snapshot.exists() && snapshot.data().studyCompleted) {
     document.body.innerHTML = `
       <div class="case-card">
         <h2>Study Already Completed</h2>
         <p>
-          This participant ID has already completed the study.
-        </p>
-      </div>
-    `;
-
-    return true;
-  }
-
-  const postStudyDoc = await getDoc(
-    doc(db, "postStudy", participantId)
-  );
-
-  if (
-    postStudyDoc.exists() &&
-    postStudyDoc.data().studyCompleted
-  ) {
-    document.body.innerHTML = `
-      <div class="case-card">
-        <h2>Study Already Completed</h2>
-        <p>
-          This participant ID has already completed the study.
+          This participant has already completed
+          the study.
         </p>
       </div>
     `;
@@ -904,9 +884,7 @@ async function loadStudy() {
   }
 }
 
-if (!(await checkCompletionStatus())) {
-  loadStudy();
-}
+loadStudy();
 
 // hide years in residency for non-residents
 document.getElementById("demoResident").addEventListener("change", function () {
@@ -943,7 +921,7 @@ document.getElementById("demographicsNextBtn").onclick = async function () {
 };
 
 // Autofill for cases
-/* window.autoFillCase = function () {
+window.autoFillCase = function () {
   document.getElementById("diagnosis").value = "Test diagnosis";
 
   document
@@ -1028,7 +1006,6 @@ function validateMaximizer() {
 
   return true;
 }
-*/
 
 async function saveScales() {
   await setDoc(
