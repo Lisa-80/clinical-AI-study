@@ -395,11 +395,11 @@ window.showCase = function (index) {
       !config.showProbabilities ? "dx-title-row-full" : ""
     }">
 
-<div class="dx-title" style="color:${config.daggerColor};">
+<div class="dx-title">
     ${row.diagnosisName}
     ${
       row.cantMiss && config.showDagger
-        ? '<span class="cantmiss-dagger">&#8224;</span>'
+        ? `<span class="cantmiss-dagger" style="color:${config.daggerColor};">&#8224;</span>`
         : ""
     }
 </div>
