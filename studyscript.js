@@ -32,8 +32,8 @@ window.addEventListener("DOMContentLoaded", () => {
 /**
  * Controls which AI-generated diagnostic support
  * features are visible for each randomized study arm.
- * ARM*A: Control, no diagnostic support
- ** ARM_B: Prioritized diagnoses
+ * ARM_A: Control, no diagnostic support
+ * ARM_B: Prioritized diagnoses
  * ARM_C: Prioritized diagnoses plus probabilities
  * ARM_D: Full diagnosis list without prioritization
  */
@@ -166,49 +166,72 @@ function saveCurrentCase() {
  *   false = missing required information
  */
 function validateCase() {
-  const missing = [];
 
-  const diagnosis = document.getElementById("diagnosis")?.value.trim();
+    const missing = [];
 
-  // Verify a primary diagnosis was entered.
-  if (!diagnosis) {
-    missing.push("Most likely diagnosis");
-  }
+    const diagnosis =
+        document.getElementById(
+            "diagnosis"
+        )?.value.trim();
 
-  const disposition = document.querySelector(".care-btn.selected");
+    if (!diagnosis) {
+        missing.push("Most likely diagnosis");
+    }
 
-  if (!disposition) {
-    missing.push("Next medical visit");
-  }
+    const disposition =
+        document.querySelector(
+            ".care-btn.selected"
+        );
 
-  // Require at least one test recommendation.
-  const hasTest = [
-    ...document.querySelectorAll('#tests-manual input[type="text"]'),
-    ...document.querySelectorAll('#tests-ai input[type="text"]'),
-  ].some((x) => x.value.trim());
+    if (!disposition) {
+        missing.push("Next medical visit");
+    }
 
-  if (!hasTest) {
-    missing.push("Tests");
-  }
-  // Require at least one management recommendation.
-  const hasManagement = [
-    ...document.querySelectorAll('#management-manual input[type="text"]'),
-    ...document.querySelectorAll('#management-ai input[type="text"]'),
-  ].some((x) => x.value.trim());
+    if (missing.length > 0) {
 
-  if (!hasManagement) {
-    missing.push("Treatment/management");
-  }
+        alert(
+            "Please complete:\n\n• " +
+            missing.join("\n• ")
+        );
 
-  if (missing.length > 0) {
-    alert("Please complete:\n\n• " + missing.join("\n• "));
+        return false;
+    }
 
-    return false;
-  }
+    const hasTest =
+        [
+            ...document.querySelectorAll(
+                '#tests-manual input[type="text"]'
+            ),
+            ...document.querySelectorAll(
+                '#tests-ai input[type="text"]'
+            )
+        ]
+        .some(x => x.value.trim());
 
-  return true;
+    const hasManagement =
+        [
+            ...document.querySelectorAll(
+                '#management-manual input[type="text"]'
+            ),
+            ...document.querySelectorAll(
+                '#management-ai input[type="text"]'
+            )
+        ]
+        .some(x => x.value.trim());
+
+    if (!hasTest || !hasManagement) {
+
+        const proceed = confirm(
+            "Tests and/or management recommendations have been left blank. Continue?"
+        );
+
+        if (!proceed) {
+            return false;
+        }
+    }
+
+    return true;
 }
-
 // Load pre-generated AI probability estimates.
 const probabilityRows = await fetch("probabilities.json").then((r) => r.json());
 
