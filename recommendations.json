@@ -1664,17 +1664,17 @@
     "value": "Ibuprofen"
   },
   {
-    "diagnosisID": "FacetJointPain",
+    "diagnosisID": "ThoracicSpondylosis",
     "type": "MGMT",
     "value": "Facet joint steroid injection"
   },
   {
-    "diagnosisID": "FacetJointPain",
+    "diagnosisID": "ThoracicSpondylosis",
     "type": "MGMT",
     "value": "Physiatry consult"
   },
   {
-    "diagnosisID": "FacetJointPain",
+    "diagnosisID": "ThoracicSpondylosis",
     "type": "MGMT",
     "value": "Physical therapy"
   },
