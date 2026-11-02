@@ -3,13 +3,238 @@
 
 <head>
   <title>Clinical AI Study</title>
-  <link
-    rel="stylesheet"
-    href="styles.css">
+  <style>
+  :root{
+    --bg:#f6f4f8;
+    --card:#ffffff;
+    --border:#e5e7eb;
+    --blue:#2563eb;
+    --text:#1f2937;
+    --muted:#6b7280;
+}
+
+body{
+    margin:0;
+    background:var(--bg);
+    font-family:'Inter',sans-serif;
+    color:var(--text);
+}
+
+.page-container{
+    max-width:1000px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.intro-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:16px;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
+}
+
+.intro-card h1{
+    margin-top:0;
+}
+
+.intro-card p{
+    font-size:18px;
+}
+
+.intro-card ul{
+    line-height:1.8;
+}
+
+.card-title{
+    font-weight:600;
+    margin-bottom:12px;
+}
+
+input[type=text]{
+    width:100%;
+    border:1px solid #d1d5db;
+    border-radius:8px;
+    padding:12px;
+    font-size:16px;
+}
+
+.submit-btn{
+    background:var(--blue);
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:14px 20px;
+    font-size:15px;
+    cursor:pointer;
+}
+
+.login-row{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin-top:12px;
+}
+
+#participantId{
+    width:180px;
+    flex:none;
+}
+
+#startBtn{
+    flex:none;
+    white-space:nowrap;
+}
+</style>
+<script type="module">
+document.getElementById(
+    "consentContinueBtn"
+).onclick = function () {
+
+    document.getElementById(
+        "consentScreen"
+    ).style.display = "none";
+
+    document.getElementById(
+        "introScreen"
+    ).style.display = "block";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+};
+</script>
 </head>
 <body>
+<div class="page-container">
+<div id="consentScreen" class="screen">
+
+    <div class="case-card">
+
+        <h1>Study Information</h1>
+
+        <h2>Purpose of the Research</h2>
+
+        <p>
+            The purpose of this research study is to understand how different forms
+            of AI-generated diagnostic support influence clinicians' diagnostic
+            reasoning and clinical decision-making. Participants will review
+            clinical handoffs derived from prior interactions with an AI chatbot
+            and make diagnostic and management decisions.
+        </p>
+
+        <h2>What Will Happen if You Participate?</h2>
+
+        <p>
+            If you agree to participate, you will complete a web-based research
+            study involving a series of clinical cases. For each case, you will
+            provide diagnostic impressions, recommended tests, management plans,
+            and disposition decisions. You will also complete brief questionnaires
+            regarding your clinical experience and perspectives on medical
+            decision-making.
+        </p>
+
+        <p>
+            The study is expected to take approximately
+            <strong>30</strong> minutes to complete.
+        </p>
+
+        <p>
+            You may pause and return to complete unfinished portions of the study using your assigned participant ID. Once the study has been completed, re-entry using the same participant ID will not be permitted.              
+        </p>
+
+        <h2>Voluntary Participation</h2>
+
+        <p>
+            Participation in this study is entirely voluntary. You may choose not
+            to participate or may stop participation at any time without penalty
+            or loss of benefits to which you are otherwise entitled.
+        </p>
+
+        <h2>Risks and Benefits</h2>
+
+        <p>
+            The risks associated with this study are minimal and are no greater
+            than those ordinarily encountered in everyday life. Some participants
+            may experience minor inconvenience associated with the time required
+            to complete study activities.
+        </p>
+
+        <p>
+            Although you may not receive a direct personal benefit from
+            participation, the information gained from this study may help
+            researchers better understand how AI-generated diagnostic support
+            affects clinician decision-making and may inform the development of
+            future clinical decision-support systems.
+        </p>
+
+        <h2>Confidentiality</h2>
+
+        <p>
+            Your responses in this study will be collected anonymously. The
+            research team will not collect your name or other direct identifiers
+            as part of the study data.
+        </p>
+
+        <p>
+            To provide study compensation, participants who complete the study
+            will be asked to provide an email address for gift card delivery.
+            Email addresses will be collected and stored separately from study
+            responses and will not be linked to participant answers during
+            analysis.
+        </p>
+
+        <h2>Compensation</h2>
+
+        <p>
+            Upon completion of the survey, you will receive a <strong>$100 electronic gift card.</strong>
+</p>
+        <p>To receive compensation, you will be asked to provide an email address at the end of the study. Email addresses will be used solely for compensation distribution and will be stored separately from study response data. The email address will not be linked to your responses during analysis.
+
+        </p>
+
+        <p>
+            Email addresses collected for compensation purposes will be used
+            solely for gift card delivery and will be stored separately from
+            study response data.
+        </p>
+
+        <h2>Contact Information</h2>
+
+        <p>
+            <strong>Principal Investigator:</strong>
+            Daniel Morgan
+            <br>
+            <strong>Email:</strong>
+            dmorgan@som.umaryland.edu
+        </p>
+
+        <h2>Consent</h2>
+
+        <p>
+            By selecting "Continue" below, you acknowledge that you have read
+            the information above, are at least 18 years of age, and voluntarily
+            agree to participate in this research study.
+        </p>
+
+        <button
+            id="consentContinueBtn"
+            class="primary-btn">
+            Continue
+        </button>
+
+    </div>
+    </div>
+
+</div>
 
 <div class="page-container">
+    <div
+    id="introScreen"
+    class="screen"
+    style="display:none;">
 
     <div class="case-card">
 
@@ -45,15 +270,20 @@ You are a clinician evaluating a patient who completed an initial intake assessm
 <p>
 Your goal is to provide the best possible care at this point using only the information available in the case. Assume that you can recommend any options.
 </p>
-    <div class="notice_box">
+
+<p>
+    <strong>
         Please do not use any external resources while completing the study
         (e.g., AI tools, UpToDate, clinical references, search engines,
         or other decision-support resources).
-    </div>
-
+    </strong>
+</p>
 <p><strong>This study is designed to be completed on a desktop or laptop computer or tablet. Do not attempt to complete the study on a mobile phone.</strong></p>
 <p>The AI information presented during the study may vary across participants as part of the study design.</p>
+<p>There are <strong>10 patient cases</strong> followed by additional questionnaires.</p>
+
 <p>There are <strong>10 patient cases</strong> followed by a questionnaire.</p>
+
 <p>Your progress is automatically saved after each case. If you leave before completing the study, return to this page and enter the same Participant ID to resume where you left off.
 </p>
 
