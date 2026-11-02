@@ -698,7 +698,7 @@ const age =
     );
 
 if (
-    !age ||
+    !Number.isInteger(age) ||
     age < 18 ||
     age > 100
 ) {
