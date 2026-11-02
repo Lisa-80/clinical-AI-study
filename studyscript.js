@@ -817,7 +817,7 @@ window.submitCase = async function () {
         participantId,
         studyArm,
         currentCase,
-        surveyVersion: "2026-08-17",
+        surveyVersion: "2026-11-02",
 
         responses: caseResponses,
 
@@ -870,27 +870,7 @@ window.submitCase = async function () {
   }
 };
 
-/**Check completion status */
-async function checkCompletionStatus() {
-  const snapshot = await getDoc(doc(db, "postStudy", participantId));
-
-  if (snapshot.exists() && snapshot.data().studyCompleted) {
-    document.body.innerHTML = `
-      <div class="case-card">
-        <h2>Study Already Completed</h2>
-        <p>
-          This participant has already completed
-          the study.
-        </p>
-      </div>
-    `;
-
-    return true;
-  }
-
-  return false;
-}
-
+/**Load partially completed */
 async function loadStudy() {
   const snapshot = await getDoc(doc(db, "studyProgress", participantId));
 
