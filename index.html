@@ -420,7 +420,34 @@ document
 
     const studyArm =
         assignmentSnap.data().studyArm;
+  const responseSnap =
+    await getDoc(
+        doc(
+            db,
+            "responses",
+            participantId
+        )
+    );
 
+if (
+    responseSnap.exists() &&
+    responseSnap.data().completed === true
+) {
+
+    showLoginError(
+        "This participant ID has already completed the study."
+    );
+
+    document.getElementById(
+        "participantId"
+    ).focus();
+
+    document.getElementById(
+        "participantId"
+    ).select();
+
+    return;
+}
     window.location.href =
         `diagnosis-study.html?id=${participantId}&arm=${studyArm}`;
 
