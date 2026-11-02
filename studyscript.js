@@ -690,10 +690,23 @@ async function saveProgress() {
 }
 
 function validateDemographics() {
-  if (!document.getElementById("demoAge").value.trim()) {
-    alert("Please enter your age.");
+const age =
+    Number(
+        document.getElementById(
+            "demoAge"
+        ).value
+    );
+
+if (
+    !age ||
+    age < 18 ||
+    age > 100
+) {
+    alert(
+        "Please enter a valid age between 18 and 100."
+    );
     return false;
-  }
+}
 
   if (!document.getElementById("demoGender").value) {
     alert("Please select a gender.");
