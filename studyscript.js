@@ -834,18 +834,10 @@ window.submitCase = async function () {
 
         responses: caseResponses,
 
-        completed: true,
-
         submitted: new Date().toISOString(),
       },
     );
-    // await deleteDoc(
-    //     doc(
-    //         db,
-    //         "studyProgress",
-    //         participantId
-    //     )
-    // );
+
 
     // document.body.innerHTML = `
     //     <div style="
@@ -1280,6 +1272,17 @@ document.getElementById("finalSubmitBtn").onclick = async function () {
   if (!success) {
     return;
   }
+
+  await setDoc(
+    doc(db, "responses", participantId),
+    {
+        completed: true,
+        completedAt: new Date().toISOString()
+    },
+    {
+        merge: true
+    }
+);
 
   await deleteDoc(doc(db, "studyProgress", participantId));
 
