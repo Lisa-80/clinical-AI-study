@@ -166,71 +166,47 @@ function saveCurrentCase() {
  *   false = missing required information
  */
 function validateCase() {
+  const missing = [];
 
-    const missing = [];
+  const diagnosis = document.getElementById("diagnosis")?.value.trim();
 
-    const diagnosis =
-        document.getElementById(
-            "diagnosis"
-        )?.value.trim();
+  if (!diagnosis) {
+    missing.push("Most likely diagnosis");
+  }
 
-    if (!diagnosis) {
-        missing.push("Most likely diagnosis");
+  const disposition = document.querySelector(".care-btn.selected");
+
+  if (!disposition) {
+    missing.push("Next medical visit");
+  }
+
+  if (missing.length > 0) {
+    alert("Please complete:\n\n• " + missing.join("\n• "));
+
+    return false;
+  }
+
+  const hasTest = [
+    ...document.querySelectorAll('#tests-manual input[type="text"]'),
+    ...document.querySelectorAll('#tests-ai input[type="text"]'),
+  ].some((x) => x.value.trim());
+
+  const hasManagement = [
+    ...document.querySelectorAll('#management-manual input[type="text"]'),
+    ...document.querySelectorAll('#management-ai input[type="text"]'),
+  ].some((x) => x.value.trim());
+
+  if (!hasTest || !hasManagement) {
+    const proceed = confirm(
+      "Tests and/or management recommendations have been left blank. Continue?",
+    );
+
+    if (!proceed) {
+      return false;
     }
+  }
 
-    const disposition =
-        document.querySelector(
-            ".care-btn.selected"
-        );
-
-    if (!disposition) {
-        missing.push("Next medical visit");
-    }
-
-    if (missing.length > 0) {
-
-        alert(
-            "Please complete:\n\n• " +
-            missing.join("\n• ")
-        );
-
-        return false;
-    }
-
-    const hasTest =
-        [
-            ...document.querySelectorAll(
-                '#tests-manual input[type="text"]'
-            ),
-            ...document.querySelectorAll(
-                '#tests-ai input[type="text"]'
-            )
-        ]
-        .some(x => x.value.trim());
-
-    const hasManagement =
-        [
-            ...document.querySelectorAll(
-                '#management-manual input[type="text"]'
-            ),
-            ...document.querySelectorAll(
-                '#management-ai input[type="text"]'
-            )
-        ]
-        .some(x => x.value.trim());
-
-    if (!hasTest || !hasManagement) {
-
-        const proceed = confirm(
-            "Tests and/or management recommendations have been left blank. Continue?"
-        );
-
-        if (!proceed) {
-            return false;
-        }
-    }
-
-    return true;
+  return true;
 }
 // Load pre-generated AI probability estimates.
 const probabilityRows = await fetch("probabilities.json").then((r) => r.json());
@@ -690,23 +666,12 @@ async function saveProgress() {
 }
 
 function validateDemographics() {
-const age =
-    Number(
-        document.getElementById(
-            "demoAge"
-        ).value
-    );
+  const age = Number(document.getElementById("demoAge").value);
 
-if (
-    !Number.isInteger(age) ||
-    age < 18 ||
-    age > 100
-) {
-    alert(
-        "Please enter a valid age between 18 and 100."
-    );
+  if (!Number.isInteger(age) || age < 18 || age > 100) {
+    alert("Please enter a valid age between 18 and 100.");
     return false;
-}
+  }
 
   if (!document.getElementById("demoGender").value) {
     alert("Please select a gender.");
@@ -830,14 +795,13 @@ window.submitCase = async function () {
         participantId,
         studyArm,
         currentCase,
-        surveyVersion: "2026-11-02",
+        surveyVersion: "2026-11-11",
 
         responses: caseResponses,
 
         submitted: new Date().toISOString(),
       },
     );
-
 
     // document.body.innerHTML = `
     //     <div style="
@@ -853,6 +817,26 @@ window.submitCase = async function () {
     //         <p>Your response has been successfully recorded.</p>
     //     </div>
     // `;
+
+    await setDoc(
+      doc(db, "studyProgress", participantId),
+      {
+        stage: "demographics",
+      },
+      {
+        merge: true,
+      },
+    );
+
+    await setDoc(
+      doc(db, "studyProgress", participantId),
+      {
+        stage: "demographics",
+      },
+      {
+        merge: true,
+      },
+    );
 
     document.getElementById("studyScreen").style.display = "none";
     window.scrollTo({
@@ -881,6 +865,38 @@ async function loadStudy() {
 
   if (snapshot.exists()) {
     const data = snapshot.data();
+
+    switch (data.stage) {
+      case "demographics":
+        document.getElementById("studyScreen").style.display = "none";
+
+        document.getElementById("demographicsScreen").style.display = "block";
+        return;
+
+      case "fear":
+        document.getElementById("studyScreen").style.display = "none";
+
+        document.getElementById("scalesScreen").style.display = "block";
+        return;
+
+      case "maximizer":
+        document.getElementById("studyScreen").style.display = "none";
+
+        document.getElementById("maximizerScreen").style.display = "block";
+        return;
+
+      case "stress":
+        document.getElementById("studyScreen").style.display = "none";
+
+        document.getElementById("stressScreen").style.display = "block";
+        return;
+
+      case "compensation":
+        document.getElementById("studyScreen").style.display = "none";
+
+        document.getElementById("thankYouScreen").style.display = "block";
+        return;
+    }
 
     currentCase = data.currentCase || 1;
     caseResponses = data.responses || [];
@@ -912,8 +928,15 @@ document.getElementById("demographicsNextBtn").onclick = async function () {
 
   try {
     await saveDemographics();
-
-    console.log("Demographics saved");
+    await setDoc(
+      doc(db, "studyProgress", participantId),
+      {
+        stage: "fear",
+      },
+      {
+        merge: true,
+      },
+    );
 
     document.getElementById("demographicsScreen").style.display = "none";
 
@@ -1064,7 +1087,15 @@ document.getElementById("maximizerNextBtn").onclick = async function () {
   }
 
   await saveMaximizer();
-
+  await setDoc(
+    doc(db, "studyProgress", participantId),
+    {
+      stage: "stress",
+    },
+    {
+      merge: true,
+    },
+  );
   document.getElementById("maximizerScreen").style.display = "none";
 
   document.getElementById("stressScreen").style.display = "block";
@@ -1081,7 +1112,15 @@ document.getElementById("scalesNextBtn").onclick = async function () {
   }
 
   await saveScales();
-
+  await setDoc(
+    doc(db, "studyProgress", participantId),
+    {
+      stage: "maximizer",
+    },
+    {
+      merge: true,
+    },
+  );
   document.getElementById("scalesScreen").style.display = "none";
 
   document.getElementById("maximizerScreen").style.display = "block";
@@ -1235,7 +1274,15 @@ document.getElementById("stressNextBtn").onclick = async function () {
   }
 
   await saveStress();
-
+  await setDoc(
+    doc(db, "studyProgress", participantId),
+    {
+      stage: "compensation",
+    },
+    {
+      merge: true,
+    },
+  );
   document.getElementById("stressScreen").style.display = "none";
 
   document.getElementById("thankYouScreen").style.display = "block";
@@ -1276,13 +1323,13 @@ document.getElementById("finalSubmitBtn").onclick = async function () {
   await setDoc(
     doc(db, "responses", participantId),
     {
-        completed: true,
-        completedAt: new Date().toISOString()
+      completed: true,
+      completedAt: new Date().toISOString(),
     },
     {
-        merge: true
-    }
-);
+      merge: true,
+    },
+  );
 
   await deleteDoc(doc(db, "studyProgress", participantId));
 
